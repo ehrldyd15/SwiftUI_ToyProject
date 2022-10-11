@@ -7,49 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00F2E3D628F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */; };
-		00F2E3D828F4F97000C7DA00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E3D728F4F97000C7DA00 /* ContentView.swift */; };
-		00F2E3DA28F4F97100C7DA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F2E3D928F4F97100C7DA00 /* Assets.xcassets */; };
-		00F2E3DD28F4F97100C7DA00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F2E3DC28F4F97100C7DA00 /* Preview Assets.xcassets */; };
+		00F2E52128F522DF00C7DA00 /* IsometricApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E52028F522DF00C7DA00 /* IsometricApp.swift */; };
+		00F2E52328F522DF00C7DA00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E52228F522DF00C7DA00 /* ContentView.swift */; };
+		00F2E52528F522E000C7DA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F2E52428F522E000C7DA00 /* Assets.xcassets */; };
+		00F2E52828F522E000C7DA00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F2E52728F522E000C7DA00 /* Preview Assets.xcassets */; };
+		00F2E53828F523D200C7DA00 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E53728F523D200C7DA00 /* Home.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00F2E4E128F4FFB700C7DA00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00F2E4CC28F4FFB600C7DA00;
-			remoteInfo = Metaball;
-		};
-		00F2E50128F4FFD200C7DA00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00F2E4EC28F4FFD100C7DA00;
-			remoteInfo = Metrix;
-		};
-		00F2E53228F522E000C7DA00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00F2E51D28F522DF00C7DA00;
-			remoteInfo = Isometric;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
-		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		00F2E3D928F4F97100C7DA00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		00F2E3DC28F4F97100C7DA00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Metaball.xcodeproj; path = Metaball/Metaball.xcodeproj; sourceTree = "<group>"; };
-		00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Metrix.xcodeproj; path = Metrix/Metrix.xcodeproj; sourceTree = "<group>"; };
-		00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Isometric.xcodeproj; path = Isometric/Isometric.xcodeproj; sourceTree = "<group>"; };
+		00F2E51D28F522DF00C7DA00 /* Isometric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Isometric.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00F2E52028F522DF00C7DA00 /* IsometricApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsometricApp.swift; sourceTree = "<group>"; };
+		00F2E52228F522DF00C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		00F2E52428F522E000C7DA00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00F2E52728F522E000C7DA00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00F2E53728F523D200C7DA00 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00F2E3CF28F4F97000C7DA00 /* Frameworks */ = {
+		00F2E51A28F522DF00C7DA00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,104 +34,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00F2E3C928F4F97000C7DA00 = {
+		00F2E51428F522DF00C7DA00 = {
 			isa = PBXGroup;
 			children = (
-				00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */,
-				00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */,
-				00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */,
-				00F2E3D428F4F97000C7DA00 /* SwiftUI_ToyProject */,
-				00F2E3D328F4F97000C7DA00 /* Products */,
+				00F2E51F28F522DF00C7DA00 /* Isometric */,
+				00F2E51E28F522DF00C7DA00 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		00F2E3D328F4F97000C7DA00 /* Products */ = {
+		00F2E51E28F522DF00C7DA00 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */,
+				00F2E51D28F522DF00C7DA00 /* Isometric.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00F2E3D428F4F97000C7DA00 /* SwiftUI_ToyProject */ = {
+		00F2E51F28F522DF00C7DA00 /* Isometric */ = {
 			isa = PBXGroup;
 			children = (
-				00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */,
-				00F2E3D728F4F97000C7DA00 /* ContentView.swift */,
-				00F2E3D928F4F97100C7DA00 /* Assets.xcassets */,
-				00F2E3DB28F4F97100C7DA00 /* Preview Content */,
+				00F2E53628F523C300C7DA00 /* View */,
+				00F2E52028F522DF00C7DA00 /* IsometricApp.swift */,
+				00F2E52228F522DF00C7DA00 /* ContentView.swift */,
+				00F2E52428F522E000C7DA00 /* Assets.xcassets */,
+				00F2E52628F522E000C7DA00 /* Preview Content */,
 			);
-			path = SwiftUI_ToyProject;
+			path = Isometric;
 			sourceTree = "<group>";
 		};
-		00F2E3DB28F4F97100C7DA00 /* Preview Content */ = {
+		00F2E52628F522E000C7DA00 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				00F2E3DC28F4F97100C7DA00 /* Preview Assets.xcassets */,
+				00F2E52728F522E000C7DA00 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		00F2E4DE28F4FFB600C7DA00 /* Products */ = {
+		00F2E53628F523C300C7DA00 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				00F2E4E228F4FFB700C7DA00 /* Metaball.app */,
+				00F2E53728F523D200C7DA00 /* Home.swift */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		00F2E4FE28F4FFD200C7DA00 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00F2E50228F4FFD200C7DA00 /* Metrix.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		00F2E52F28F522E000C7DA00 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00F2E53328F522E000C7DA00 /* Isometric.app */,
-			);
-			name = Products;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00F2E3D128F4F97000C7DA00 /* SwiftUI_ToyProject */ = {
+		00F2E51C28F522DF00C7DA00 /* Isometric */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00F2E3E028F4F97100C7DA00 /* Build configuration list for PBXNativeTarget "SwiftUI_ToyProject" */;
+			buildConfigurationList = 00F2E52B28F522E000C7DA00 /* Build configuration list for PBXNativeTarget "Isometric" */;
 			buildPhases = (
-				00F2E3CE28F4F97000C7DA00 /* Sources */,
-				00F2E3CF28F4F97000C7DA00 /* Frameworks */,
-				00F2E3D028F4F97000C7DA00 /* Resources */,
+				00F2E51928F522DF00C7DA00 /* Sources */,
+				00F2E51A28F522DF00C7DA00 /* Frameworks */,
+				00F2E51B28F522DF00C7DA00 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftUI_ToyProject;
-			productName = SwiftUI_ToyProject;
-			productReference = 00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */;
+			name = Isometric;
+			productName = Isometric;
+			productReference = 00F2E51D28F522DF00C7DA00 /* Isometric.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		00F2E3CA28F4F97000C7DA00 /* Project object */ = {
+		00F2E51528F522DF00C7DA00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					00F2E3D128F4F97000C7DA00 = {
+					00F2E51C28F522DF00C7DA00 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 00F2E3CD28F4F97000C7DA00 /* Build configuration list for PBXProject "SwiftUI_ToyProject" */;
+			buildConfigurationList = 00F2E51828F522DF00C7DA00 /* Build configuration list for PBXProject "Isometric" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -164,80 +121,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 00F2E3C928F4F97000C7DA00;
-			productRefGroup = 00F2E3D328F4F97000C7DA00 /* Products */;
+			mainGroup = 00F2E51428F522DF00C7DA00;
+			productRefGroup = 00F2E51E28F522DF00C7DA00 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 00F2E52F28F522E000C7DA00 /* Products */;
-					ProjectRef = 00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */;
-				},
-				{
-					ProductGroup = 00F2E4DE28F4FFB600C7DA00 /* Products */;
-					ProjectRef = 00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */;
-				},
-				{
-					ProductGroup = 00F2E4FE28F4FFD200C7DA00 /* Products */;
-					ProjectRef = 00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				00F2E3D128F4F97000C7DA00 /* SwiftUI_ToyProject */,
+				00F2E51C28F522DF00C7DA00 /* Isometric */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		00F2E4E228F4FFB700C7DA00 /* Metaball.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Metaball.app;
-			remoteRef = 00F2E4E128F4FFB700C7DA00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00F2E50228F4FFD200C7DA00 /* Metrix.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Metrix.app;
-			remoteRef = 00F2E50128F4FFD200C7DA00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00F2E53328F522E000C7DA00 /* Isometric.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Isometric.app;
-			remoteRef = 00F2E53228F522E000C7DA00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		00F2E3D028F4F97000C7DA00 /* Resources */ = {
+		00F2E51B28F522DF00C7DA00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F2E3DD28F4F97100C7DA00 /* Preview Assets.xcassets in Resources */,
-				00F2E3DA28F4F97100C7DA00 /* Assets.xcassets in Resources */,
+				00F2E52828F522E000C7DA00 /* Preview Assets.xcassets in Resources */,
+				00F2E52528F522E000C7DA00 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00F2E3CE28F4F97000C7DA00 /* Sources */ = {
+		00F2E51928F522DF00C7DA00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F2E3D828F4F97000C7DA00 /* ContentView.swift in Sources */,
-				00F2E3D628F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift in Sources */,
+				00F2E52328F522DF00C7DA00 /* ContentView.swift in Sources */,
+				00F2E53828F523D200C7DA00 /* Home.swift in Sources */,
+				00F2E52128F522DF00C7DA00 /* IsometricApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		00F2E3DE28F4F97100C7DA00 /* Debug */ = {
+		00F2E52928F522E000C7DA00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +217,7 @@
 			};
 			name = Debug;
 		};
-		00F2E3DF28F4F97100C7DA00 /* Release */ = {
+		00F2E52A28F522E000C7DA00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,14 +271,14 @@
 			};
 			name = Release;
 		};
-		00F2E3E128F4F97100C7DA00 /* Debug */ = {
+		00F2E52C28F522E000C7DA00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_ToyProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Isometric/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -371,7 +291,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AppStoreAnimation.www.SwiftUI-ToyProject";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppStoreAnimation.www.Isometric;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -379,14 +299,14 @@
 			};
 			name = Debug;
 		};
-		00F2E3E228F4F97100C7DA00 /* Release */ = {
+		00F2E52D28F522E000C7DA00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_ToyProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Isometric/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -399,7 +319,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AppStoreAnimation.www.SwiftUI-ToyProject";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppStoreAnimation.www.Isometric;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -410,25 +330,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00F2E3CD28F4F97000C7DA00 /* Build configuration list for PBXProject "SwiftUI_ToyProject" */ = {
+		00F2E51828F522DF00C7DA00 /* Build configuration list for PBXProject "Isometric" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00F2E3DE28F4F97100C7DA00 /* Debug */,
-				00F2E3DF28F4F97100C7DA00 /* Release */,
+				00F2E52928F522E000C7DA00 /* Debug */,
+				00F2E52A28F522E000C7DA00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00F2E3E028F4F97100C7DA00 /* Build configuration list for PBXNativeTarget "SwiftUI_ToyProject" */ = {
+		00F2E52B28F522E000C7DA00 /* Build configuration list for PBXNativeTarget "Isometric" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00F2E3E128F4F97100C7DA00 /* Debug */,
-				00F2E3E228F4F97100C7DA00 /* Release */,
+				00F2E52C28F522E000C7DA00 /* Debug */,
+				00F2E52D28F522E000C7DA00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 00F2E3CA28F4F97000C7DA00 /* Project object */;
+	rootObject = 00F2E51528F522DF00C7DA00 /* Project object */;
 }
