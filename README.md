@@ -13,3 +13,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.10.07 | Metaball |
 | 2022.10.11 | Metrix |
 | 2022.10.11 | Isometric |
+
+https://www.youtube.com/watch?v=fYQ9YnbvasU
+
+6:42
