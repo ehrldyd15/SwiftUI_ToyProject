@@ -18,3 +18,8 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 https://www.youtube.com/watch?v=fYQ9YnbvasU
 
 19:33
+
+
+
+
+
