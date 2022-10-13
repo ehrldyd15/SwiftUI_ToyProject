@@ -35,6 +35,13 @@
 			remoteGlobalIDString = 00F2E51D28F522DF00C7DA00;
 			remoteInfo = Isometric;
 		};
+		00F2E5BB28F6449B00C7DA00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00F2E5A628F6449A00C7DA00;
+			remoteInfo = TCA_Simple_tutorial;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,7 @@
 		00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Metaball.xcodeproj; path = Metaball/Metaball.xcodeproj; sourceTree = "<group>"; };
 		00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Metrix.xcodeproj; path = Metrix/Metrix.xcodeproj; sourceTree = "<group>"; };
 		00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Isometric.xcodeproj; path = Isometric/Isometric.xcodeproj; sourceTree = "<group>"; };
+		00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCA_Simple_tutorial.xcodeproj; path = TCA_Simple_tutorial/TCA_Simple_tutorial.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
+				00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */,
 				00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */,
 				00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */,
 				00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */,
@@ -117,6 +126,14 @@
 			isa = PBXGroup;
 			children = (
 				00F2E53328F522E000C7DA00 /* Isometric.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00F2E5B828F6449B00C7DA00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00F2E5BC28F6449B00C7DA00 /* TCA_Simple_tutorial.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +197,10 @@
 					ProductGroup = 00F2E4FE28F4FFD200C7DA00 /* Products */;
 					ProjectRef = 00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */;
 				},
+				{
+					ProductGroup = 00F2E5B828F6449B00C7DA00 /* Products */;
+					ProjectRef = 00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -208,6 +229,13 @@
 			fileType = wrapper.application;
 			path = Isometric.app;
 			remoteRef = 00F2E53228F522E000C7DA00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00F2E5BC28F6449B00C7DA00 /* TCA_Simple_tutorial.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TCA_Simple_tutorial.app;
+			remoteRef = 00F2E5BB28F6449B00C7DA00 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
