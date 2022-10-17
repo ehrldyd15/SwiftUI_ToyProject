@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0012160328FCD26E000414FB /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012160228FCD26E000414FB /* Memo.swift */; };
+		0012160A28FCD317000414FB /* MemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012160928FCD317000414FB /* MemoClient.swift */; };
+		0012160D28FCDA97000414FB /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012160C28FCDA97000414FB /* MemoView.swift */; };
 		00F2E5AA28F6449A00C7DA00 /* TCA_Simple_tutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E5A928F6449A00C7DA00 /* TCA_Simple_tutorialApp.swift */; };
 		00F2E5AC28F6449A00C7DA00 /* ConterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E5AB28F6449A00C7DA00 /* ConterView.swift */; };
 		00F2E5AE28F6449B00C7DA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F2E5AD28F6449B00C7DA00 /* Assets.xcassets */; };
@@ -15,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0012160228FCD26E000414FB /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		0012160928FCD317000414FB /* MemoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoClient.swift; sourceTree = "<group>"; };
+		0012160C28FCDA97000414FB /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		0012160F28FCE9F4000414FB /* TCA-Simple-tutorial-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Simple-tutorial-Info.plist"; sourceTree = SOURCE_ROOT; };
 		00F2E5A628F6449A00C7DA00 /* TCA_Simple_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_Simple_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E5A928F6449A00C7DA00 /* TCA_Simple_tutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_Simple_tutorialApp.swift; sourceTree = "<group>"; };
 		00F2E5AB28F6449A00C7DA00 /* ConterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConterView.swift; sourceTree = "<group>"; };
@@ -34,6 +41,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0012160728FCD2FB000414FB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0012160B28FCD32A000414FB /* Counter */,
+				0012160828FCD305000414FB /* Memo */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0012160828FCD305000414FB /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				0012160228FCD26E000414FB /* Memo.swift */,
+				0012160928FCD317000414FB /* MemoClient.swift */,
+				0012160C28FCDA97000414FB /* MemoView.swift */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		0012160B28FCD32A000414FB /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				00F2E5AB28F6449A00C7DA00 /* ConterView.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 		00F2E59D28F6449A00C7DA00 = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +87,9 @@
 		00F2E5A828F6449A00C7DA00 /* TCA_Simple_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				0012160F28FCE9F4000414FB /* TCA-Simple-tutorial-Info.plist */,
+				0012160728FCD2FB000414FB /* Domain */,
 				00F2E5A928F6449A00C7DA00 /* TCA_Simple_tutorialApp.swift */,
-				00F2E5AB28F6449A00C7DA00 /* ConterView.swift */,
 				00F2E5AD28F6449B00C7DA00 /* Assets.xcassets */,
 				00F2E5AF28F6449B00C7DA00 /* Preview Content */,
 			);
@@ -145,6 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0012160D28FCDA97000414FB /* MemoView.swift in Sources */,
+				0012160328FCD26E000414FB /* Memo.swift in Sources */,
+				0012160A28FCD317000414FB /* MemoClient.swift in Sources */,
 				00F2E5AC28F6449A00C7DA00 /* ConterView.swift in Sources */,
 				00F2E5AA28F6449A00C7DA00 /* TCA_Simple_tutorialApp.swift in Sources */,
 			);
@@ -277,6 +315,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TCA_Simple_tutorial/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Simple-tutorial-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +344,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TCA_Simple_tutorial/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Simple-tutorial-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

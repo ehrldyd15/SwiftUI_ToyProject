@@ -54,11 +54,9 @@ struct ConterView: View {
                     Button("빼기", action: { viewStore.send(.subtractCount) })
                 }
             }
-
         }
-        
-
     }
+    
 }
 
 //struct ConterView_Previews: PreviewProvider {

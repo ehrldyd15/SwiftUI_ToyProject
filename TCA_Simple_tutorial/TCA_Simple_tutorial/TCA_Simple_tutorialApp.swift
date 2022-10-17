@@ -14,9 +14,15 @@ struct TCA_Simple_tutorialApp: App {
                              reducer: counterReducer,
                              environment: CounterEnvironment())
     
+    let momoStore = Store(initialState: MemoState(),
+                          reducer: memoReducer,
+                          environment: MemoEnvironment(memoClient: MemoClient.live,
+                                                       mainQueue: .main))
+    
     var body: some Scene {
         WindowGroup {
-            ConterView(store: counterStore)
+//            ConterView(store: counterStore)
+            MemoView(store: momoStore)
         }
     }
 }
