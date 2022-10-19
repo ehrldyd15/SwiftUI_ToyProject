@@ -14,6 +14,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0012163828FF9226000414FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0012162028FF9224000414FB;
+			remoteInfo = Oauth_Authentication;
+		};
 		00F2E4E128F4FFB700C7DA00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */;
@@ -45,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Oauth_Authentication.xcodeproj; path = Oauth_Authentication/Oauth_Authentication.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
 		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,9 +75,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0012163228FF9225000414FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0012163928FF9226000414FB /* Oauth_Authentication.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
+				0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */,
 				00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */,
 				00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */,
 				00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */,
@@ -198,6 +215,10 @@
 					ProjectRef = 00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */;
 				},
 				{
+					ProductGroup = 0012163228FF9225000414FB /* Products */;
+					ProjectRef = 0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */;
+				},
+				{
 					ProductGroup = 00F2E5B828F6449B00C7DA00 /* Products */;
 					ProjectRef = 00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */;
 				},
@@ -210,6 +231,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0012163928FF9226000414FB /* Oauth_Authentication.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Oauth_Authentication.app;
+			remoteRef = 0012163828FF9226000414FB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		00F2E4E228F4FFB700C7DA00 /* Metaball.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
