@@ -11,6 +11,11 @@
 		0012162628FF9224000414FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012162528FF9224000414FB /* ContentView.swift */; };
 		0012162828FF9225000414FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0012162728FF9225000414FB /* Assets.xcassets */; };
 		0012162B28FF9225000414FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0012162A28FF9225000414FB /* Preview Assets.xcassets */; };
+		0012163D28FFBC08000414FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012163C28FFBC08000414FB /* LoginView.swift */; };
+		0012163F28FFC89C000414FB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012163E28FFC89C000414FB /* RegisterView.swift */; };
+		0012164128FFCA85000414FB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164028FFCA85000414FB /* ProfileView.swift */; };
+		0012164428FFCC78000414FB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164328FFCC78000414FB /* UserData.swift */; };
+		0012164728FFDDF0000414FB /* OtherUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164628FFDDF0000414FB /* OtherUserProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		0012162528FF9224000414FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0012162728FF9225000414FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0012162A28FF9225000414FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0012163C28FFBC08000414FB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0012163E28FFC89C000414FB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0012164028FFCA85000414FB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0012164328FFCC78000414FB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		0012164628FFDDF0000414FB /* OtherUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				0012162328FF9224000414FB /* Oauth_AuthenticationApp.swift */,
-				0012162528FF9224000414FB /* ContentView.swift */,
+				0012164228FFCC6E000414FB /* Model */,
+				0012163B28FFBBDB000414FB /* View */,
 				0012162728FF9225000414FB /* Assets.xcassets */,
 				0012162928FF9225000414FB /* Preview Content */,
 			);
@@ -65,6 +76,26 @@
 				0012162A28FF9225000414FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0012163B28FFBBDB000414FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0012162528FF9224000414FB /* ContentView.swift */,
+				0012163C28FFBC08000414FB /* LoginView.swift */,
+				0012163E28FFC89C000414FB /* RegisterView.swift */,
+				0012164028FFCA85000414FB /* ProfileView.swift */,
+				0012164628FFDDF0000414FB /* OtherUserProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0012164228FFCC6E000414FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0012164328FFCC78000414FB /* UserData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0012164728FFDDF0000414FB /* OtherUserProfileView.swift in Sources */,
+				0012164428FFCC78000414FB /* UserData.swift in Sources */,
+				0012163D28FFBC08000414FB /* LoginView.swift in Sources */,
+				0012163F28FFC89C000414FB /* RegisterView.swift in Sources */,
+				0012164128FFCA85000414FB /* ProfileView.swift in Sources */,
 				0012162628FF9224000414FB /* ContentView.swift in Sources */,
 				0012162428FF9224000414FB /* Oauth_AuthenticationApp.swift in Sources */,
 			);
