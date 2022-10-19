@@ -12,7 +12,6 @@ import ComposableArchitecture
 struct MemoClient {
     // 단일 아이템 조회
     var fetchMemoItem: (_ id: String) -> Effect<Memo, Failure>
-    
     // 전체 아이템 조회
     var fetchMemos: () -> Effect<Memos, Failure>
     
