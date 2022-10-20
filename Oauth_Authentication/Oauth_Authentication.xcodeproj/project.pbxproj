@@ -21,6 +21,11 @@
 		001216512901023C000414FB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001216502901023C000414FB /* ApiClient.swift */; };
 		0012165329010368000414FB /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012165229010368000414FB /* BaseInterceptor.swift */; };
 		001216552901057A000414FB /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001216542901057A000414FB /* ApiLogger.swift */; };
+		00121657290118C7000414FB /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121656290118C7000414FB /* AuthRouter.swift */; };
+		0012165A290120FE000414FB /* AuthApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121659290120FE000414FB /* AuthApiService.swift */; };
+		0012165C29012252000414FB /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012165B29012252000414FB /* TokenData.swift */; };
+		0012165E29012539000414FB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012165D29012539000414FB /* AuthResponse.swift */; };
+		00121661290127A5000414FB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121660290127A5000414FB /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		001216502901023C000414FB /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		0012165229010368000414FB /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		001216542901057A000414FB /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
+		00121656290118C7000414FB /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		00121659290120FE000414FB /* AuthApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiService.swift; sourceTree = "<group>"; };
+		0012165B29012252000414FB /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
+		0012165D29012539000414FB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		00121660290127A5000414FB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 				0012164228FFCC6E000414FB /* Model */,
 				0012164D290101C3000414FB /* API */,
 				0012163B28FFBBDB000414FB /* View */,
+				0012165F29012781000414FB /* ViewModel */,
 				0012162728FF9225000414FB /* Assets.xcassets */,
 				0012162928FF9225000414FB /* Preview Content */,
 			);
@@ -106,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				0012164328FFCC78000414FB /* UserData.swift */,
+				0012165B29012252000414FB /* TokenData.swift */,
+				0012165D29012539000414FB /* AuthResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 		0012164D290101C3000414FB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				00121658290120EB000414FB /* Service */,
 				0012164F290101FA000414FB /* Interceptor */,
 				0012164E290101D7000414FB /* Router */,
 				001216542901057A000414FB /* ApiLogger.swift */,
@@ -124,6 +138,7 @@
 		0012164E290101D7000414FB /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				00121656290118C7000414FB /* AuthRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -134,6 +149,22 @@
 				0012165229010368000414FB /* BaseInterceptor.swift */,
 			);
 			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		00121658290120EB000414FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				00121659290120FE000414FB /* AuthApiService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0012165F29012781000414FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00121660290127A5000414FB /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +252,12 @@
 				0012165329010368000414FB /* BaseInterceptor.swift in Sources */,
 				0012164128FFCA85000414FB /* ProfileView.swift in Sources */,
 				0012162628FF9224000414FB /* ContentView.swift in Sources */,
+				00121661290127A5000414FB /* UserViewModel.swift in Sources */,
 				001216552901057A000414FB /* ApiLogger.swift in Sources */,
+				0012165A290120FE000414FB /* AuthApiService.swift in Sources */,
+				0012165C29012252000414FB /* TokenData.swift in Sources */,
+				00121657290118C7000414FB /* AuthRouter.swift in Sources */,
+				0012165E29012539000414FB /* AuthResponse.swift in Sources */,
 				0012162428FF9224000414FB /* Oauth_AuthenticationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

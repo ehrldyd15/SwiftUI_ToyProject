@@ -68,6 +68,6 @@ struct ProfileView: View {
                 }
             }
         }
-        .navigationTitle("로그인 하기")
+        .navigationTitle("사용자 프로필")
     }
 }
