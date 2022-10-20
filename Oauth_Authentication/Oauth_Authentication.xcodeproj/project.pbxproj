@@ -17,6 +17,7 @@
 		0012164428FFCC78000414FB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164328FFCC78000414FB /* UserData.swift */; };
 		0012164728FFDDF0000414FB /* OtherUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164628FFDDF0000414FB /* OtherUserProfileView.swift */; };
 		001216492900D109000414FB /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001216482900D109000414FB /* UserListView.swift */; };
+		0012164C2900EA0D000414FB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0012164B2900EA0D000414FB /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0012164C2900EA0D000414FB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,9 @@
 			dependencies = (
 			);
 			name = Oauth_Authentication;
+			packageProductDependencies = (
+				0012164B2900EA0D000414FB /* Alamofire */,
+			);
 			productName = Oauth_Authentication;
 			productReference = 0012162028FF9224000414FB /* Oauth_Authentication.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 0012161728FF9224000414FB;
+			packageReferences = (
+				0012164A2900EA0D000414FB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 0012162128FF9224000414FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -377,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0012164A2900EA0D000414FB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0012164B2900EA0D000414FB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0012164A2900EA0D000414FB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0012161828FF9224000414FB /* Project object */;
 }
