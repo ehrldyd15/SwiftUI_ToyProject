@@ -16,6 +16,7 @@
 		0012164128FFCA85000414FB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164028FFCA85000414FB /* ProfileView.swift */; };
 		0012164428FFCC78000414FB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164328FFCC78000414FB /* UserData.swift */; };
 		0012164728FFDDF0000414FB /* OtherUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012164628FFDDF0000414FB /* OtherUserProfileView.swift */; };
+		001216492900D109000414FB /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001216482900D109000414FB /* UserListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		0012164028FFCA85000414FB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0012164328FFCC78000414FB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		0012164628FFDDF0000414FB /* OtherUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileView.swift; sourceTree = "<group>"; };
+		001216482900D109000414FB /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				0012163C28FFBC08000414FB /* LoginView.swift */,
 				0012163E28FFC89C000414FB /* RegisterView.swift */,
 				0012164028FFCA85000414FB /* ProfileView.swift */,
+				001216482900D109000414FB /* UserListView.swift */,
 				0012164628FFDDF0000414FB /* OtherUserProfileView.swift */,
 			);
 			path = View;
@@ -171,6 +174,7 @@
 				0012164728FFDDF0000414FB /* OtherUserProfileView.swift in Sources */,
 				0012164428FFCC78000414FB /* UserData.swift in Sources */,
 				0012163D28FFBC08000414FB /* LoginView.swift in Sources */,
+				001216492900D109000414FB /* UserListView.swift in Sources */,
 				0012163F28FFC89C000414FB /* RegisterView.swift in Sources */,
 				0012164128FFCA85000414FB /* ProfileView.swift in Sources */,
 				0012162628FF9224000414FB /* ContentView.swift in Sources */,

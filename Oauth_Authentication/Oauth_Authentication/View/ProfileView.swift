@@ -9,15 +9,13 @@ import Foundation
 import SwiftUI
 
 struct ProfileView: View {
-    @State var userData: UserData? = nil
-    
     @State var id: String = ""
     @State var name: String = ""
     @State var email: String = ""
     @State var avatarImg: String = ""
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             Form {
                 Section {
                     HStack {

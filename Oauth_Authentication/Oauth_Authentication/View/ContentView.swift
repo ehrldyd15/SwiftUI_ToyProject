@@ -59,7 +59,7 @@ struct ContentView: View {
                 })
                 .padding([.bottom], 10)
                 
-                NavigationLink(destination: Text("사용자 목록 화면"),
+                NavigationLink(destination: UserListView(),
                                label: {
                     HStack {
                         Spacer()
