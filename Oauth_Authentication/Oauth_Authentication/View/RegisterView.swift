@@ -17,6 +17,8 @@ struct RegisterView: View {
     @State var emailInput: String = ""
     @State var passwordInput: String = ""
     
+    @State fileprivate var shouldShowAlert: Bool = false
+    
     var body: some View {
         VStack {
             Form {
@@ -52,8 +54,13 @@ struct RegisterView: View {
             }
             .onReceive(userViewModel.registrationSuccess, perform: {
                 print("RegisterView - registrationSuccess() is called")
-                self.dismiss()
+                shouldShowAlert = true
             })
+            .alert("회원가입이 완료되었습니다.", isPresented: $shouldShowAlert) {
+                Button("확인", role: .cancel) {
+                    self.dismiss()
+                }
+            }
         }
         .navigationTitle("회원가입")
     }
