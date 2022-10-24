@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var userViewModel: UserViewModel
+    
+    @Environment(\.dismiss) var dismiss
+    
+    @State fileprivate var shouldShowAlert: Bool = false
+    
     @State var emailInput: String = ""
     @State var passwordInput: String = ""
     
@@ -25,9 +31,19 @@ struct LoginView: View {
                 Section {
                     Button(action: {
                         print("로그인 버튼 클릭")
+                        userViewModel.login(email: emailInput, password: passwordInput)
                     }, label: {
                         Text("로그인 하기")
                     })
+                }
+            }
+            .onReceive(userViewModel.loginSuccess, perform: {
+                print("LoginView - loginSuccess() is called")
+                shouldShowAlert = true
+            })
+            .alert("로그인이 완료되었습니다.", isPresented: $shouldShowAlert) {
+                Button("확인", role: .cancel) {
+                    self.dismiss()
                 }
             }
         }

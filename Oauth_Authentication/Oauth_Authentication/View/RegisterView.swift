@@ -13,11 +13,11 @@ struct RegisterView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @State fileprivate var shouldShowAlert: Bool = false
+    
     @State var nameInput: String = ""
     @State var emailInput: String = ""
     @State var passwordInput: String = ""
-    
-    @State fileprivate var shouldShowAlert: Bool = false
     
     var body: some View {
         VStack {
