@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct AuthResponse: Codable {
+struct AuthResponse : Codable {
     var user: UserData
     var token: TokenData
     
     enum CodingKeys: String, CodingKey {
-        case user
         case token
+        case user
     }
 }

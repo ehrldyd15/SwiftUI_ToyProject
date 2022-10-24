@@ -25,7 +25,15 @@
 		0012165A290120FE000414FB /* AuthApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121659290120FE000414FB /* AuthApiService.swift */; };
 		0012165C29012252000414FB /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012165B29012252000414FB /* TokenData.swift */; };
 		0012165E29012539000414FB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012165D29012539000414FB /* AuthResponse.swift */; };
-		00121661290127A5000414FB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121660290127A5000414FB /* UserViewModel.swift */; };
+		00121661290127A5000414FB /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121660290127A5000414FB /* UserVM.swift */; };
+		0012166529062A21000414FB /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012166429062A21000414FB /* UserDefaultManager.swift */; };
+		001216672906482F000414FB /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001216662906482F000414FB /* UserRouter.swift */; };
+		0012166929064ABC000414FB /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012166829064ABC000414FB /* UserApiService.swift */; };
+		0012166B29064C02000414FB /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012166A29064C02000414FB /* UserInfoResponse.swift */; };
+		0012166E29064D16000414FB /* OAuthCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012166D29064D16000414FB /* OAuthCredential.swift */; };
+		0012167029064E48000414FB /* OAuthAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012166F29064E48000414FB /* OAuthAuthenticator.swift */; };
+		00121672290650D2000414FB /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121671290650D2000414FB /* TokenResponse.swift */; };
+		00121674290671CF000414FB /* UserListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121673290671CF000414FB /* UserListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +55,15 @@
 		00121659290120FE000414FB /* AuthApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiService.swift; sourceTree = "<group>"; };
 		0012165B29012252000414FB /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		0012165D29012539000414FB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
-		00121660290127A5000414FB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		00121660290127A5000414FB /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
+		0012166429062A21000414FB /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		001216662906482F000414FB /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		0012166829064ABC000414FB /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
+		0012166A29064C02000414FB /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
+		0012166D29064D16000414FB /* OAuthCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthCredential.swift; sourceTree = "<group>"; };
+		0012166F29064E48000414FB /* OAuthAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAuthenticator.swift; sourceTree = "<group>"; };
+		00121671290650D2000414FB /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		00121673290671CF000414FB /* UserListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				0012162328FF9224000414FB /* Oauth_AuthenticationApp.swift */,
-				0012164228FFCC6E000414FB /* Model */,
+				00121663290629E7000414FB /* Manager */,
 				0012164D290101C3000414FB /* API */,
+				0012164228FFCC6E000414FB /* Model */,
 				0012163B28FFBBDB000414FB /* View */,
 				0012165F29012781000414FB /* ViewModel */,
 				0012162728FF9225000414FB /* Assets.xcassets */,
@@ -107,8 +124,8 @@
 				0012163C28FFBC08000414FB /* LoginView.swift */,
 				0012163E28FFC89C000414FB /* RegisterView.swift */,
 				0012164028FFCA85000414FB /* ProfileView.swift */,
-				001216482900D109000414FB /* UserListView.swift */,
 				0012164628FFDDF0000414FB /* OtherUserProfileView.swift */,
+				001216482900D109000414FB /* UserListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +136,9 @@
 				0012164328FFCC78000414FB /* UserData.swift */,
 				0012165B29012252000414FB /* TokenData.swift */,
 				0012165D29012539000414FB /* AuthResponse.swift */,
+				0012166A29064C02000414FB /* UserInfoResponse.swift */,
+				00121671290650D2000414FB /* TokenResponse.swift */,
+				00121673290671CF000414FB /* UserListResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +146,7 @@
 		0012164D290101C3000414FB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				0012166C29064D03000414FB /* OAuth */,
 				00121658290120EB000414FB /* Service */,
 				0012164F290101FA000414FB /* Interceptor */,
 				0012164E290101D7000414FB /* Router */,
@@ -139,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				00121656290118C7000414FB /* AuthRouter.swift */,
+				001216662906482F000414FB /* UserRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -155,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				00121659290120FE000414FB /* AuthApiService.swift */,
+				0012166829064ABC000414FB /* UserApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -162,9 +185,26 @@
 		0012165F29012781000414FB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				00121660290127A5000414FB /* UserViewModel.swift */,
+				00121660290127A5000414FB /* UserVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00121663290629E7000414FB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0012166429062A21000414FB /* UserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0012166C29064D03000414FB /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				0012166D29064D16000414FB /* OAuthCredential.swift */,
+				0012166F29064E48000414FB /* OAuthAuthenticator.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,22 +283,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0012166929064ABC000414FB /* UserApiService.swift in Sources */,
 				0012164728FFDDF0000414FB /* OtherUserProfileView.swift in Sources */,
 				0012164428FFCC78000414FB /* UserData.swift in Sources */,
+				00121674290671CF000414FB /* UserListResponse.swift in Sources */,
 				001216512901023C000414FB /* ApiClient.swift in Sources */,
 				0012163D28FFBC08000414FB /* LoginView.swift in Sources */,
+				0012167029064E48000414FB /* OAuthAuthenticator.swift in Sources */,
+				0012166529062A21000414FB /* UserDefaultManager.swift in Sources */,
 				001216492900D109000414FB /* UserListView.swift in Sources */,
 				0012163F28FFC89C000414FB /* RegisterView.swift in Sources */,
 				0012165329010368000414FB /* BaseInterceptor.swift in Sources */,
+				0012166E29064D16000414FB /* OAuthCredential.swift in Sources */,
 				0012164128FFCA85000414FB /* ProfileView.swift in Sources */,
 				0012162628FF9224000414FB /* ContentView.swift in Sources */,
-				00121661290127A5000414FB /* UserViewModel.swift in Sources */,
+				00121661290127A5000414FB /* UserVM.swift in Sources */,
 				001216552901057A000414FB /* ApiLogger.swift in Sources */,
 				0012165A290120FE000414FB /* AuthApiService.swift in Sources */,
+				001216672906482F000414FB /* UserRouter.swift in Sources */,
 				0012165C29012252000414FB /* TokenData.swift in Sources */,
 				00121657290118C7000414FB /* AuthRouter.swift in Sources */,
+				0012166B29064C02000414FB /* UserInfoResponse.swift in Sources */,
 				0012165E29012539000414FB /* AuthResponse.swift in Sources */,
 				0012162428FF9224000414FB /* Oauth_AuthenticationApp.swift in Sources */,
+				00121672290650D2000414FB /* TokenResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

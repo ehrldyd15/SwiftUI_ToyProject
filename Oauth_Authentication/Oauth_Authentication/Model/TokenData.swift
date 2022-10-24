@@ -7,12 +7,12 @@
 
 import Foundation
 
+// MARK: - TokenData
 struct TokenData: Codable {
-    let tokenType: String
-    let expiresIn: Int
-    let accessToken: String
-    let refreshToken: String
-    
+    let tokenType: String = ""
+    let expiresIn: Int = 0
+    let accessToken, refreshToken: String
+
     enum CodingKeys: String, CodingKey {
         case tokenType = "token_type"
         case expiresIn = "expires_in"
@@ -20,3 +20,4 @@ struct TokenData: Codable {
         case refreshToken = "refresh_token"
     }
 }
+
