@@ -11,6 +11,8 @@
 		0012168429076C45000414FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012168329076C45000414FB /* ContentView.swift */; };
 		0012168629076C46000414FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0012168529076C46000414FB /* Assets.xcassets */; };
 		0012168929076C46000414FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0012168829076C46000414FB /* Preview Assets.xcassets */; };
+		001216992907AB2F000414FB /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001216982907AB2F000414FB /* Book.swift */; };
+		003DC81E2909173800B6853F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC81D2909173800B6853F /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		0012168329076C45000414FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0012168529076C46000414FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0012168829076C46000414FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		001216982907AB2F000414FB /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		003DC81D2909173800B6853F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		0012168029076C44000414FB /* BookAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				001216972907AB1C000414FB /* View */,
+				001216962907AB15000414FB /* Model */,
 				0012168129076C45000414FB /* BookAnimationApp.swift */,
 				0012168329076C45000414FB /* ContentView.swift */,
 				0012168529076C46000414FB /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				0012168829076C46000414FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		001216962907AB15000414FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				001216982907AB2F000414FB /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		001216972907AB1C000414FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				003DC81D2909173800B6853F /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				0012168429076C45000414FB /* ContentView.swift in Sources */,
 				0012168229076C45000414FB /* BookAnimationApp.swift in Sources */,
+				003DC81E2909173800B6853F /* Home.swift in Sources */,
+				001216992907AB2F000414FB /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
