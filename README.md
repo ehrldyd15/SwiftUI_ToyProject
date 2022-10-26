@@ -17,6 +17,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.10.19 | Oauth Authentication App | https://www.youtube.com/watch?v=NKp3q1JTZu8&list=PLgOlaPUIbynqyJHiTEv7CFaXd8g5jtogT&index=44 |
 | 2022.10.25 | Book Animation | https://www.youtube.com/watch?v=zmte3GQnr6c&t=22s |
 
+1:55
 
 
 
