@@ -12,6 +12,7 @@
 		0012168629076C46000414FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0012168529076C46000414FB /* Assets.xcassets */; };
 		0012168929076C46000414FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0012168829076C46000414FB /* Preview Assets.xcassets */; };
 		001216992907AB2F000414FB /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001216982907AB2F000414FB /* Book.swift */; };
+		00378226290A40E400D89ECF /* IsometricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00378225290A40E400D89ECF /* IsometricView.swift */; };
 		003DC81E2909173800B6853F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC81D2909173800B6853F /* Home.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		0012168529076C46000414FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0012168829076C46000414FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		001216982907AB2F000414FB /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		00378225290A40E400D89ECF /* IsometricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsometricView.swift; sourceTree = "<group>"; };
 		003DC81D2909173800B6853F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				003DC81D2909173800B6853F /* Home.swift */,
+				00378225290A40E400D89ECF /* IsometricView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				0012168229076C45000414FB /* BookAnimationApp.swift in Sources */,
 				003DC81E2909173800B6853F /* Home.swift in Sources */,
 				001216992907AB2F000414FB /* Book.swift in Sources */,
+				00378226290A40E400D89ECF /* IsometricView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
