@@ -28,6 +28,13 @@
 			remoteGlobalIDString = 0012167E29076C44000414FB;
 			remoteInfo = BookAnimation;
 		};
+		00378250290B683300D89ECF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00378248290B683200D89ECF /* Navigation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00378237290B683200D89ECF;
+			remoteInfo = Navigation;
+		};
 		00F2E4E128F4FFB700C7DA00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */;
@@ -62,6 +69,7 @@
 		0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Oauth_Authentication.xcodeproj; path = Oauth_Authentication/Oauth_Authentication.xcodeproj; sourceTree = "<group>"; };
 		0012164528FFCE79000414FB /* SwiftUI-ToyProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-ToyProject-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0012168F29076C46000414FB /* BookAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BookAnimation.xcodeproj; path = BookAnimation/BookAnimation.xcodeproj; sourceTree = "<group>"; };
+		00378248290B683200D89ECF /* Navigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigation.xcodeproj; path = Navigation/Navigation.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
 		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,9 +108,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		00378249290B683200D89ECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00378251290B683300D89ECF /* Navigation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
+				00378248290B683200D89ECF /* Navigation.xcodeproj */,
 				0012168F29076C46000414FB /* BookAnimation.xcodeproj */,
 				0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */,
 				00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */,
@@ -238,6 +255,10 @@
 					ProjectRef = 00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */;
 				},
 				{
+					ProductGroup = 00378249290B683200D89ECF /* Products */;
+					ProjectRef = 00378248290B683200D89ECF /* Navigation.xcodeproj */;
+				},
+				{
 					ProductGroup = 0012163228FF9225000414FB /* Products */;
 					ProjectRef = 0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */;
 				},
@@ -266,6 +287,13 @@
 			fileType = wrapper.application;
 			path = BookAnimation.app;
 			remoteRef = 0012169329076C46000414FB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00378251290B683300D89ECF /* Navigation.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Navigation.app;
+			remoteRef = 00378250290B683300D89ECF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00F2E4E228F4FFB700C7DA00 /* Metaball.app */ = {
