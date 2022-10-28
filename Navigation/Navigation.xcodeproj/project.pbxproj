@@ -67,13 +67,8 @@
 			children = (
 				0037823A290B683200D89ECF /* NavigationApp.swift */,
 				0037823C290B683200D89ECF /* ContentView.swift */,
-				0037825A290B85F000D89ECF /* HomeView.swift */,
-				0037825C290B860200D89ECF /* SettingsView.swift */,
-				0037825E290B8DD500D89ECF /* DocumentsDetailView.swift */,
-				00378260290B915600D89ECF /* MarketingOptionView.swift */,
-				00378262290B918700D89ECF /* SubmitMarketingOptionsView.swift */,
-				00378264290B91A300D89ECF /* AppVersionView.swift */,
-				00378266290B926F00D89ECF /* SettingsNavigationManager.swift */,
+				00378268290BA08500D89ECF /* TabViews */,
+				0037826D290BA13C00D89ECF /* Manager */,
 				0037823E290B683200D89ECF /* Assets.xcassets */,
 				00378240290B683200D89ECF /* Preview Content */,
 			);
@@ -86,6 +81,83 @@
 				00378241290B683200D89ECF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		00378268290BA08500D89ECF /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				00378269290BA0A700D89ECF /* Home */,
+				0037826A290BA0B700D89ECF /* Settings */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		00378269290BA0A700D89ECF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0037825A290B85F000D89ECF /* HomeView.swift */,
+				0037826B290BA11200D89ECF /* HomeDetails */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0037826A290BA0B700D89ECF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0037825C290B860200D89ECF /* SettingsView.swift */,
+				0037826C290BA11D00D89ECF /* SettingDetails */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0037826B290BA11200D89ECF /* HomeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0037825E290B8DD500D89ECF /* DocumentsDetailView.swift */,
+			);
+			path = HomeDetails;
+			sourceTree = "<group>";
+		};
+		0037826C290BA11D00D89ECF /* SettingDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0037826E290BA15700D89ECF /* MarketingOption */,
+				0037826F290BA16300D89ECF /* AppVersion */,
+			);
+			path = SettingDetails;
+			sourceTree = "<group>";
+		};
+		0037826D290BA13C00D89ECF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				00378266290B926F00D89ECF /* SettingsNavigationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0037826E290BA15700D89ECF /* MarketingOption */ = {
+			isa = PBXGroup;
+			children = (
+				00378260290B915600D89ECF /* MarketingOptionView.swift */,
+				00378270290BA17D00D89ECF /* MarkettingOptionDetails */,
+			);
+			path = MarketingOption;
+			sourceTree = "<group>";
+		};
+		0037826F290BA16300D89ECF /* AppVersion */ = {
+			isa = PBXGroup;
+			children = (
+				00378264290B91A300D89ECF /* AppVersionView.swift */,
+			);
+			path = AppVersion;
+			sourceTree = "<group>";
+		};
+		00378270290BA17D00D89ECF /* MarkettingOptionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				00378262290B918700D89ECF /* SubmitMarketingOptionsView.swift */,
+			);
+			path = MarkettingOptionDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

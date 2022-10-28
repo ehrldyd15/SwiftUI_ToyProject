@@ -54,6 +54,7 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
+            // 화면 상단 툴바 아이템
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     NavigationLink(destination: AppVersionView(),
