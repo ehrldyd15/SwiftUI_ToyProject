@@ -34,7 +34,7 @@ struct Home: View {
             .padding(.horizontal, 20)
             
             if expand {
-                DropDownView(expand: $expand, munus: $munus)
+                DropDownView(expand: $expand, munus: $munus, popupWidth: 150, horizontalPadding: 20, leftRightMode: .right)
             }
 
             Spacer()
