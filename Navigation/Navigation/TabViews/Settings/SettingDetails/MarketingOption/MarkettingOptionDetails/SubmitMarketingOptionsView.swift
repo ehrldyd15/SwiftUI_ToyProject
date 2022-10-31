@@ -17,6 +17,18 @@ struct SubmitMarketingOptionsView: View {
         VStack(spacing: 15) {
             Text("Submit Marketing Options screen")
             
+            Menu {
+                Button("first menu") {
+
+                }
+
+                Button("first menu") {
+
+                }
+            } label: {
+                Text("menu")
+            }
+            
             Button("Go to root") {
                 settingManager.popToRoot()
             }
@@ -29,6 +41,32 @@ struct SubmitMarketingOptionsView: View {
                 }
             }
         }
+    }
+    
+    @ViewBuilder
+    func samplePopUp() -> some View {
+        GroupBox {
+            DisclosureGroup("Menu 1") {
+                Text("Item 1")
+                Text("Item 2")
+                Text("Item 3")
+            }
+        }
+//        Menu {
+//            Button() {
+//
+//            } Label: {
+//                Text("first menu")
+//            }
+//
+//            Button() {
+//
+//            } Label: {
+//                Text("second menu")
+//            }
+//        } Label: {
+//            Text("메뉴")
+//        }
     }
 }
 

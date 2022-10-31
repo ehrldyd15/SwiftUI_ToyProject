@@ -35,6 +35,13 @@
 			remoteGlobalIDString = 00378237290B683200D89ECF;
 			remoteInfo = Navigation;
 		};
+		0037828F290BB87200D89ECF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0037827A290BB87000D89ECF;
+			remoteInfo = ContextMenus;
+		};
 		00F2E4E128F4FFB700C7DA00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */;
@@ -70,6 +77,7 @@
 		0012164528FFCE79000414FB /* SwiftUI-ToyProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-ToyProject-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0012168F29076C46000414FB /* BookAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BookAnimation.xcodeproj; path = BookAnimation/BookAnimation.xcodeproj; sourceTree = "<group>"; };
 		00378248290B683200D89ECF /* Navigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigation.xcodeproj; path = Navigation/Navigation.xcodeproj; sourceTree = "<group>"; };
+		0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContextMenus.xcodeproj; path = ContextMenus/ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
 		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,9 +124,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		0037828C290BB87200D89ECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00378290290BB87200D89ECF /* ContextMenus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
+				0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */,
 				00378248290B683200D89ECF /* Navigation.xcodeproj */,
 				0012168F29076C46000414FB /* BookAnimation.xcodeproj */,
 				0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */,
@@ -243,6 +260,10 @@
 					ProjectRef = 0012168F29076C46000414FB /* BookAnimation.xcodeproj */;
 				},
 				{
+					ProductGroup = 0037828C290BB87200D89ECF /* Products */;
+					ProjectRef = 0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */;
+				},
+				{
 					ProductGroup = 00F2E52F28F522E000C7DA00 /* Products */;
 					ProjectRef = 00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */;
 				},
@@ -294,6 +315,13 @@
 			fileType = wrapper.application;
 			path = Navigation.app;
 			remoteRef = 00378250290B683300D89ECF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00378290290BB87200D89ECF /* ContextMenus.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ContextMenus.app;
+			remoteRef = 0037828F290BB87200D89ECF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00F2E4E228F4FFB700C7DA00 /* Metaball.app */ = {
