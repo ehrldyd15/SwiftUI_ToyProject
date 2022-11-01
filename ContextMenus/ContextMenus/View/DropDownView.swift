@@ -63,7 +63,7 @@ struct DropDownView: View {
                 Spacer()
             }
         }
-        // ✅ 패딩은 팝업뷰와 우측여백의 정의한다.
+        // ✅ 패딩은 팝업뷰와 우측여백의 수치를 정의한다.
         .padding(.horizontal, horizontalPadding)
     }
 }
