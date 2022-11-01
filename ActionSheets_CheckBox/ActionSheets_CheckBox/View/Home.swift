@@ -46,7 +46,7 @@ struct Home: View {
             .padding(.trailing)
             .padding(.top, 10)
             
-            // Filter or Radio Button View
+            // Filter Button View
             VStack {
                 Spacer()
                 
