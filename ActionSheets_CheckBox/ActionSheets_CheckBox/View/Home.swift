@@ -24,8 +24,8 @@ struct Home: View {
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top), content: {
-            Map(coordinateRegion: $coordinate)
-                .ignoresSafeArea()
+//            Map(coordinateRegion: $coordinate)
+//                .ignoresSafeArea()
             
             // Filter Button
             Button(action: {
