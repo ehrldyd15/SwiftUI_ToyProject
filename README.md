@@ -20,3 +20,6 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.10.31 | ContextMunu | 팝업 메뉴의 커스텀, 추후 프로젝트에 활용할 수 있음 |
 | 2022.11.01 | ActionSheets_CheckBox | 액션시트를 이용해서 체크박스 커스텀을 해보자 |
 | 2022.11.03 | BottomSheetDrawer | 바텀시트(드래그)를 만들어보자 |
+| 2022.11.03 | Dynamic Island - Custom Progress View | 다이내믹 아일랜드 커스텀 |
+https://www.youtube.com/watch?v=nK2i7Wt1sUE&t=30s
+6:20
