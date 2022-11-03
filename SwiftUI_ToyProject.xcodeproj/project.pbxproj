@@ -49,6 +49,13 @@
 			remoteGlobalIDString = 003782A52910AFD500D89ECF;
 			remoteInfo = ActionSheets_CheckBox;
 		};
+		003782FC2911FA7200D89ECF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 003782E72911FA7100D89ECF;
+			remoteInfo = BottomSheetDrawer;
+		};
 		00F2E4E128F4FFB700C7DA00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */;
@@ -86,6 +93,7 @@
 		00378248290B683200D89ECF /* Navigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigation.xcodeproj; path = Navigation/Navigation.xcodeproj; sourceTree = "<group>"; };
 		0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContextMenus.xcodeproj; path = ContextMenus/ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionSheets_CheckBox.xcodeproj; path = ActionSheets_CheckBox/ActionSheets_CheckBox.xcodeproj; sourceTree = "<group>"; };
+		003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BottomSheetDrawer.xcodeproj; path = BottomSheetDrawer/BottomSheetDrawer.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
 		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,9 +156,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		003782F92911FA7200D89ECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				003782FD2911FA7200D89ECF /* BottomSheetDrawer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
+				003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */,
 				003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */,
 				0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */,
 				00378248290B683200D89ECF /* Navigation.xcodeproj */,
@@ -281,6 +298,10 @@
 					ProjectRef = 0012168F29076C46000414FB /* BookAnimation.xcodeproj */;
 				},
 				{
+					ProductGroup = 003782F92911FA7200D89ECF /* Products */;
+					ProjectRef = 003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */;
+				},
+				{
 					ProductGroup = 0037828C290BB87200D89ECF /* Products */;
 					ProjectRef = 0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */;
 				},
@@ -350,6 +371,13 @@
 			fileType = wrapper.application;
 			path = ActionSheets_CheckBox.app;
 			remoteRef = 003782BA2910AFD700D89ECF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		003782FD2911FA7200D89ECF /* BottomSheetDrawer.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = BottomSheetDrawer.app;
+			remoteRef = 003782FC2911FA7200D89ECF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00F2E4E228F4FFB700C7DA00 /* Metaball.app */ = {
