@@ -28,6 +28,13 @@
 			remoteGlobalIDString = 0012167E29076C44000414FB;
 			remoteInfo = BookAnimation;
 		};
+		0027713B2918BFD4002C4716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 002771232918BFD2002C4716;
+			remoteInfo = CoffeeAppAnimation;
+		};
 		00378250290B683300D89ECF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00378248290B683200D89ECF /* Navigation.xcodeproj */;
@@ -97,6 +104,7 @@
 		0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Oauth_Authentication.xcodeproj; path = Oauth_Authentication/Oauth_Authentication.xcodeproj; sourceTree = "<group>"; };
 		0012164528FFCE79000414FB /* SwiftUI-ToyProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-ToyProject-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0012168F29076C46000414FB /* BookAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BookAnimation.xcodeproj; path = BookAnimation/BookAnimation.xcodeproj; sourceTree = "<group>"; };
+		002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoffeeAppAnimation.xcodeproj; path = CoffeeAppAnimation/CoffeeAppAnimation.xcodeproj; sourceTree = "<group>"; };
 		00378248290B683200D89ECF /* Navigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigation.xcodeproj; path = Navigation/Navigation.xcodeproj; sourceTree = "<group>"; };
 		0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContextMenus.xcodeproj; path = ContextMenus/ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionSheets_CheckBox.xcodeproj; path = ActionSheets_CheckBox/ActionSheets_CheckBox.xcodeproj; sourceTree = "<group>"; };
@@ -136,6 +144,14 @@
 			isa = PBXGroup;
 			children = (
 				0012169429076C46000414FB /* BookAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		002771352918BFD3002C4716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0027713C2918BFD4002C4716 /* CoffeeAppAnimation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +199,7 @@
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
+				002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */,
 				0037832929137C4000D89ECF /* DynamicProgressView.xcodeproj */,
 				003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */,
 				003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */,
@@ -319,6 +336,10 @@
 					ProjectRef = 003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */;
 				},
 				{
+					ProductGroup = 002771352918BFD3002C4716 /* Products */;
+					ProjectRef = 002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */;
+				},
+				{
 					ProductGroup = 0037828C290BB87200D89ECF /* Products */;
 					ProjectRef = 0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */;
 				},
@@ -371,6 +392,13 @@
 			fileType = wrapper.application;
 			path = BookAnimation.app;
 			remoteRef = 0012169329076C46000414FB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0027713C2918BFD4002C4716 /* CoffeeAppAnimation.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CoffeeAppAnimation.app;
+			remoteRef = 0027713B2918BFD4002C4716 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00378251290B683300D89ECF /* Navigation.app */ = {
