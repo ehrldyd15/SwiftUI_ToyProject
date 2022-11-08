@@ -22,4 +22,4 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.11.03 | BottomSheetDrawer | 바텀시트(드래그)를 만들어보자 |
 | 2022.11.03 | Dynamic Island - Custom Progress View (미완성) | https://www.youtube.com/watch?v=nK2i7Wt1sUE&t=30s 6:20 |
 | 2022.11.03 | Coffee App Animation | 커피이미지 슬라이딩 애니메이션 |
-
+| 2022.11.08 | NavigationStack | IOS 16 이상에서 네비게이션 스택의 다양한 사용법과 스텍관리애 대하여 알아보자 |
