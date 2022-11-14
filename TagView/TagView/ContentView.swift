@@ -32,7 +32,7 @@ struct ContentView: View {
                 .pickerStyle(.segmented)
                 .padding(.bottom, 20)
                 
-                TagView(alignment: alignmentValue == 0 ? .leading : alignmentValue == 1 ? .leading : .leading, spacing: 20) {
+                TagView(alignment: alignmentValue == 0 ? .leading : alignmentValue == 1 ? .center : .trailing, spacing: 20) {
                     ForEach($tags) { $tag in
                         // MARK: New Toggle API
                         Toggle(tag.name, isOn: $tag.isSelected)
@@ -110,18 +110,18 @@ struct TagView: Layout {
         
         for view in subviews {
             let viewSize = view.sizeThatFits(proposal)
-            print("viewSize", viewSize)
+//            print("viewSize", viewSize)
             
             if (origin.x + viewSize.width + spacing) > maxWidth {
                 print("maxWidth", maxWidth)
                 // This Will Give How Much Space Remaining In a row
                 row.1 = (bounds.maxX - origin.x + bounds.minX + spacing)
                 
-                print("row.1", row.1)
-                print("bounds.maxX", bounds.maxX)
-                print("origin.x", origin.x)
-                print("bounds.minX", bounds.minX)
-                print("spacing", spacing)
+//                print("row.1", row.1)
+//                print("bounds.maxX", bounds.maxX)
+//                print("origin.x", origin.x)
+//                print("bounds.minX", bounds.minX)
+//                print("spacing", spacing)
                 
                 rows.append(row)
                 row.0.removeAll()
@@ -133,23 +133,31 @@ struct TagView: Layout {
                 origin.x += (viewSize.width + spacing)
                 
             } else {
-                print("row.1", row.1)
-                print("bounds.maxX", bounds.maxX)
-                print("origin.x", origin.x)
-                print("bounds.minX", bounds.minX)
-                print("spacing", spacing)
+//                print("row.1", row.1)
+//                print("bounds.maxX", bounds.maxX)
+//                print("origin.x", origin.x)
+//                print("bounds.minX", bounds.minX)
+//                print("spacing", spacing)
                 
                 row.0.append(view)
                 origin.x += (viewSize.width + spacing)
             }
         }
         
+//        print("rows", rows)
+        
         // MARK: Exhaust Ones
         if !row.0.isEmpty {
+            print("row.1", row.1)
+            print("bounds.maxX", bounds.maxX)
+            print("origin.x", origin.x)
+            print("bounds.minX", bounds.minX)
+            print("spacing", spacing)
+            
             row.1 = (bounds.maxX - origin.x + bounds.minX + spacing)
             rows.append(row)
         }
-        
+        print("rows", rows)
         // MARK: Resseting Origin
         origin = bounds.origin
         
