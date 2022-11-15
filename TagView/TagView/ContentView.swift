@@ -157,7 +157,7 @@ struct TagView: Layout {
             row.1 = (bounds.maxX - origin.x + bounds.minX + spacing)
             rows.append(row)
         }
-        print("rows", rows)
+
         // MARK: Resseting Origin
         origin = bounds.origin
         
