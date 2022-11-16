@@ -24,3 +24,4 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.11.03 | Coffee App Animation | 커피이미지 슬라이딩 애니메이션 |
 | 2022.11.08 | NavigationStack | IOS 16 이상에서 네비게이션 스택의 다양한 사용법과 스텍관리애 대하여 알아보자 |
 | 2022.11.14 | Tag View | Flexible한 Tag View |
+| 2022.11.16 | Swipe Hidden Header | 상하 스크롤시 헤더뷰 컨트롤 |
