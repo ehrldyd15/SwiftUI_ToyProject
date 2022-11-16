@@ -31,10 +31,10 @@ struct Home: View {
                     // MARK: Moving Header Based On Direction Scroll
                     if previous > current {
 //                        print("UP", current)
-                        if direction != .up {
+                        if direction != .up && current < 0 {
                             shiftOffset = current
                             direction = .up
-                            lastHeaderOffset = headerHeight
+                            lastHeaderOffset = headerOffset
                         }
                         
                         let offset = current < 0 ? (current - shiftOffset) : 0
@@ -45,8 +45,12 @@ struct Home: View {
                         if direction != .down {
                             shiftOffset = current
                             direction = .down
-                            lastHeaderOffset = headerHeight
+                            lastHeaderOffset = headerOffset
                         }
+                        
+                        let offset = lastHeaderOffset + (current - shiftOffset)
+                        
+                        headerOffset = (offset > 0 ? 0 : offset)
                     }
                 }
         }
