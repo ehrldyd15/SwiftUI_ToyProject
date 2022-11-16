@@ -21,8 +21,8 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.10.31 | ContextMunu | 팝업 메뉴의 커스텀, 추후 프로젝트에 활용할 수 있음 |
 | 2022.11.01 | ActionSheets_CheckBox | 액션시트를 이용해서 체크박스 커스텀을 해보자 |
 | 2022.11.03 | BottomSheetDrawer | 바텀시트(드래그)를 만들어보자 |
-| 2022.11.03 | DynamicProgressView | 다이내믹 아일랜드 커스텀 |
-| 2022.11.03 | CoffeeAppAnimation | 커피이미지 슬라이딩 애니메이션 |
+| 2022.11.07 | DynamicProgressView | 다이내믹 아일랜드 커스텀 |
+| 2022.11.09 | CoffeeAppAnimation | 커피이미지 슬라이딩 애니메이션 |
 | 2022.11.14 | TagView | Flexible한 Tag View |
 | 2022.11.16 | SwipeHiddenHeader | 상하 스크롤시 헤더뷰 컨트롤 |
 
