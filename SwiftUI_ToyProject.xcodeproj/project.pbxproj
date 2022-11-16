@@ -56,6 +56,13 @@
 			remoteGlobalIDString = 002771D92923192E002C4716;
 			remoteInfo = SwipeHiddenHeader;
 		};
+		002772152924C544002C4716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 002772002924C543002C4716;
+			remoteInfo = PreferenceKey_Tutorial;
+		};
 		00378250290B683300D89ECF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00378248290B683200D89ECF /* Navigation.xcodeproj */;
@@ -129,6 +136,7 @@
 		002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NavigationStack_Tutorial.xcodeproj; path = NavigationStack_Tutorial/NavigationStack_Tutorial.xcodeproj; sourceTree = "<group>"; };
 		002771BD291E2DBC002C4716 /* TagView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TagView.xcodeproj; path = TagView/TagView.xcodeproj; sourceTree = "<group>"; };
 		002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwipeHiddenHeader.xcodeproj; path = SwipeHiddenHeader/SwipeHiddenHeader.xcodeproj; sourceTree = "<group>"; };
+		002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PreferenceKey_Tutorial.xcodeproj; path = PreferenceKey_Tutorial/PreferenceKey_Tutorial.xcodeproj; sourceTree = "<group>"; };
 		00378248290B683200D89ECF /* Navigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigation.xcodeproj; path = Navigation/Navigation.xcodeproj; sourceTree = "<group>"; };
 		0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContextMenus.xcodeproj; path = ContextMenus/ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionSheets_CheckBox.xcodeproj; path = ActionSheets_CheckBox/ActionSheets_CheckBox.xcodeproj; sourceTree = "<group>"; };
@@ -204,6 +212,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		002772122924C544002C4716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002772162924C544002C4716 /* PreferenceKey_Tutorial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00378249290B683200D89ECF /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +265,6 @@
 			children = (
 				002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */,
 				002771BD291E2DBC002C4716 /* TagView.xcodeproj */,
-				002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */,
 				002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */,
 				0037832929137C4000D89ECF /* DynamicProgressView.xcodeproj */,
 				003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */,
@@ -258,10 +273,12 @@
 				00378248290B683200D89ECF /* Navigation.xcodeproj */,
 				0012168F29076C46000414FB /* BookAnimation.xcodeproj */,
 				0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */,
-				00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */,
 				00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */,
 				00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */,
 				00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */,
+				00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */,
+				002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */,
+				002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */,
 				00F2E3D428F4F97000C7DA00 /* SwiftUI_ToyProject */,
 				00F2E3D328F4F97000C7DA00 /* Products */,
 			);
@@ -423,6 +440,10 @@
 					ProjectRef = 0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */;
 				},
 				{
+					ProductGroup = 002772122924C544002C4716 /* Products */;
+					ProjectRef = 002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */;
+				},
+				{
 					ProductGroup = 002771EB2923192F002C4716 /* Products */;
 					ProjectRef = 002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */;
 				},
@@ -483,6 +504,13 @@
 			fileType = wrapper.application;
 			path = SwipeHiddenHeader.app;
 			remoteRef = 002771EE29231930002C4716 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		002772162924C544002C4716 /* PreferenceKey_Tutorial.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PreferenceKey_Tutorial.app;
+			remoteRef = 002772152924C544002C4716 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00378251290B683300D89ECF /* Navigation.app */ = {

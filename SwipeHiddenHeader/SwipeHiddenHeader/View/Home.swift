@@ -20,7 +20,7 @@ struct Home: View {
     @State var headerOffset: CGFloat = 0
     @State var lastHeaderOffset: CGFloat = 0
     @State var direction: SwipeDirection = .none
-    // MARK: Shift Offset Means The alue From Where It Shifted From Up/Down
+    // MARK: Shift Offset Means The value From Where It Shifted From Up/Down
     @State var shiftOffset: CGFloat = 0
     
     var body: some View {
