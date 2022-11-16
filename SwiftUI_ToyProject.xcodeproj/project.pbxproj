@@ -35,13 +35,6 @@
 			remoteGlobalIDString = 002771232918BFD2002C4716;
 			remoteInfo = CoffeeAppAnimation;
 		};
-		002771822919E9EF002C4716 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 002771632919E9EE002C4716;
-			remoteInfo = NavigationStack_Tutorial;
-		};
 		002771CD291E2DBC002C4716 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 002771BD291E2DBC002C4716 /* TagView.xcodeproj */;
@@ -56,12 +49,26 @@
 			remoteGlobalIDString = 002771D92923192E002C4716;
 			remoteInfo = SwipeHiddenHeader;
 		};
-		002772152924C544002C4716 /* PBXContainerItemProxy */ = {
+		002772952924C8AC002C4716 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 002772002924C543002C4716;
 			remoteInfo = PreferenceKey_Tutorial;
+		};
+		0027729A2924C8AC002C4716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 002771632919E9EE002C4716;
+			remoteInfo = NavigationStack_Tutorial;
+		};
+		002772BD2924C9A3002C4716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00F2E5A628F6449A00C7DA00;
+			remoteInfo = TCA_Simple_tutorial;
 		};
 		00378250290B683300D89ECF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -119,13 +126,6 @@
 			remoteGlobalIDString = 00F2E51D28F522DF00C7DA00;
 			remoteInfo = Isometric;
 		};
-		00F2E5BB28F6449B00C7DA00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00F2E5A628F6449A00C7DA00;
-			remoteInfo = TCA_Simple_tutorial;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -133,10 +133,10 @@
 		0012164528FFCE79000414FB /* SwiftUI-ToyProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-ToyProject-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0012168F29076C46000414FB /* BookAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BookAnimation.xcodeproj; path = BookAnimation/BookAnimation.xcodeproj; sourceTree = "<group>"; };
 		002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoffeeAppAnimation.xcodeproj; path = CoffeeAppAnimation/CoffeeAppAnimation.xcodeproj; sourceTree = "<group>"; };
-		002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NavigationStack_Tutorial.xcodeproj; path = NavigationStack_Tutorial/NavigationStack_Tutorial.xcodeproj; sourceTree = "<group>"; };
+		002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NavigationStack_Tutorial.xcodeproj; path = ../NavigationStack_Tutorial/NavigationStack_Tutorial.xcodeproj; sourceTree = "<group>"; };
 		002771BD291E2DBC002C4716 /* TagView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TagView.xcodeproj; path = TagView/TagView.xcodeproj; sourceTree = "<group>"; };
 		002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwipeHiddenHeader.xcodeproj; path = SwipeHiddenHeader/SwipeHiddenHeader.xcodeproj; sourceTree = "<group>"; };
-		002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PreferenceKey_Tutorial.xcodeproj; path = PreferenceKey_Tutorial/PreferenceKey_Tutorial.xcodeproj; sourceTree = "<group>"; };
+		002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PreferenceKey_Tutorial.xcodeproj; path = ../PreferenceKey_Tutorial/PreferenceKey_Tutorial.xcodeproj; sourceTree = "<group>"; };
 		00378248290B683200D89ECF /* Navigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigation.xcodeproj; path = Navigation/Navigation.xcodeproj; sourceTree = "<group>"; };
 		0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContextMenus.xcodeproj; path = ContextMenus/ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionSheets_CheckBox.xcodeproj; path = ActionSheets_CheckBox/ActionSheets_CheckBox.xcodeproj; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Metaball.xcodeproj; path = Metaball/Metaball.xcodeproj; sourceTree = "<group>"; };
 		00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Metrix.xcodeproj; path = Metrix/Metrix.xcodeproj; sourceTree = "<group>"; };
 		00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Isometric.xcodeproj; path = Isometric/Isometric.xcodeproj; sourceTree = "<group>"; };
-		00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCA_Simple_tutorial.xcodeproj; path = TCA_Simple_tutorial/TCA_Simple_tutorial.xcodeproj; sourceTree = "<group>"; };
+		00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCA_Simple_tutorial.xcodeproj; path = ../TCA_Simple_tutorial/TCA_Simple_tutorial.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,14 +188,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		002771752919E9EF002C4716 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				002771832919E9EF002C4716 /* NavigationStack_Tutorial.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		002771BE291E2DBC002C4716 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +204,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		002772122924C544002C4716 /* Products */ = {
+		002772172924C7A3002C4716 /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
-				002772162924C544002C4716 /* PreferenceKey_Tutorial.app */,
+				00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */,
+				002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */,
+				002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */,
+			);
+			path = Tutorials;
+			sourceTree = "<group>";
+		};
+		002772922924C8AC002C4716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002772962924C8AC002C4716 /* PreferenceKey_Tutorial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		002772972924C8AC002C4716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0027729B2924C8AC002C4716 /* NavigationStack_Tutorial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		002772AB2924C9A3002C4716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002772BE2924C9A3002C4716 /* TCA_Simple_tutorial.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +281,7 @@
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
+				002772172924C7A3002C4716 /* Tutorials */,
 				002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */,
 				002771BD291E2DBC002C4716 /* TagView.xcodeproj */,
 				002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */,
@@ -276,9 +295,6 @@
 				00F2E52E28F522E000C7DA00 /* Isometric.xcodeproj */,
 				00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */,
 				00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */,
-				00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */,
-				002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */,
-				002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */,
 				00F2E3D428F4F97000C7DA00 /* SwiftUI_ToyProject */,
 				00F2E3D328F4F97000C7DA00 /* Products */,
 			);
@@ -332,14 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				00F2E53328F522E000C7DA00 /* Isometric.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		00F2E5B828F6449B00C7DA00 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00F2E5BC28F6449B00C7DA00 /* TCA_Simple_tutorial.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,7 +440,7 @@
 					ProjectRef = 00378248290B683200D89ECF /* Navigation.xcodeproj */;
 				},
 				{
-					ProductGroup = 002771752919E9EF002C4716 /* Products */;
+					ProductGroup = 002772972924C8AC002C4716 /* Products */;
 					ProjectRef = 002771742919E9EF002C4716 /* NavigationStack_Tutorial.xcodeproj */;
 				},
 				{
@@ -440,7 +448,7 @@
 					ProjectRef = 0012163128FF9225000414FB /* Oauth_Authentication.xcodeproj */;
 				},
 				{
-					ProductGroup = 002772122924C544002C4716 /* Products */;
+					ProductGroup = 002772922924C8AC002C4716 /* Products */;
 					ProjectRef = 002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */;
 				},
 				{
@@ -452,7 +460,7 @@
 					ProjectRef = 002771BD291E2DBC002C4716 /* TagView.xcodeproj */;
 				},
 				{
-					ProductGroup = 00F2E5B828F6449B00C7DA00 /* Products */;
+					ProductGroup = 002772AB2924C9A3002C4716 /* Products */;
 					ProjectRef = 00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */;
 				},
 			);
@@ -485,13 +493,6 @@
 			remoteRef = 0027713B2918BFD4002C4716 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		002771832919E9EF002C4716 /* NavigationStack_Tutorial.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = NavigationStack_Tutorial.app;
-			remoteRef = 002771822919E9EF002C4716 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		002771CE291E2DBC002C4716 /* TagView.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -506,11 +507,25 @@
 			remoteRef = 002771EE29231930002C4716 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		002772162924C544002C4716 /* PreferenceKey_Tutorial.app */ = {
+		002772962924C8AC002C4716 /* PreferenceKey_Tutorial.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = PreferenceKey_Tutorial.app;
-			remoteRef = 002772152924C544002C4716 /* PBXContainerItemProxy */;
+			remoteRef = 002772952924C8AC002C4716 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0027729B2924C8AC002C4716 /* NavigationStack_Tutorial.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = NavigationStack_Tutorial.app;
+			remoteRef = 0027729A2924C8AC002C4716 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		002772BE2924C9A3002C4716 /* TCA_Simple_tutorial.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TCA_Simple_tutorial.app;
+			remoteRef = 002772BD2924C9A3002C4716 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00378251290B683300D89ECF /* Navigation.app */ = {
@@ -567,13 +582,6 @@
 			fileType = wrapper.application;
 			path = Isometric.app;
 			remoteRef = 00F2E53228F522E000C7DA00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00F2E5BC28F6449B00C7DA00 /* TCA_Simple_tutorial.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = TCA_Simple_tutorial.app;
-			remoteRef = 00F2E5BB28F6449B00C7DA00 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
