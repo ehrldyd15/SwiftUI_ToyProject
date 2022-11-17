@@ -70,6 +70,13 @@
 			remoteGlobalIDString = 00F2E5A628F6449A00C7DA00;
 			remoteInfo = TCA_Simple_tutorial;
 		};
+		002772F72925F854002C4716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002772EA2925F854002C4716 /* MorphingView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 002772D92925F853002C4716;
+			remoteInfo = MorphingView;
+		};
 		00378250290B683300D89ECF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00378248290B683200D89ECF /* Navigation.xcodeproj */;
@@ -137,6 +144,7 @@
 		002771BD291E2DBC002C4716 /* TagView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TagView.xcodeproj; path = TagView/TagView.xcodeproj; sourceTree = "<group>"; };
 		002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwipeHiddenHeader.xcodeproj; path = SwipeHiddenHeader/SwipeHiddenHeader.xcodeproj; sourceTree = "<group>"; };
 		002772112924C544002C4716 /* PreferenceKey_Tutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PreferenceKey_Tutorial.xcodeproj; path = ../PreferenceKey_Tutorial/PreferenceKey_Tutorial.xcodeproj; sourceTree = "<group>"; };
+		002772EA2925F854002C4716 /* MorphingView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MorphingView.xcodeproj; path = MorphingView/MorphingView.xcodeproj; sourceTree = "<group>"; };
 		00378248290B683200D89ECF /* Navigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigation.xcodeproj; path = Navigation/Navigation.xcodeproj; sourceTree = "<group>"; };
 		0037828B290BB87200D89ECF /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContextMenus.xcodeproj; path = ContextMenus/ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionSheets_CheckBox.xcodeproj; path = ActionSheets_CheckBox/ActionSheets_CheckBox.xcodeproj; sourceTree = "<group>"; };
@@ -238,6 +246,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		002772EB2925F854002C4716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002772F82925F854002C4716 /* MorphingView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00378249290B683200D89ECF /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				002772172924C7A3002C4716 /* Tutorials */,
+				002772EA2925F854002C4716 /* MorphingView.xcodeproj */,
 				002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */,
 				002771BD291E2DBC002C4716 /* TagView.xcodeproj */,
 				002771342918BFD3002C4716 /* CoffeeAppAnimation.xcodeproj */,
@@ -436,6 +453,10 @@
 					ProjectRef = 00F2E4FD28F4FFD200C7DA00 /* Metrix.xcodeproj */;
 				},
 				{
+					ProductGroup = 002772EB2925F854002C4716 /* Products */;
+					ProjectRef = 002772EA2925F854002C4716 /* MorphingView.xcodeproj */;
+				},
+				{
 					ProductGroup = 00378249290B683200D89ECF /* Products */;
 					ProjectRef = 00378248290B683200D89ECF /* Navigation.xcodeproj */;
 				},
@@ -526,6 +547,13 @@
 			fileType = wrapper.application;
 			path = TCA_Simple_tutorial.app;
 			remoteRef = 002772BD2924C9A3002C4716 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		002772F82925F854002C4716 /* MorphingView.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MorphingView.app;
+			remoteRef = 002772F72925F854002C4716 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00378251290B683300D89ECF /* Navigation.app */ = {
