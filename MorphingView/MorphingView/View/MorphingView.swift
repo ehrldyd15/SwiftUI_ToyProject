@@ -11,16 +11,21 @@ struct MorphingView: View {
     @State var currentImage: CustomShape = .cloud
     
     var body: some View {
-        // MARK: Morphing Shape With the Help of Canvas and Fillters
-        Canvas { context, size in
-            if let resolvedImage = context.resolveSymbol(id: 1) {
-                context.draw(resolvedImage, at: CGPoint(x: size.width / 2, y: size.height / 2), anchor: .center)
+        VStack {
+            // MARK: Morphing Shape With the Help of Canvas and Fillters
+            Canvas { context, size in
+                if let resolvedImage = context.resolveSymbol(id: 1) {
+                    context.draw(resolvedImage, at: CGPoint(x: size.width / 2, y: size.height / 2), anchor: .center)
 
+                }
+            } symbols: {
+                // MARK: Giving Images With ID
+                ResolvedImage(currentImage: $currentImage)
+                    .tag(1)
             }
-        } symbols: {
-            // MARK: Giving Images With ID
-            ResolvedImage(currentImage: $currentImage)
-                .tag(1)
+            
+            // MARK: Segmented Picker
+            
         }
     }
 }
