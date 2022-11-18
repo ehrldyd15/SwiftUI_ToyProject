@@ -25,7 +25,14 @@ struct MorphingView: View {
             }
             
             // MARK: Segmented Picker
-            
+            Picker("", selection: $currentImage) {
+                ForEach(CustomShape.allCases, id: \.rawValue) { shape in
+                    Image(systemName: shape.rawValue)
+                        .tag(shape)
+                }
+            }
+            .pickerStyle(.segmented)
+            .padding(15)
         }
     }
 }
