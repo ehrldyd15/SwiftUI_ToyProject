@@ -8,21 +8,51 @@
 import SwiftUI
 
 struct MorphingView: View {
+    // MARK: View Properties
     @State var currentImage: CustomShape = .cloud
+    @State var turnOffImageMorph: Bool = false
+    @State var blurRadius: CGFloat = 0
     
     var body: some View {
         VStack {
-            // MARK: Morphing Shape With the Help of Canvas and Fillters
-            Canvas { context, size in
-                if let resolvedImage = context.resolveSymbol(id: 1) {
-                    context.draw(resolvedImage, at: CGPoint(x: size.width / 2, y: size.height / 2), anchor: .center)
-
-                }
-            } symbols: {
-                // MARK: Giving Images With ID
-                ResolvedImage(currentImage: $currentImage)
-                    .tag(1)
+            // MARK: Image Morph is Simple
+            // Simply Mask the Canvas Shape as Image Mask
+            GeometryReader { proxy in
+                let size = proxy.size
+                
+                Image("iJustine")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .offset(x: -20, y: 40)
+                    .frame(width: size.width, height: size.height)
+                    .clipped()
+                    .overlay(content: {
+                        Rectangle()
+                            .fill(.white)
+                            .opacity(turnOffImageMorph ? 1 : 0)
+                    })
+                    .mask {
+                        // MARK: Morphing Shape With the Help of Canvas and Fillters
+                        Canvas { context, size in
+                            // MARK: Morphing Filters
+                            context.addFilter(.alphaThreshold(min: 0.5))
+                            // MARK: This Value Plays Major Role in the Morphing Animation
+                            context.addFilter(.blur(radius: blurRadius))
+                            
+                            if let resolvedImage = context.resolveSymbol(id: 1) {
+                                context.draw(resolvedImage, at: CGPoint(x: size.width / 2, y: size.height / 2), anchor: .center)
+                            }
+                        } symbols: {
+                            // MARK: Giving Images With ID
+                            ResolvedImage(currentImage: $currentImage)
+                                .tag(1)
+                        }
+                        
+                        // MARK: Animations will not work in the Canvas
+                        // 
+                    }
             }
+            .frame(height: 400)
             
             // MARK: Segmented Picker
             Picker("", selection: $currentImage) {
@@ -33,7 +63,17 @@ struct MorphingView: View {
             }
             .pickerStyle(.segmented)
             .padding(15)
+            .padding(.top, -50)
+            
+            Toggle("Turn Off Image Morph", isOn: $turnOffImageMorph)
+                .fontWeight(.semibold)
+                .padding(.horizontal, 15)
+                .padding(.top, 10)
+            
+            Slider(value: $blurRadius, in: 0...40)
         }
+        .offset(y: -50)
+        .frame(maxHeight: .infinity, alignment: .top)
     }
 }
 
