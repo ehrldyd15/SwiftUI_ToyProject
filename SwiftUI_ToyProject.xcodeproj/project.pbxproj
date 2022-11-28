@@ -112,6 +112,13 @@
 			remoteGlobalIDString = 0037831829137C3F00D89ECF;
 			remoteInfo = DynamicProgressView;
 		};
+		007C2C9729347C270030BC36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 007C2C8229347C270030BC36 /* ValidatingAndDisablingForms.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 007C2C7129347C260030BC36;
+			remoteInfo = ValidatingAndDisablingForms;
+		};
 		00F2E4E128F4FFB700C7DA00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00F2E4DD28F4FFB600C7DA00 /* Metaball.xcodeproj */;
@@ -150,6 +157,7 @@
 		003782B62910AFD600D89ECF /* ActionSheets_CheckBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionSheets_CheckBox.xcodeproj; path = ActionSheets_CheckBox/ActionSheets_CheckBox.xcodeproj; sourceTree = "<group>"; };
 		003782F82911FA7200D89ECF /* BottomSheetDrawer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BottomSheetDrawer.xcodeproj; path = BottomSheetDrawer/BottomSheetDrawer.xcodeproj; sourceTree = "<group>"; };
 		0037832929137C4000D89ECF /* DynamicProgressView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DynamicProgressView.xcodeproj; path = DynamicProgressView/DynamicProgressView.xcodeproj; sourceTree = "<group>"; };
+		007C2C8229347C270030BC36 /* ValidatingAndDisablingForms.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ValidatingAndDisablingForms.xcodeproj; path = ValidatingAndDisablingForms/ValidatingAndDisablingForms.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
 		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -294,10 +302,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		007C2C8329347C270030BC36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				007C2C9829347C270030BC36 /* ValidatingAndDisablingForms.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
 				002772172924C7A3002C4716 /* Tutorials */,
+				007C2C8229347C270030BC36 /* ValidatingAndDisablingForms.xcodeproj */,
 				002772EA2925F854002C4716 /* MorphingView.xcodeproj */,
 				002771EA2923192F002C4716 /* SwipeHiddenHeader.xcodeproj */,
 				002771BD291E2DBC002C4716 /* TagView.xcodeproj */,
@@ -484,6 +501,10 @@
 					ProductGroup = 002772AB2924C9A3002C4716 /* Products */;
 					ProjectRef = 00F2E5B728F6449B00C7DA00 /* TCA_Simple_tutorial.xcodeproj */;
 				},
+				{
+					ProductGroup = 007C2C8329347C270030BC36 /* Products */;
+					ProjectRef = 007C2C8229347C270030BC36 /* ValidatingAndDisablingForms.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -589,6 +610,13 @@
 			fileType = wrapper.application;
 			path = DynamicProgressView.app;
 			remoteRef = 0037832D29137C4000D89ECF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		007C2C9829347C270030BC36 /* ValidatingAndDisablingForms.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ValidatingAndDisablingForms.app;
+			remoteRef = 007C2C9729347C270030BC36 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00F2E4E228F4FFB700C7DA00 /* Metaball.app */ = {
