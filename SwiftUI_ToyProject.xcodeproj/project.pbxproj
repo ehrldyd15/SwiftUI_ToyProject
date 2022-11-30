@@ -133,6 +133,13 @@
 			remoteGlobalIDString = 0037827A290BB87000D89ECF;
 			remoteInfo = ContextMenus;
 		};
+		007C2DBB2936EAF80030BC36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00F2E4EC28F4FFD100C7DA00;
+			remoteInfo = Metrix;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +161,7 @@
 		007C2D832936E86E0030BC36 /* Isometric.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Isometric.xcodeproj; sourceTree = "<group>"; };
 		007C2D892936E86E0030BC36 /* TagView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TagView.xcodeproj; sourceTree = "<group>"; };
 		007C2D8F2936E8EA0030BC36 /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ContextMenus.xcodeproj; sourceTree = "<group>"; };
+		007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Metrix.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
 		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,8 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				007C2D472936E7710030BC36 /* TCA_Simple_tutorial.xcodeproj */,
-				007C2D412936E76D0030BC36 /* PreferenceKey_Tutorial.xcodeproj */,
 				007C2D3B2936E7690030BC36 /* NavigationStack_Tutorial.xcodeproj */,
+				007C2D412936E76D0030BC36 /* PreferenceKey_Tutorial.xcodeproj */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -185,16 +193,17 @@
 		007C2CC42936E1DC0030BC36 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				007C2D772936E86E0030BC36 /* BookAnimation.xcodeproj */,
-				007C2D5F2936E86E0030BC36 /* BottomSheetDrawer.xcodeproj */,
-				007C2D532936E86E0030BC36 /* CoffeeAppAnimation.xcodeproj */,
-				007C2D592936E86E0030BC36 /* DynamicProgressView.xcodeproj */,
-				007C2D832936E86E0030BC36 /* Isometric.xcodeproj */,
 				007C2D712936E86E0030BC36 /* Metaball.xcodeproj */,
-				007C2D652936E86E0030BC36 /* MorphingView.xcodeproj */,
-				007C2D6B2936E86E0030BC36 /* SwipeHiddenHeader.xcodeproj */,
-				007C2D892936E86E0030BC36 /* TagView.xcodeproj */,
+				007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */,
+				007C2D832936E86E0030BC36 /* Isometric.xcodeproj */,
+				007C2D772936E86E0030BC36 /* BookAnimation.xcodeproj */,
 				007C2D4D2936E8570030BC36 /* ActionSheets_CheckBox.xcodeproj */,
+				007C2D5F2936E86E0030BC36 /* BottomSheetDrawer.xcodeproj */,
+				007C2D592936E86E0030BC36 /* DynamicProgressView.xcodeproj */,
+				007C2D532936E86E0030BC36 /* CoffeeAppAnimation.xcodeproj */,
+				007C2D892936E86E0030BC36 /* TagView.xcodeproj */,
+				007C2D6B2936E86E0030BC36 /* SwipeHiddenHeader.xcodeproj */,
+				007C2D652936E86E0030BC36 /* MorphingView.xcodeproj */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -202,9 +211,9 @@
 		007C2CD72936E1E60030BC36 /* Fundamental */ = {
 			isa = PBXGroup;
 			children = (
-				007C2D8F2936E8EA0030BC36 /* ContextMenus.xcodeproj */,
-				007C2D352936E67A0030BC36 /* Navigation.xcodeproj */,
 				007C2D2F2936E5E80030BC36 /* Oauth_Authentication.xcodeproj */,
+				007C2D352936E67A0030BC36 /* Navigation.xcodeproj */,
+				007C2D8F2936E8EA0030BC36 /* ContextMenus.xcodeproj */,
 				007C2D292936E5570030BC36 /* ValidatingAndDisablingForms.xcodeproj */,
 			);
 			path = Fundamental;
@@ -346,6 +355,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		007C2DB82936EAF80030BC36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				007C2DBC2936EAF80030BC36 /* Metrix.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +480,10 @@
 				{
 					ProductGroup = 007C2D722936E86E0030BC36 /* Products */;
 					ProjectRef = 007C2D712936E86E0030BC36 /* Metaball.xcodeproj */;
+				},
+				{
+					ProductGroup = 007C2DB82936EAF80030BC36 /* Products */;
+					ProjectRef = 007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */;
 				},
 				{
 					ProductGroup = 007C2D662936E86E0030BC36 /* Products */;
@@ -626,6 +647,13 @@
 			fileType = wrapper.application;
 			path = ContextMenus.app;
 			remoteRef = 007C2D932936E8EA0030BC36 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		007C2DBC2936EAF80030BC36 /* Metrix.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Metrix.app;
+			remoteRef = 007C2DBB2936EAF80030BC36 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
