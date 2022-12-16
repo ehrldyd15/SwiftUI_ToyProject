@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-//https://www.youtube.com/watch?v=xS-fGYDD0qk&t=191s 3:45
+//https://www.youtube.com/watch?v=xS-fGYDD0qk&t=191s 5:08
 
 struct Home: View {
     // MARK: State Chart Data For Animation Changes
@@ -20,7 +20,31 @@ struct Home: View {
         NavigationStack {
             VStack {
                 // MARK: New Chart API
-                AnimatedCharts()
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack {
+                        Text("Views")
+                            .fontWeight(.semibold)
+                        
+                        Picker("", selection: $currentTab) {
+                            Text("7 Days")
+                                .tag("7 Days")
+                            Text("Weak")
+                                .tag("Weak")
+                            Text("Month")
+                                .tag("Month")
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.leading, 80)
+                    }
+                    
+                    let totalValue = sampleAnalytics.reduce(0.0) { partialResilt, item in
+                        item.views + partialResilt
+                    } ?? 0.0
+                    
+                    Text()
+                    
+                    AnimatedCharts()
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .padding()
@@ -52,5 +76,13 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+    }
+}
+
+extension Double {
+    var stringFormat: String {
+        if self > 10000 && self < 999999 {
+            return String(format: "%.1fk", self / 10000).replacingOccurrences(of: ".0", with: "")
+        }
     }
 }
