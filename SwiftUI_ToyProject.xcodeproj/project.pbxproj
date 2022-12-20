@@ -14,6 +14,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		000292ED29514E4C00DEAA04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000292E829514E4C00DEAA04 /* AnimatedOnBoardingScreen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 000292D729514E4B00DEAA04;
+			remoteInfo = AnimatedOnBoardingScreen;
+		};
 		007C2D2D2936E5570030BC36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 007C2D292936E5570030BC36 /* ValidatingAndDisablingForms.xcodeproj */;
@@ -150,6 +157,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000292E829514E4C00DEAA04 /* AnimatedOnBoardingScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimatedOnBoardingScreen.xcodeproj; path = AnimatedOnBoardingScreen/AnimatedOnBoardingScreen.xcodeproj; sourceTree = "<group>"; };
 		0012164528FFCE79000414FB /* SwiftUI-ToyProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-ToyProject-Info.plist"; sourceTree = SOURCE_ROOT; };
 		007C2D292936E5570030BC36 /* ValidatingAndDisablingForms.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ValidatingAndDisablingForms.xcodeproj; sourceTree = "<group>"; };
 		007C2D2F2936E5E80030BC36 /* Oauth_Authentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Oauth_Authentication.xcodeproj; sourceTree = "<group>"; };
@@ -188,6 +196,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000292E929514E4C00DEAA04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000292EE29514E4C00DEAA04 /* AnimatedOnBoardingScreen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		002772172924C7A3002C4716 /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +217,7 @@
 		007C2CC42936E1DC0030BC36 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				000292E829514E4C00DEAA04 /* AnimatedOnBoardingScreen.xcodeproj */,
 				007C33C2294ABA740030BC36 /* SwiftCharts.xcodeproj */,
 				007C2D712936E86E0030BC36 /* Metaball.xcodeproj */,
 				007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */,
@@ -471,6 +488,10 @@
 					ProjectRef = 007C2D4D2936E8570030BC36 /* ActionSheets_CheckBox.xcodeproj */;
 				},
 				{
+					ProductGroup = 000292E929514E4C00DEAA04 /* Products */;
+					ProjectRef = 000292E829514E4C00DEAA04 /* AnimatedOnBoardingScreen.xcodeproj */;
+				},
+				{
 					ProductGroup = 007C2D782936E86E0030BC36 /* Products */;
 					ProjectRef = 007C2D772936E86E0030BC36 /* BookAnimation.xcodeproj */;
 				},
@@ -551,6 +572,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		000292EE29514E4C00DEAA04 /* AnimatedOnBoardingScreen.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AnimatedOnBoardingScreen.app;
+			remoteRef = 000292ED29514E4C00DEAA04 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		007C2D2E2936E5570030BC36 /* ValidatingAndDisablingForms.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
