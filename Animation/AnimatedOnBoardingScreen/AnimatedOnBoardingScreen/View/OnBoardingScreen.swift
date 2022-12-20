@@ -7,7 +7,12 @@
 
 import SwiftUI
 import Lottie
+import UIKit
+import Foundation
 
+// https://www.youtube.com/watch?v=QKol0WQpoOs 6:19
+// 로띠 안나오는것 확인해볼 것
+// 로띠파일 -> https://lottiefiles.com/search?q=Delivery&category=animations&type=free&animations-page=2
 struct OnBoardingScreen: View {
     // MARK: OnBoarding Slides Model Data
     @State var onboardingItem: [OnboardingItem] = [
@@ -43,6 +48,7 @@ struct OnBoardingScreen: View {
                             // MARK: Resizable Lottie View
                             ResizableLottieView(onboardingItem: $item)
                                 .frame(height: size.width)
+                            
                             
                             Text(item.title)
                                 .font(.title.bold())
@@ -94,31 +100,31 @@ struct OnBoardingScreen_Previews: PreviewProvider {
 // MARK: Resizable Lottie View Without Background
 struct ResizableLottieView: UIViewRepresentable {
     @Binding var onboardingItem: OnboardingItem
-    
+
     func makeUIView(context: Context) -> UIView {
         let view = UIView()
         view.backgroundColor = .clear
-        
+
         setupLottieView(view)
-        
+
         return view
     }
-    
+
     func updateUIView(_ uiView: UIView, context: Context) {
-        
+
     }
-    
+
     func setupLottieView(_ to: UIView) {
         let lottieView = onboardingItem.lottieView
         lottieView.backgroundColor = .clear
         lottieView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         // MARK: Applying Constraints
         let constraints = [
             lottieView.widthAnchor.constraint(equalTo: to.widthAnchor),
             lottieView.heightAnchor.constraint(equalTo: to.heightAnchor)
         ]
-        
+
         to.addSubview(lottieView)
         to.addConstraints(constraints)
     }

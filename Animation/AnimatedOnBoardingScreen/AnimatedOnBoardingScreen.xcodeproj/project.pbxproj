@@ -14,9 +14,9 @@
 		00029309295154B600DEAA04 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 00029308295154B600DEAA04 /* Lottie */; };
 		0002930D2951565600DEAA04 /* OnBoardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0002930C2951565600DEAA04 /* OnBoardingItem.swift */; };
 		0002930F2951570C00DEAA04 /* OnBoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0002930E2951570C00DEAA04 /* OnBoardingScreen.swift */; };
-		000293102951778B00DEAA04 /* Delivery.json in Resources */ = {isa = PBXBuildFile; fileRef = 00029302295153E000DEAA04 /* Delivery.json */; };
-		000293112951778E00DEAA04 /* Pickup.json in Resources */ = {isa = PBXBuildFile; fileRef = 00029301295153E000DEAA04 /* Pickup.json */; };
-		000293122951779200DEAA04 /* Transfer.json in Resources */ = {isa = PBXBuildFile; fileRef = 00029303295153E000DEAA04 /* Transfer.json */; };
+		0002931629517A9F00DEAA04 /* Transfer.json in Resources */ = {isa = PBXBuildFile; fileRef = 0002931329517A9F00DEAA04 /* Transfer.json */; };
+		0002931729517A9F00DEAA04 /* Pickup.json in Resources */ = {isa = PBXBuildFile; fileRef = 0002931429517A9F00DEAA04 /* Pickup.json */; };
+		0002931829517A9F00DEAA04 /* Delivery.json in Resources */ = {isa = PBXBuildFile; fileRef = 0002931529517A9F00DEAA04 /* Delivery.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +25,11 @@
 		000292DC29514E4B00DEAA04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		000292DE29514E4C00DEAA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000292E129514E4C00DEAA04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		00029301295153E000DEAA04 /* Pickup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Pickup.json; sourceTree = "<group>"; };
-		00029302295153E000DEAA04 /* Delivery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Delivery.json; sourceTree = "<group>"; };
-		00029303295153E000DEAA04 /* Transfer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Transfer.json; sourceTree = "<group>"; };
 		0002930C2951565600DEAA04 /* OnBoardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingItem.swift; sourceTree = "<group>"; };
 		0002930E2951570C00DEAA04 /* OnBoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreen.swift; sourceTree = "<group>"; };
+		0002931329517A9F00DEAA04 /* Transfer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Transfer.json; sourceTree = "<group>"; };
+		0002931429517A9F00DEAA04 /* Pickup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Pickup.json; sourceTree = "<group>"; };
+		0002931529517A9F00DEAA04 /* Delivery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Delivery.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +47,9 @@
 		000292CE29514E4B00DEAA04 = {
 			isa = PBXGroup;
 			children = (
-				00029302295153E000DEAA04 /* Delivery.json */,
-				00029301295153E000DEAA04 /* Pickup.json */,
-				00029303295153E000DEAA04 /* Transfer.json */,
+				0002931529517A9F00DEAA04 /* Delivery.json */,
+				0002931429517A9F00DEAA04 /* Pickup.json */,
+				0002931329517A9F00DEAA04 /* Transfer.json */,
 				000292D929514E4B00DEAA04 /* AnimatedOnBoardingScreen */,
 				000292D829514E4B00DEAA04 /* Products */,
 			);
@@ -164,9 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000293122951779200DEAA04 /* Transfer.json in Resources */,
-				000293112951778E00DEAA04 /* Pickup.json in Resources */,
-				000293102951778B00DEAA04 /* Delivery.json in Resources */,
+				0002931629517A9F00DEAA04 /* Transfer.json in Resources */,
+				0002931729517A9F00DEAA04 /* Pickup.json in Resources */,
+				0002931829517A9F00DEAA04 /* Delivery.json in Resources */,
 				000292E229514E4C00DEAA04 /* Preview Assets.xcassets in Resources */,
 				000292DF29514E4C00DEAA04 /* Assets.xcassets in Resources */,
 			);
