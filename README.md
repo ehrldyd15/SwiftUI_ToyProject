@@ -33,6 +33,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.11.16 | SwipeHiddenHeader | 상하 스크롤시 헤더뷰 컨트롤 |
 | 2022.11.18 | MorphingView | 이미지 Morphing |
 | 2022.12.19 | SwiftCharts | 스위프트 차트 API를 활용하여 에니메이션 차트를 만들어보자 |
+| 2022.12.20 | AnimatedOnBoardingScreen | 진행중 -> 로띠 작동 안하는것 해결해야함 |
 
 ### 튜토리얼
 
