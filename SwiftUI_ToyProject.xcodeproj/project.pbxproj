@@ -154,6 +154,13 @@
 			remoteGlobalIDString = 007C33B1294ABA730030BC36;
 			remoteInfo = SwiftCharts;
 		};
+		00DB31432971357100935646 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00DB31392971357000935646 /* DropDown.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00DB31282971356F00935646;
+			remoteInfo = DropDown;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +185,7 @@
 		007C2D8F2936E8EA0030BC36 /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Metrix.xcodeproj; sourceTree = "<group>"; };
 		007C33C2294ABA740030BC36 /* SwiftCharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCharts.xcodeproj; path = SwiftCharts/SwiftCharts.xcodeproj; sourceTree = "<group>"; };
+		00DB31392971357000935646 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = DropDown/DropDown.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2E3D528F4F97000C7DA00 /* SwiftUI_ToyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToyProjectApp.swift; sourceTree = "<group>"; };
 		00F2E3D728F4F97000C7DA00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 		007C2CC42936E1DC0030BC36 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				00DB31392971357000935646 /* DropDown.xcodeproj */,
 				000292E829514E4C00DEAA04 /* AnimatedOnBoardingScreen.xcodeproj */,
 				007C33C2294ABA740030BC36 /* SwiftCharts.xcodeproj */,
 				007C2D712936E86E0030BC36 /* Metaball.xcodeproj */,
@@ -397,6 +406,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		00DB313A2971357000935646 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00DB31442971357100935646 /* DropDown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00F2E3C928F4F97000C7DA00 = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +523,10 @@
 				{
 					ProductGroup = 007C2D902936E8EA0030BC36 /* Products */;
 					ProjectRef = 007C2D8F2936E8EA0030BC36 /* ContextMenus.xcodeproj */;
+				},
+				{
+					ProductGroup = 00DB313A2971357000935646 /* Products */;
+					ProjectRef = 00DB31392971357000935646 /* DropDown.xcodeproj */;
 				},
 				{
 					ProductGroup = 007C2D5A2936E86E0030BC36 /* Products */;
@@ -710,6 +731,13 @@
 			fileType = wrapper.application;
 			path = SwiftCharts.app;
 			remoteRef = 007C33C6294ABA750030BC36 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00DB31442971357100935646 /* DropDown.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DropDown.app;
+			remoteRef = 00DB31432971357100935646 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
