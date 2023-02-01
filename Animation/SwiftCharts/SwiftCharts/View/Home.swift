@@ -8,8 +8,6 @@
 import SwiftUI
 import Charts
 
-//https://www.youtube.com/watch?v=xS-fGYDD0qk&t=191s 5:08
-
 struct Home: View {
     // MARK: State Chart Data For Animation Changes
     @State var sampleAnalytics: [SiteView] = sample_analytics
