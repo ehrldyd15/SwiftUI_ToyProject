@@ -43,3 +43,10 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.10.13 | TCA_Simple_tutorial | https://www.youtube.com/watch?v=fYQ9YnbvasU |
 | 2022.11.08 | NavigationStack_Tutorial | IOS 16 이상에서 네비게이션 스택의 다양한 사용법과 스텍관리애 대하여 알아보자 |
 | 2022.11.16 | PreferenceKey_Tutorial | PreferenceKey 사용법 |
+
+### 미니 프로젝트
+
+| 날짜  | 프로젝트명 | 참고자료 |
+| ------ | ------ | ------ |
+| 2023.02.15 | MarvelAPI | https://www.youtube.com/watch?v=VBvphFzVQS4 |
+
