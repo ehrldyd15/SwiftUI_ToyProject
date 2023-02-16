@@ -10,7 +10,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 
 ### 기본
 
-| 날짜  | 프로젝트명 | 참고자료 |
+| 날짜  | 프로젝트명 | 기타 |
 | ------ | ------ | ------ |
 | 2022.10.19 | OauthAuthentication | https://www.youtube.com/watch?v=NKp3q1JTZu8&list=PLgOlaPUIbynqyJHiTEv7CFaXd8g5jtogT&index=44 |
 | 2022.10.28 | Navigation | IOS 16 미만에서 네비게이션 링크의 다양한 사용법과 스텍관리애 대하여 알아보자 |
@@ -19,7 +19,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 
 ### 애니메이션
 
-| 날짜  | 프로젝트명 | 참고자료 |
+| 날짜  | 프로젝트명 | 기타 |
 | ------ | ------ | ------ |
 | 2022.10.07 | Metaball | 메타볼 애니메이션 |
 | 2022.10.11 | Metrix | 메트릭스 애니메이션 |
@@ -46,7 +46,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 
 ### 미니 프로젝트
 
-| 날짜  | 프로젝트명 | 참고자료 |
+| 날짜  | 프로젝트명 | 기타 |
 | ------ | ------ | ------ |
 | 2023.02.15 | MarvelAPI | https://www.youtube.com/watch?v=VBvphFzVQS4 |
 
