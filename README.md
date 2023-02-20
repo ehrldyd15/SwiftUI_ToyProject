@@ -51,3 +51,8 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | ------ | ------ | ------ |
 | 2023.02.15 | MarvelAPI | https://www.youtube.com/watch?v=VBvphFzVQS4 |
 
+### What's In New SwiftUI (Xcode 버전별 최신사항 업데이트)
+
+| 날짜  | 프로젝트명 | 기타 |
+| ------ | ------ | ------ |
+| 2023.02.20 | Xcode 16.4 | (Sheet / ScrollView / popOver) Options |
