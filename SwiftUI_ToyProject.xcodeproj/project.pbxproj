@@ -175,6 +175,13 @@
 			remoteGlobalIDString = 00926B9429A459ED0016CFD4;
 			remoteInfo = PS_TabBar;
 		};
+		00926C6829A6F58F0016CFD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00926C4629A6F58E0016CFD4;
+			remoteInfo = MovieBooking;
+		};
 		0098DFCF299C65650047478A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */;
@@ -216,6 +223,7 @@
 		007C33C2294ABA740030BC36 /* SwiftCharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCharts.xcodeproj; path = SwiftCharts/SwiftCharts.xcodeproj; sourceTree = "<group>"; };
 		00926B4929A34D150016CFD4 /* Whats_In_New(16.4).xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Whats_In_New(16.4).xcodeproj"; path = "Whats_In_New(16.4)/Whats_In_New(16.4).xcodeproj"; sourceTree = "<group>"; };
 		00926BA529A459EE0016CFD4 /* PS_TabBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PS_TabBar.xcodeproj; path = PS_TabBar/PS_TabBar.xcodeproj; sourceTree = "<group>"; };
+		00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieBooking.xcodeproj; path = MovieBooking/MovieBooking.xcodeproj; sourceTree = "<group>"; };
 		0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MarvelAPI.xcodeproj; path = MarvelAPI/MarvelAPI.xcodeproj; sourceTree = "<group>"; };
 		00DB31392971357000935646 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = DropDown/DropDown.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -472,9 +480,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		00926C5829A6F58F0016CFD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00926C6929A6F58F0016CFD4 /* MovieBooking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0098DF9B299C63D40047478A /* MiniProject */ = {
 			isa = PBXGroup;
 			children = (
+				00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */,
 				0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */,
 			);
 			path = MiniProject;
@@ -635,6 +652,10 @@
 				{
 					ProductGroup = 007C2D662936E86E0030BC36 /* Products */;
 					ProjectRef = 007C2D652936E86E0030BC36 /* MorphingView.xcodeproj */;
+				},
+				{
+					ProductGroup = 00926C5829A6F58F0016CFD4 /* Products */;
+					ProjectRef = 00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */;
 				},
 				{
 					ProductGroup = 007C2D362936E67A0030BC36 /* Products */;
@@ -852,6 +873,13 @@
 			fileType = wrapper.application;
 			path = PS_TabBar.app;
 			remoteRef = 00926BBB29A459EE0016CFD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00926C6929A6F58F0016CFD4 /* MovieBooking.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MovieBooking.app;
+			remoteRef = 00926C6829A6F58F0016CFD4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0098DFD0299C65650047478A /* MarvelAPI.app */ = {
