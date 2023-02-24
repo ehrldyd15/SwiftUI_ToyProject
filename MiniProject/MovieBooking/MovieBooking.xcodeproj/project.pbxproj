@@ -22,6 +22,7 @@
 		00926CB229A6F78A0016CFD4 /* TimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CAE29A6F78A0016CFD4 /* TimeButton.swift */; };
 		00926CB429A6FC7F0016CFD4 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CB329A6FC7F0016CFD4 /* TicketView.swift */; };
 		00926CB629A704320016CFD4 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CB529A704320016CFD4 /* Ticket.swift */; };
+		00926CBD29A864AD0016CFD4 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CBC29A864AD0016CFD4 /* Tickets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		00926CAE29A6F78A0016CFD4 /* TimeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeButton.swift; sourceTree = "<group>"; };
 		00926CB329A6FC7F0016CFD4 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		00926CB529A704320016CFD4 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		00926CBC29A864AD0016CFD4 /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				00926CB529A704320016CFD4 /* Ticket.swift */,
+				00926CBC29A864AD0016CFD4 /* Tickets.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				00926CA629A6F77D0016CFD4 /* StatusUI.swift in Sources */,
 				00926CA529A6F77D0016CFD4 /* CircleBackground.swift in Sources */,
 				00926CB029A6F78A0016CFD4 /* DateButton.swift in Sources */,
+				00926CBD29A864AD0016CFD4 /* Tickets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
