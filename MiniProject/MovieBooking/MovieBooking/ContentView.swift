@@ -10,8 +10,36 @@ import SwiftUI
 // https://www.youtube.com/watch?v=EkcKeGQm3_U
 // 25:47
 struct ContentView: View {
+    @State var currentTab: Tab = .home
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
     var body: some View {
-        Tickets()
+        NavigationView {
+            VStack(spacing: 0) {
+                TabView(selection: $currentTab) {
+                    HomeView()
+                        .tag(Tab.home)
+                    
+                    Text("Location")
+                        .tag(Tab.location)
+                    
+                    TicketView()
+                        .tag(Tab.ticket)
+                    
+                    Text("Category")
+                        .tag(Tab.category)
+
+                    Text("Profile")
+                        .tag(Tab.profile)
+                }
+                
+                CustomTabBar(currentTab: $currentTab)
+            }
+            .ignoresSafeArea(.keyboard)
+        }
     }
 }
 
