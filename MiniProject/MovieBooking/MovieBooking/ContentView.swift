@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// https://www.youtube.com/watch?v=EkcKeGQm3_U
-// 25:47
 struct ContentView: View {
     @State var currentTab: Tab = .home
     

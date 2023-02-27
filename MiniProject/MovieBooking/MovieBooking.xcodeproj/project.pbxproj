@@ -30,6 +30,7 @@
 		00926CC729AC7BDC0016CFD4 /* ScrollSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CC629AC7BDC0016CFD4 /* ScrollSection.swift */; };
 		00926CC929AC827A0016CFD4 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CC829AC827A0016CFD4 /* BookingView.swift */; };
 		00926CCB29AC8B360016CFD4 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CCA29AC8B360016CFD4 /* LargeButton.swift */; };
+		00926CCD29AC91300016CFD4 /* SeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CCC29AC91300016CFD4 /* SeatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		00926CC629AC7BDC0016CFD4 /* ScrollSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSection.swift; sourceTree = "<group>"; };
 		00926CC829AC827A0016CFD4 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		00926CCA29AC8B360016CFD4 /* LargeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
+		00926CCC29AC91300016CFD4 /* SeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				00926CB329A6FC7F0016CFD4 /* TicketView.swift */,
 				00926CC229AC69CE0016CFD4 /* HomeView.swift */,
 				00926CC829AC827A0016CFD4 /* BookingView.swift */,
+				00926CCC29AC91300016CFD4 /* SeatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				00926C7F29A6F61B0016CFD4 /* utils.swift in Sources */,
 				00926C4C29A6F58E0016CFD4 /* ContentView.swift in Sources */,
 				00926CC929AC827A0016CFD4 /* BookingView.swift in Sources */,
+				00926CCD29AC91300016CFD4 /* SeatView.swift in Sources */,
 				00926CC129AC41980016CFD4 /* CustomTabBar.swift in Sources */,
 				00926CC329AC69CE0016CFD4 /* HomeView.swift in Sources */,
 				00926CAA29A6F7830016CFD4 /* TicketData.swift in Sources */,

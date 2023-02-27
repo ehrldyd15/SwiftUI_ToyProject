@@ -23,7 +23,7 @@ struct ScrollSection: View {
                 HStack(spacing: 20) {
                     ForEach(posters.indices, id: \.self) { index in
                         NavigationLink {
-                            Text("Booking View")
+                            BookingView()
                         } label: {
                             Image(posters[index])
                                 .resizable()
