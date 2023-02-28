@@ -59,6 +59,7 @@ struct CustomTabBar: View {
     
     func indicatorOffset(width: CGFloat) -> CGFloat {
         let index = CGFloat(getIndex())
+        
         if index == 0 { return 0 }
         
         let buttonWidth = width / CGFloat(Tab.allCases.count)
