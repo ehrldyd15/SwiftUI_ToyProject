@@ -14,6 +14,8 @@
 		00926CF229AD99660016CFD4 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CEF29AD99660016CFD4 /* ForecastModel.swift */; };
 		00926CF329AD99660016CFD4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CF029AD99660016CFD4 /* Extensions.swift */; };
 		00926CF429AD99660016CFD4 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CF129AD99660016CFD4 /* Shapes.swift */; };
+		00926D1B29B030C90016CFD4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926D1A29B030C90016CFD4 /* HomeView.swift */; };
+		00926D1D29B05B460016CFD4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926D1C29B05B460016CFD4 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		00926CEF29AD99660016CFD4 /* ForecastModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		00926CF029AD99660016CFD4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		00926CF129AD99660016CFD4 /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		00926D1A29B030C90016CFD4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		00926D1C29B05B460016CFD4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				00926CDC29AD975B0016CFD4 /* ContentView.swift */,
+				00926D1A29B030C90016CFD4 /* HomeView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 		00926CFB29ADB5D30016CFD4 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				00926D1C29B05B460016CFD4 /* TabBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -213,8 +219,10 @@
 				00926CDD29AD975B0016CFD4 /* ContentView.swift in Sources */,
 				00926CF229AD99660016CFD4 /* ForecastModel.swift in Sources */,
 				00926CF429AD99660016CFD4 /* Shapes.swift in Sources */,
+				00926D1B29B030C90016CFD4 /* HomeView.swift in Sources */,
 				00926CDB29AD975B0016CFD4 /* WeatherApp.swift in Sources */,
 				00926CF329AD99660016CFD4 /* Extensions.swift in Sources */,
+				00926D1D29B05B460016CFD4 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

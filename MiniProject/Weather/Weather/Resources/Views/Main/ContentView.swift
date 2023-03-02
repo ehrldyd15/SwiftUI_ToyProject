@@ -8,16 +8,10 @@
 import SwiftUI
 
 // https://www.youtube.com/watch?v=b8sP7AS0CAY&t=71s
-// 9:46
+// 33:53
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        HomeView()
     }
 }
 
