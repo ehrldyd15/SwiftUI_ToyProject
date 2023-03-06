@@ -16,6 +16,7 @@
 		00926CF429AD99660016CFD4 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926CF129AD99660016CFD4 /* Shapes.swift */; };
 		00926D1B29B030C90016CFD4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926D1A29B030C90016CFD4 /* HomeView.swift */; };
 		00926D1D29B05B460016CFD4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00926D1C29B05B460016CFD4 /* TabBar.swift */; };
+		00926D2229B59D9A0016CFD4 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 00926D2129B59D9A0016CFD4 /* BottomSheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00926D2229B59D9A0016CFD4 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +164,9 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				00926D2129B59D9A0016CFD4 /* BottomSheet */,
+			);
 			productName = Weather;
 			productReference = 00926CD729AD975B0016CFD4 /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 00926CCE29AD975B0016CFD4;
+			packageReferences = (
+				00926D2029B59D9A0016CFD4 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = 00926CD829AD975B0016CFD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -421,6 +429,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00926D2029B59D9A0016CFD4 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wouter125/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00926D2129B59D9A0016CFD4 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00926D2029B59D9A0016CFD4 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00926CCF29AD975B0016CFD4 /* Project object */;
 }

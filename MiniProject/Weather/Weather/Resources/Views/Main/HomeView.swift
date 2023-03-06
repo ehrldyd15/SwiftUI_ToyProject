@@ -6,8 +6,16 @@
 //
 
 import SwiftUI
+import BottomSheet
+
+enum BottomSheetPosition: CGFloat, CaseIterable {
+    case top = 0.83 // 가장 높은 시트 높이 702 / 스크린 높이 844
+    case middle = 0.385 // 가장 작은 시트 높이 325 / 스크린 높이 844
+}
 
 struct HomeView: View {
+    @State var bottomSheetPosition: BottomSheetPosition = .middle
+    
     private var attributedString: AttributedString {
         var string = AttributedString("19°" + "\n" + "Mostly Clear")
         
@@ -30,34 +38,46 @@ struct HomeView: View {
     }
     
     var body: some View {
-        ZStack {
-            // MARK: Background Color
-            Color.background
-                .ignoresSafeArea()
-            
-            // MARK: Background Image
-            Image("Background")
-                .resizable()
-                .ignoresSafeArea()
-            
-            Image("House")
-                .frame(maxWidth: .infinity, alignment: .top)
-                .padding(.top, 257)
-            
-            VStack(spacing: -10) {
-                Text("Montreal")
-                    .font(.largeTitle)
+        NavigationView {
+            ZStack {
+                // MARK: Background Color
+                Color.background
+                    .ignoresSafeArea()
                 
-                VStack {
-                    Text(attributedString)
+                // MARK: Background Image
+                Image("Background")
+                    .resizable()
+                    .ignoresSafeArea()
+                
+                Image("House")
+                    .frame(maxWidth: .infinity, alignment: .top)
+                    .padding(.top, 257)
+                
+                VStack(spacing: -10) {
+                    Text("Montreal")
+                        .font(.largeTitle)
                     
-                    Text("H:24°   L:18")
-                        .font(.title3.weight(.semibold))
+                    VStack {
+                        Text(attributedString)
+                        
+                        Text("H:24°   L:18")
+                            .font(.title3.weight(.semibold))
+                    }
+                    
+                    Spacer()
+                }
+                .padding(51)
+                
+                // MARK: Bottom Sheet
+                BottomSheetView(position: $bottomSheetPosition) {
+                    Text(bottomSheetPosition.rawValue.formatted())
+                } content: {
+                    
                 }
                 
-                Spacer()
+                TabBar(action: {})
             }
-            .padding(51)
+            .navigationBarHidden(true)
         }
     }
 }

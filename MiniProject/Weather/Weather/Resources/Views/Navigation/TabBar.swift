@@ -12,6 +12,15 @@ struct TabBar: View {
     
     var body: some View {
         ZStack {
+            Arc()
+                .fill(Color.tabBarBackground)
+                .frame(height: 88)
+                .overlay {
+                    // MARK: Arc Border
+                    Arc()
+                        .stroke(Color.tabBarBorder, lineWidth: 0.5)
+                }
+            
             // MARK: Tab Items
             HStack {
                 // MARK: Expand Button
@@ -22,6 +31,8 @@ struct TabBar: View {
                         .frame(width: 44, height: 44)
                 }
                 
+                Spacer()
+                
                 // MARK: Navigation Button
                 NavigationLink {
                     
@@ -30,6 +41,9 @@ struct TabBar: View {
                         .frame(width: 44, height: 44)
                 }
             }
+            .font(.title2)
+            .foregroundColor(.white)
+            .padding(EdgeInsets(top: 20, leading: 23, bottom: 24, trailing: 32))
         }
         .frame(maxHeight: .infinity, alignment: .bottom)
         .ignoresSafeArea()
