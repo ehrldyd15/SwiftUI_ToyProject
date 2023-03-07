@@ -8,7 +8,7 @@
 import SwiftUI
 
 // https://www.youtube.com/watch?v=b8sP7AS0CAY&t=71s
-// 54:28
+// 1:19:43
 struct ContentView: View {
     var body: some View {
         HomeView()
