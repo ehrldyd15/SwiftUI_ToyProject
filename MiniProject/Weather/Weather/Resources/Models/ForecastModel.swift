@@ -2,14 +2,14 @@
 //  ForecastModel.swift
 //  Weather
 //
-//  Created by Dara To on 2022-05-30.
+//  Created by Do Kiyong on 2023/03/14.
 //
 
 import Foundation
 
 enum ForecastPeriod {
     case hourly
-    case weekly
+    case daily
 }
 
 enum Weather: String {
@@ -65,7 +65,7 @@ extension Forecast {
         Forecast(date: .init(timeIntervalSinceNow: hour * 4), weather: .rainy, probability: 0, temperature: 19, high: 24, low: 18, location: "Montreal, Canada")
     ]
     
-    static let weekly: [Forecast] = [
+    static let daily: [Forecast] = [
         Forecast(date: .init(timeIntervalSinceNow: 0), weather: .rainy, probability: 30, temperature: 19, high: 24, low: 18, location: "Montreal, Canada"),
         Forecast(date: .init(timeIntervalSinceNow: day * 1), weather: .rainy, probability: 0, temperature: 19, high: 24, low: 18, location: "Montreal, Canada"),
         Forecast(date: .init(timeIntervalSinceNow: day * 2), weather: .stormy, probability: 100, temperature: 19, high: 24, low: 18, location: "Montreal, Canada"),
@@ -81,3 +81,4 @@ extension Forecast {
         Forecast(date: .now, weather: .tornado, probability: 0, temperature: 23, high: 26, low: 16, location: "Tennessee, United Statesfiojewfpfewhohfwehiohefwoihfweohi")
     ]
 }
+
