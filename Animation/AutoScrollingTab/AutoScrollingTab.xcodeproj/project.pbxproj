@@ -14,6 +14,7 @@
 		0045F90B29C7FF88000638B1 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045F90A29C7FF88000638B1 /* Tab.swift */; };
 		0045F90D29C80044000638B1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045F90C29C80044000638B1 /* Home.swift */; };
 		0045F91029C8237E000638B1 /* ScrollOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045F90F29C8237E000638B1 /* ScrollOffsetModifier.swift */; };
+		0045F91329C943A3000638B1 /* AnimationEndCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045F91229C943A3000638B1 /* AnimationEndCallBack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0045F90A29C7FF88000638B1 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		0045F90C29C80044000638B1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0045F90F29C8237E000638B1 /* ScrollOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetModifier.swift; sourceTree = "<group>"; };
+		0045F91229C943A3000638B1 /* AnimationEndCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEndCallBack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				0045F90F29C8237E000638B1 /* ScrollOffsetModifier.swift */,
+				0045F91229C943A3000638B1 /* AnimationEndCallBack.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				0045F90B29C7FF88000638B1 /* Tab.swift in Sources */,
 				0045F91029C8237E000638B1 /* ScrollOffsetModifier.swift in Sources */,
 				0045F8DC29C7FC7F000638B1 /* ContentView.swift in Sources */,
+				0045F91329C943A3000638B1 /* AnimationEndCallBack.swift in Sources */,
 				0045F90D29C80044000638B1 /* Home.swift in Sources */,
 				0045F8DA29C7FC7F000638B1 /* AutoScrollingTabApp.swift in Sources */,
 			);

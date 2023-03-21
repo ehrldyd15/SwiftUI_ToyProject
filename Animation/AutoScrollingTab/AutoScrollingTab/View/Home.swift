@@ -11,6 +11,7 @@ struct Home: View {
     // View properties
     @State private var activeTab: Tab = .men
     @State private var scrollProgress: CGFloat = .zero
+    @State private var tapState: AnimationState = .init()
     
     var body: some View {
         GeometryReader {
@@ -23,12 +24,16 @@ struct Home: View {
                     ForEach(Tab.allCases, id:\.rawValue) { tab in
                         TabImageView(tab)
                             .tag(tab)
-                            .offsetX() { rect in
+                            .offsetX(activeTab == tab) { rect in
                                 let minX = rect.minX
                                 let pageOffset = minX - (size.width * CGFloat(tab.index))
-//                                print("tab.index -> ", tab.index)
-                                print("minX -> ", minX)
-                                print("pageOffset -> ", pageOffset)
+                                // Converting Page Offset into Progress
+                                let pageProgress = pageOffset / size.width
+                                // Limiting Progress
+                                // Simply Disable When the TapState value is True
+                                if !tapState.status {
+                                    scrollProgress = max(min(pageProgress, 0), -CGFloat(Tab.allCases.count - 1))
+                                }
                             }
                     }
                 }
@@ -53,8 +58,22 @@ struct Home: View {
                         .font(.title3.bold())
                         .foregroundColor(activeTab == tab ? .primary : .gray)
                         .frame(width: tabWidth)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                activeTab = tab
+                                // Setting Scroll Progress Explicitly
+                                scrollProgress = -CGFloat(tab.index)
+                                tapState.startAnimation()
+                            }
+                        }
                 }
             }
+            .modifier(
+                AnimationEndCallback(endValue: tapState.progress, onEnd: {
+                    tapState.reset()
+                })
+            )
             .frame(width: CGFloat(Tab.allCases.count) * tabWidth)
             // Center에서 시작한다.
             .padding(.leading, tabWidth)
