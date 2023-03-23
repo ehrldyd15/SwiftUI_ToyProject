@@ -9,6 +9,7 @@ import SwiftUI
 
 // https://www.youtube.com/watch?v=FnwI1I5-8cE&t=19s
 // https://www.youtube.com/watch?v=xTRhYKjp5nk
+// 4:43
 
 struct ContentView: View {
     var body: some View {
@@ -46,6 +47,10 @@ struct ContentView: View {
             HStack {
                 Triangle()
                     .fill(.red)
+                    .frame(width: 100, height: 100)
+                
+                Triangle()
+                    .stroke(.red, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
                     .frame(width: 100, height: 100)
             }
         }
