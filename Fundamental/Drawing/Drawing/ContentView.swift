@@ -74,10 +74,15 @@ struct ContentView: View {
                 }
 
             Arc(startAngle: .degrees(-90), endAngle: .degrees(90), clockwise: true)
+            // 그냥 stroke를 쓰게되면 선을 중심으로 두꼐 40짜리 선이 Circle을 테두리를 중심으로 그려진다.
+            // 따라서 선 밖과 안쪽에 20씩 두꺼운 그림이 그려지면서 line이 화면 밖을 빠져나가게 된다.
+//                .stroke(.blue, lineWidth: 40)
+            // Circle의 테두리 안쪽으로 두꼐 40짜리 선이 그려지도록 해야하므로 strokeBorder를 쓴다.
+            // 하지만 strokeBorder는 Shape의 멤버가 아니기 때문에 InsettableShape 프로토콜을 채택하여 쓰도록 한다.
                 .strokeBorder(.blue, lineWidth: 40)
                 .tabItem {
                     Image(systemName: "2.square.fill")
-                    Text("First")
+                    Text("InsettableShape")
                 }
 
             Text("path/Shape")
@@ -85,6 +90,13 @@ struct ContentView: View {
                     Image(systemName: "3.square.fill")
                     Text("First")
                 }
+            
+//            Text("path/Shape")
+//                .tabItem {
+//                    Image(systemName: "3.square.fill")
+//                    Text("First")
+//                }
+            
         }
     }
 }
