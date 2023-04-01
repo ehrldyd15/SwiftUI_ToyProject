@@ -11,8 +11,12 @@ import SwiftUI
 // https://www.youtube.com/watch?v=xTRhYKjp5nk
 // https://www.youtube.com/watch?v=HkSoE0j8u90
 // https://www.youtube.com/watch?v=sQ89JRq0kvg
+// https://www.youtube.com/watch?v=23rvgRZVvLM
 
 struct ContentView: View {
+    @State private var petalOffset = -20.0
+    @State private var petalWidth = 100.0
+    
     var body: some View {
         TabView {
             VStack {
@@ -68,16 +72,16 @@ struct ContentView: View {
                 
                 Spacer()
             }
-                .tabItem {
-                    Image(systemName: "1.square.fill")
-                    Text("Path/Shape")
-                }
+            .tabItem {
+                Image(systemName: "1.square.fill")
+                Text("Path/Shape")
+            }
 
             Arc(startAngle: .degrees(-90), endAngle: .degrees(90), clockwise: true)
             // 그냥 stroke를 쓰게되면 선을 중심으로 두꼐 40짜리 선이 Circle을 테두리를 중심으로 그려진다.
             // 따라서 선 밖과 안쪽에 20씩 두꺼운 그림이 그려지면서 line이 화면 밖을 빠져나가게 된다.
 //                .stroke(.blue, lineWidth: 40)
-            // Circle의 테두리 안쪽으로 두꼐 40짜리 선이 그려지도록 해야하므로 strokeBorder를 쓴다.
+            // Circle의 테두리 안쪽으로 두께 40짜리 선이 그려지도록 해야하므로 strokeBorder를 쓴다.
             // 하지만 strokeBorder는 Shape의 멤버가 아니기 때문에 InsettableShape 프로토콜을 채택하여 쓰도록 한다.
                 .strokeBorder(.blue, lineWidth: 40)
                 .tabItem {
@@ -85,11 +89,24 @@ struct ContentView: View {
                     Text("InsettableShape")
                 }
 
-            Text("path/Shape")
-                .tabItem {
-                    Image(systemName: "3.square.fill")
-                    Text("First")
-                }
+            VStack {
+                Flower(petalOffset: petalOffset, petalWidth: petalWidth)
+                    .stroke(.red, lineWidth: 1)
+//                    .fill(.red)
+//                    .fill(.red, style: FillStyle(eoFill: true))
+                
+                Text("Offset")
+                Slider(value: $petalOffset, in: -40...40)
+                    .padding([.horizontal, .bottom])
+                
+                Text("Width")
+                Slider(value: $petalWidth, in: 0...100)
+                    .padding(.horizontal)
+            }
+            .tabItem {
+                Image(systemName: "3.square.fill")
+                Text("First")
+            }
             
 //            Text("path/Shape")
 //                .tabItem {
@@ -104,6 +121,27 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct Flower: Shape {
+    var petalOffset = -20.0
+    var petalWidth = 100.0
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        for number in stride(from: 0, to: Double.pi * 2, by: Double.pi / 8) {
+            let rotation = CGAffineTransform(rotationAngle: number)
+            let position = rotation.concatenating(CGAffineTransform(translationX: rect.width / 2, y: rect.height / 2))
+            
+            let originalPetal = Path(ellipseIn: CGRect(x: petalOffset, y: 0, width: petalWidth, height: rect.width / 2))
+            let rotatedPetal = originalPetal.applying(position)
+            
+            path.addPath(rotatedPetal)
+        }
+        
+        return path
     }
 }
 
