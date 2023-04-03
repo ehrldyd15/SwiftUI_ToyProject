@@ -131,6 +131,15 @@ struct Flower: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
+        // stride 함수
+//        stride(from: 5, to: 30, by: 5).forEach() { (element) in
+//            print(element) // 5, 10, 15, 20, 25 (from: 시작, to: 끝(미포함), by: 폭)
+//        }
+//
+//        stride(from: 5, through: 30, by: 5).forEach() { (element) in
+//            print(element) // 5, 10, 15, 20, 25, 30 (from: 시작, through: 끝(포함), by: 폭)
+//        }
+        
         for number in stride(from: 0, to: Double.pi * 2, by: Double.pi / 8) {
             let rotation = CGAffineTransform(rotationAngle: number)
             let position = rotation.concatenating(CGAffineTransform(translationX: rect.width / 2, y: rect.height / 2))
