@@ -20,6 +20,10 @@ struct ContentView: View {
     
     @State private var colorCycle = 0.0
     
+    @State private var amount = 0.0
+    
+    @State private var insetAmount = 50.0
+    
     var body: some View {
         TabView {
             VStack {
@@ -77,7 +81,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "1.square.fill")
-                Text("Path/Shape")
+                Text("Path / Shape")
             }
 
             Arc(startAngle: .degrees(-90), endAngle: .degrees(90), clockwise: true)
@@ -89,7 +93,7 @@ struct ContentView: View {
                 .strokeBorder(.blue, lineWidth: 40)
                 .tabItem {
                     Image(systemName: "2.square.fill")
-                    Text("InsettableShape")
+                    Text("Insettable Shape")
                 }
 
             VStack {
@@ -119,7 +123,7 @@ struct ContentView: View {
                 .frame(width: 300, height: 200)
                 .tabItem {
                     Image(systemName: "4.square.fill")
-                    Text("ImagePaint")
+                    Text("Image Paint")
                 }
             
             VStack {
@@ -130,8 +134,45 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "5.square.fill")
-                Text("MetalRendering")
+                Text("Metal Rendering")
             }
+            
+            VStack {
+                Image("Example")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .saturation(amount)
+                    .blur(radius: (1 - amount) * 20)
+                
+                Slider(value: $amount)
+                    .padding()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.black)
+            .ignoresSafeArea()
+            .tabItem {
+                Image(systemName: "6.square.fill")
+                Text("Blurs, Blending and More")
+            }
+            
+            Trapezoid(insetAmount: insetAmount)
+                .frame(width: 200, height: 100)
+                .onTapGesture {
+                    withAnimation {
+                        insetAmount = Double.random(in: 10...90)
+                    }
+                }
+                .tabItem {
+                    Image(systemName: "7.square.fill")
+                    Text("Simple Shapes")
+                }
+            
+            Trapezoid(insetAmount: insetAmount)
+                .tabItem {
+                    Image(systemName: "8.square.fill")
+                    Text("Complex Shapes")
+                }
         }
     }
 }
@@ -139,6 +180,59 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct Checkerboard: Shape {
+    var rows: Int
+    var columns: Int
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        let rowSize = rect.height / Double(rows)
+        let columnSize = rect.width / Double(columns)
+        
+        for row in 0..<rows {
+            for column in 0..<columns {
+                if (row + column).isMultiple(of: 2) {
+                    let startX = columnSize * Double(column)
+                    let startY = rowSize * Double(row)
+                    
+                    let rect = CGRect(x: startX, y: startY, width: columnSize, height: rowSize)
+                    
+                    path.addRect(rect)
+                }
+            }
+        }
+        
+        return path
+    }
+}
+
+struct Trapezoid: Shape {
+    var insetAmount: Double
+    
+    // SwiftUI 애니메이션 효과가 적용되는 조건이 따로 있다.
+    // SwiftUI의 애니메이션 효과는 뷰의 상태가 변경되었을 때, 상태 A -> 상태 B로 점차 바뀌면서 애니메이션 효과를 주게 된다.
+    // 만약 뷰의 scale이 1.0 -> 2.0으로 변경되었다면, 1.0에서 2.0으로 바로 바뀌는 것이 아니라, scale = 1.0, 1.1, 1.2, ..., 2.0이 적용되면서 애니메이션 효과를 주는 것이다.
+    // 그런데 위의 insetAmount 뷰의 상태는 아니기 때문에 애니메이션 효과가 적용되지 않는다.
+    // 따라서 animatableData를 구현하면 애니메이션이 작동한다.
+    var animatableData: Double { // ✅
+        get { insetAmount }
+        set { insetAmount = newValue }
+    }
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        path.move(to: CGPoint(x: 0, y: rect.maxY))
+        path.addLine(to: CGPoint(x: insetAmount, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX - insetAmount, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: 0, y: rect.maxY))
+        
+        return path
     }
 }
 
