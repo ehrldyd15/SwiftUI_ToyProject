@@ -13,6 +13,10 @@ import SwiftUI
 // https://www.youtube.com/watch?v=sQ89JRq0kvg
 // https://www.youtube.com/watch?v=23rvgRZVvLM
 // https://www.youtube.com/watch?v=OFf5ZEd3Yzw
+// https://www.youtube.com/watch?v=gWoXpULXmww
+// https://www.youtube.com/watch?v=27ZvPQMYS6E
+// https://www.youtube.com/watch?v=YSBXJvANWSo
+// https://www.youtube.com/watch?v=V2fxC92HGnQ
 
 struct ContentView: View {
     @State private var petalOffset = -20.0
@@ -23,6 +27,15 @@ struct ContentView: View {
     @State private var amount = 0.0
     
     @State private var insetAmount = 50.0
+    
+    @State private var rows = 4
+    @State private var columns = 4
+    
+    @State private var innerRadius = 125.0
+    @State private var outerRadius = 75.0
+    @State private var distance = 25.0
+    @State private var amount2 = 1.0
+    @State private var hue = 0.6
     
     var body: some View {
         TabView {
@@ -168,12 +181,102 @@ struct ContentView: View {
                     Text("Simple Shapes")
                 }
             
-            Trapezoid(insetAmount: insetAmount)
+            Checkerboard(rows: rows, columns: columns)
+                .onTapGesture {
+                    withAnimation(.linear(duration: 3)) {
+                        rows = 8
+                        columns = 16
+                    }
+                }
                 .tabItem {
                     Image(systemName: "8.square.fill")
                     Text("Complex Shapes")
                 }
+            
+            VStack(spacing: 0) {
+                Spacer()
+                
+                Spirograph(innerRadius: Int(innerRadius), outerRadius: Int(outerRadius), distance: Int(distance), amount: amount2)
+                    .stroke(Color(hue: hue, saturation: 1, brightness: 1), lineWidth: 1)
+                    .frame(width: 300, height: 300)
+                
+                Spacer()
+                
+                Group {
+                    Text("Inner radius: \(Int(innerRadius))")
+                    Slider(value: $innerRadius, in: 10...150, step: 1)
+                        .padding([.horizontal, .bottom])
+
+                    Text("Outer radius: \(Int(outerRadius))")
+                    Slider(value: $outerRadius, in: 10...150, step: 1)
+                        .padding([.horizontal, .bottom])
+
+                    Text("Distance: \(Int(distance))")
+                    Slider(value: $distance, in: 1...150, step: 1)
+                        .padding([.horizontal, .bottom])
+
+                    Text("Amount: \(amount2, format: .number.precision(.fractionLength(2)))")
+                    Slider(value: $amount2)
+                        .padding([.horizontal, .bottom])
+
+                    Text("Color")
+                    Slider(value: $hue)
+                        .padding(.horizontal)
+                }
+            }
+            .tabItem {
+                Image(systemName: "9.square.fill")
+                Text("Spirograph")
+            }
         }
+    }
+}
+
+struct Spirograph: Shape {
+    let innerRadius: Int
+    let outerRadius: Int
+    let distance: Int
+    let amount: Double
+    
+    func gcd(_ a: Int, _ b: Int) -> Int {
+        var a = a
+        var b = b
+
+        while b != 0 {
+            let temp = b
+            
+            b = a % b
+            a = temp
+        }
+
+        return a
+    }
+    
+    func path(in rect: CGRect) -> Path {
+        let divisor = gcd(innerRadius, outerRadius)
+        let outerRadius = Double(self.outerRadius)
+        let innerRadius = Double(self.innerRadius)
+        let distance = Double(self.distance)
+        let difference = innerRadius - outerRadius
+        let endPoint = ceil(2 * Double.pi * outerRadius / Double(divisor)) * amount
+
+        var path = Path()
+
+        for theta in stride(from: 0, through: endPoint, by: 0.01) {
+            var x = difference * cos(theta) + distance * cos(difference / outerRadius * theta)
+            var y = difference * sin(theta) - distance * sin(difference / outerRadius * theta)
+
+            x += rect.width / 2
+            y += rect.height / 2
+
+            if theta == 0 {
+                path.move(to: CGPoint(x: x, y: y))
+            } else {
+                path.addLine(to: CGPoint(x: x, y: y))
+            }
+        }
+
+        return path
     }
 }
 
@@ -186,6 +289,17 @@ struct ContentView_Previews: PreviewProvider {
 struct Checkerboard: Shape {
     var rows: Int
     var columns: Int
+    
+    var animatableData: AnimatablePair<Double, Double> {
+        get {
+            AnimatablePair(Double(rows), Double(columns))
+        }
+        
+        set {
+            rows = Int(newValue.first)
+            columns = Int(newValue.second)
+        }
+    }
     
     func path(in rect: CGRect) -> Path {
         var path = Path()
