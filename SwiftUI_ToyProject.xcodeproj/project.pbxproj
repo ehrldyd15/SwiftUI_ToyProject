@@ -203,6 +203,13 @@
 			remoteGlobalIDString = 00926CD729AD975B0016CFD4;
 			remoteInfo = Weather;
 		};
+		0096F24229ECE11500CC1DAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0096F22729ECE11400CC1DAA;
+			remoteInfo = CombineTutorial;
+		};
 		0098DFCF299C65650047478A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */;
@@ -248,6 +255,7 @@
 		00926BA529A459EE0016CFD4 /* PS_TabBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PS_TabBar.xcodeproj; path = PS_TabBar/PS_TabBar.xcodeproj; sourceTree = "<group>"; };
 		00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieBooking.xcodeproj; path = MovieBooking/MovieBooking.xcodeproj; sourceTree = "<group>"; };
 		00926CE829AD975D0016CFD4 /* Weather.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Weather.xcodeproj; path = Weather/Weather.xcodeproj; sourceTree = "<group>"; };
+		0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CombineTutorial.xcodeproj; path = CombineTutorial/CombineTutorial.xcodeproj; sourceTree = "<group>"; };
 		0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MarvelAPI.xcodeproj; path = MarvelAPI/MarvelAPI.xcodeproj; sourceTree = "<group>"; };
 		00DB31392971357000935646 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = DropDown/DropDown.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +295,7 @@
 		002772172924C7A3002C4716 /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
+				0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */,
 				007C2D472936E7710030BC36 /* TCA_Simple_tutorial.xcodeproj */,
 				007C2D3B2936E7690030BC36 /* NavigationStack_Tutorial.xcodeproj */,
 				007C2D412936E76D0030BC36 /* PreferenceKey_Tutorial.xcodeproj */,
@@ -538,6 +547,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		0096F23929ECE11500CC1DAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0096F24329ECE11500CC1DAA /* CombineTutorial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0098DF9B299C63D40047478A /* MiniProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +692,10 @@
 				{
 					ProductGroup = 007C2D542936E86E0030BC36 /* Products */;
 					ProjectRef = 007C2D532936E86E0030BC36 /* CoffeeAppAnimation.xcodeproj */;
+				},
+				{
+					ProductGroup = 0096F23929ECE11500CC1DAA /* Products */;
+					ProjectRef = 0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */;
 				},
 				{
 					ProductGroup = 007C2D902936E8EA0030BC36 /* Products */;
@@ -964,6 +985,13 @@
 			fileType = wrapper.application;
 			path = Weather.app;
 			remoteRef = 00926CEC29AD975D0016CFD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0096F24329ECE11500CC1DAA /* CombineTutorial.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CombineTutorial.app;
+			remoteRef = 0096F24229ECE11500CC1DAA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0098DFD0299C65650047478A /* MarvelAPI.app */ = {
