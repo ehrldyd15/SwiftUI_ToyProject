@@ -97,6 +97,23 @@ struct ContentView: View {
             externalProvider.send("C")
             anyCancleable.cancel() //데이터 발행을 중단
             externalProvider.send("D")
+            
+            // ✅ 6
+            let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+
+            // dataTaskPublsiher는 URLSession에서 제공하는 Publisher입니다.
+            let cancellable = URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: [Post].self, decoder: JSONDecoder()) // 전달받은 데이터를 JSON형식으로 Decode합니다.
+            .replaceError(with: []) // 에러가 발생할경우 에러를 전달하지않습니다.
+            .eraseToAnyPublisher()
+            .sink(receiveValue: { posts in
+                print("전달받은 데이터는 총 \(posts.count)개 입니다.")
+            })
+        
+
+            
+            
         }
     }
 }
@@ -148,4 +165,18 @@ class CustomSubscrbier: Subscriber {
 //        unlimited로 설정하면 10개의 데이터를 모두 구독한다.
     }
     
+}
+
+// ✅ 6
+
+enum HTTPError: LocalizedError {
+    case statusCode
+    case post
+}
+
+struct Post: Codable {
+    let id: Int
+    let title: String
+    let body: String
+    let userId: Int
 }
