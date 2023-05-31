@@ -27,6 +27,41 @@ struct Home: View {
                             .frame(height: safeArea.top)
                     })
                     .ignoresSafeArea()
+                    .overlay(alignment: .topTrailing) {
+                        // 샘플 버튼
+                        VStack {
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "location.fill")
+                                    .foregroundColor(.white)
+                                    .padding(10)
+                                    .background {
+                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                            .fill(.black)
+                                    }
+                            }
+                            .showCase(order: 0,
+                                      title: "My Current Location",
+                                      cornerRadius: 10,
+                                      style: .continuous)
+                            
+                            Spacer()
+                            
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "suit.heart.fill")
+                                    .foregroundColor(.red)
+                                    .padding(10)
+                                    .background {
+                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                            .fill(.black)
+                                    }
+                            }
+                        }
+                        .padding(15)
+                    }
             }
             .tabItem {
                 Image(systemName: "macbook.and.iphone")
@@ -47,6 +82,10 @@ struct Home: View {
                     Text("Me")
                 }
         }
+        // 현재 최상위 뷰에 해당 Modifire를 호출하자. 또한, 이것은 한번만 호출되어야 함
+        .modifier(ShowCaseRoot(showHighlights: true, onFinished: {
+            print("Finished OnBoarding")
+        }))
     }
 }
 
