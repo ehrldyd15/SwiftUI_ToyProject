@@ -59,6 +59,10 @@ struct Home: View {
                                             .fill(.black)
                                     }
                             }
+                            .showCase(order: 1,
+                                      title: "Favorite Location's",
+                                      cornerRadius: 10,
+                                      style: .continuous)
                         }
                         .padding(15)
                     }
@@ -82,6 +86,38 @@ struct Home: View {
                     Text("Me")
                 }
         }
+        .overlay(alignment: .bottom, content: {
+            HStack(spacing: 0) {
+                Circle()
+                    .foregroundColor(.clear)
+                    .frame(width: 45, height: 45)
+                    .showCase(order: 2,
+                              title: "My Devices",
+                              cornerRadius: 10,
+                              style: .continuous)
+                    .frame(maxWidth: .infinity)
+                
+                Circle()
+                    .foregroundColor(.clear)
+                    .frame(width: 45, height: 45)
+                    .showCase(order: 4,
+                              title: "Location Enabled Tag's",
+                              cornerRadius: 10,
+                              style: .continuous)
+                    .frame(maxWidth: .infinity)
+                
+                Circle()
+                    .foregroundColor(.clear)
+                    .frame(width: 45, height: 45)
+                    .showCase(order: 3,
+                              title: "Personal Info",
+                              cornerRadius: 10,
+                              style: .continuous)
+                    .frame(maxWidth: .infinity)
+            }
+            // Disabling User Interactions
+            .allowsHitTesting(false)
+        })
         // 현재 최상위 뷰에 해당 Modifire를 호출하자. 또한, 이것은 한번만 호출되어야 함
         .modifier(ShowCaseRoot(showHighlights: true, onFinished: {
             print("Finished OnBoarding")
