@@ -42,6 +42,13 @@
 			remoteGlobalIDString = 0045F9A429CBD7FF000638B1;
 			remoteInfo = Drawing;
 		};
+		005877DA2A3FEC3A0008EF84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 005877BA2A3FEC390008EF84;
+			remoteInfo = ElasticScroll;
+		};
 		00593C682A25C2C200556FBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00593C4D2A25C2C100556FBB /* ShowcaseView.xcodeproj */;
@@ -239,6 +246,7 @@
 		001D70E3299F053400448A4F /* Popovers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Popovers.xcodeproj; path = Popovers/Popovers.xcodeproj; sourceTree = "<group>"; };
 		0045F8E729C7FC80000638B1 /* AutoScrollingTab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutoScrollingTab.xcodeproj; path = AutoScrollingTab/AutoScrollingTab.xcodeproj; sourceTree = "<group>"; };
 		0045F9B529CBD800000638B1 /* Drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Drawing.xcodeproj; path = Drawing/Drawing.xcodeproj; sourceTree = "<group>"; };
+		005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ElasticScroll.xcodeproj; path = ElasticScroll/ElasticScroll.xcodeproj; sourceTree = "<group>"; };
 		00593C4D2A25C2C100556FBB /* ShowcaseView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShowcaseView.xcodeproj; path = ShowcaseView/ShowcaseView.xcodeproj; sourceTree = "<group>"; };
 		007C2D292936E5570030BC36 /* ValidatingAndDisablingForms.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ValidatingAndDisablingForms.xcodeproj; sourceTree = "<group>"; };
 		007C2D2F2936E5E80030BC36 /* Oauth_Authentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Oauth_Authentication.xcodeproj; sourceTree = "<group>"; };
@@ -327,6 +335,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		005877CC2A3FEC3A0008EF84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				005877DB2A3FEC3A0008EF84 /* ElasticScroll.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00593C4E2A25C2C100556FBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +354,7 @@
 		007C2CC42936E1DC0030BC36 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */,
 				00593C4D2A25C2C100556FBB /* ShowcaseView.xcodeproj */,
 				0045F8E729C7FC80000638B1 /* AutoScrollingTab.xcodeproj */,
 				00926BA529A459EE0016CFD4 /* PS_TabBar.xcodeproj */,
@@ -731,6 +748,10 @@
 					ProjectRef = 007C2D592936E86E0030BC36 /* DynamicProgressView.xcodeproj */;
 				},
 				{
+					ProductGroup = 005877CC2A3FEC3A0008EF84 /* Products */;
+					ProjectRef = 005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */;
+				},
+				{
 					ProductGroup = 007C2D842936E86E0030BC36 /* Products */;
 					ProjectRef = 007C2D832936E86E0030BC36 /* Isometric.xcodeproj */;
 				},
@@ -845,6 +866,13 @@
 			fileType = wrapper.application;
 			path = Drawing.app;
 			remoteRef = 0045F9C029CBD800000638B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		005877DB2A3FEC3A0008EF84 /* ElasticScroll.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ElasticScroll.app;
+			remoteRef = 005877DA2A3FEC3A0008EF84 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00593C692A25C2C200556FBB /* ShowcaseView.app */ = {
