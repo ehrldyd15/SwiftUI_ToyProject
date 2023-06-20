@@ -40,6 +40,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2023.03.21 | AutoScrollingTab | 커스텀 스크롤 탭바 |
 | 2023.04.14 | Drawing | Drawing의 각종 스킬에 대하여 알아보자 |
 | 2023.06.01 | ShowcaseView | ShowcaseView 애니메이션을 만들어보자 |
+| 2023.06.20 | ElasticScroll | ElasticScroll 애니메이션을 만들어보자 |
 
 ### 튜토리얼
 
