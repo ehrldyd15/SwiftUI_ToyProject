@@ -18,6 +18,7 @@ struct Home: View {
                 VStack(spacing: 18) {
                     ForEach(sampleMessages) {
                         MessageRow($0)
+                            .elasticScroll(scrollRect: scrollRect, screenSize: size)
                     }
                 }
                 .padding(15)
@@ -25,6 +26,10 @@ struct Home: View {
                     scrollRect = $0
                 })
             }
+            .coordinateSpace(name: "SCROLLVIEW")
+//            .overlay {
+//                Text("\(scrollRect.minY)")
+//            }
         }
     }
     
