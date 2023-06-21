@@ -26,6 +26,7 @@ struct Home: View {
                     scrollRect = $0
                 })
             }
+//            .background(.blue)
             .coordinateSpace(name: "SCROLLVIEW")
 //            .overlay {
 //                Text("\(scrollRect.minY)")

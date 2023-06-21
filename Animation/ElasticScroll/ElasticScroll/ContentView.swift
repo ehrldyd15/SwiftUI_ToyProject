@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-// https://www.youtube.com/watch?v=Xjp1bIoSOHs&t=43s
-// 6:04
-
 struct ContentView: View {
     var body: some View {
         NavigationStack {
