@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-//https://www.youtube.com/watch?v=ZiDVbDlHDF0&t=28s
-
 struct ContentView: View {
     var body: some View {
         VStack {
