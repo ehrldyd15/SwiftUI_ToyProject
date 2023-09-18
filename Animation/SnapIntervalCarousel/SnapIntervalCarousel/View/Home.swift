@@ -41,11 +41,17 @@ struct Home: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 0) {
                         ForEach(images) { imageFile in
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(.white)
-                                .frame(width: pageWidth, height: size.height)
+                            if let thumbnail = imageFile.thumbnail {
+                                Image(uiImage: thumbnail)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: pageWidth, height: size.height)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            }
                         }
                     }
+                    // Making to Start from the Center
+                    .padding(.horizontal, (size.width - pageWidth) / 2)
                 }
             }
             .frame(height: 120)
@@ -56,6 +62,18 @@ struct Home: View {
                 .fill(Color("BG").opacity(0.6).gradient)
                 .rotationEffect(.init(degrees: -180))
                 .ignoresSafeArea()
+        }
+        .task {
+            // Adding Images
+            guard images.isEmpty else { return }
+            
+            for index in 1...10 {
+                let imageName = "Pic \(index)"
+                // Creating Thumbnail (Save Lots of Memory)
+                if let thumbnail = await UIImage(named: imageName)?.byPreparingThumbnail(ofSize: CGSize(width: 300, height: 300)) {
+                    images.append(.init(imageName: imageName, thumbnail: thumbnail))
+                }
+            }
         }
     }
 }

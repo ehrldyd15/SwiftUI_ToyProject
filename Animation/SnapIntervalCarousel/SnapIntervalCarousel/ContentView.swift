@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-//https://www.youtube.com/watch?v=ZiDVbDlHDF0&t=28s
-//2:53
+// https://www.youtube.com/watch?v=ZiDVbDlHDF0&t=28s
+// 4:54
 
 struct ContentView: View {
     var body: some View {

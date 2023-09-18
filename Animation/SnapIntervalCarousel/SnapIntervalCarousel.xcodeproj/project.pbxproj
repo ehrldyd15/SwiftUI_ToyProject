@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001BB6022AB7E01100CB306E /* SnapCarouselHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001BB6012AB7E01100CB306E /* SnapCarouselHelpers.swift */; };
 		006EF7E12A92F4B900F3D8B1 /* SnapIntervalCarouselApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EF7E02A92F4B900F3D8B1 /* SnapIntervalCarouselApp.swift */; };
 		006EF7E32A92F4B900F3D8B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EF7E22A92F4B900F3D8B1 /* ContentView.swift */; };
 		006EF7E52A92F4BA00F3D8B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006EF7E42A92F4BA00F3D8B1 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001BB6012AB7E01100CB306E /* SnapCarouselHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselHelpers.swift; sourceTree = "<group>"; };
 		006EF7DD2A92F4B900F3D8B1 /* SnapIntervalCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapIntervalCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006EF7E02A92F4B900F3D8B1 /* SnapIntervalCarouselApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapIntervalCarouselApp.swift; sourceTree = "<group>"; };
 		006EF7E22A92F4B900F3D8B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001BB6002AB7DFF400CB306E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				001BB6012AB7E01100CB306E /* SnapCarouselHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		006EF7D42A92F4B900F3D8B1 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +65,7 @@
 		006EF7DF2A92F4B900F3D8B1 /* SnapIntervalCarousel */ = {
 			isa = PBXGroup;
 			children = (
+				001BB6002AB7DFF400CB306E /* Helpers */,
 				007762072A96E4990049437F /* View */,
 				007762082A96E4A20049437F /* Model */,
 				006EF7E02A92F4B900F3D8B1 /* SnapIntervalCarouselApp.swift */,
@@ -161,6 +172,7 @@
 			files = (
 				0077620A2A96E4E30049437F /* ImageFile.swift in Sources */,
 				006EF7E32A92F4B900F3D8B1 /* ContentView.swift in Sources */,
+				001BB6022AB7E01100CB306E /* SnapCarouselHelpers.swift in Sources */,
 				007762112A9C2D7B0049437F /* Home.swift in Sources */,
 				006EF7E12A92F4B900F3D8B1 /* SnapIntervalCarouselApp.swift in Sources */,
 			);
