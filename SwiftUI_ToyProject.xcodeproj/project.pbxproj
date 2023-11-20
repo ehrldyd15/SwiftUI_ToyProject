@@ -42,6 +42,13 @@
 			remoteGlobalIDString = 0045F9A429CBD7FF000638B1;
 			remoteInfo = Drawing;
 		};
+		004CF6EE2B0AE71D00206431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 004CF6E22B0AE71B00206431 /* CoordinatorTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 004CF6D12B0AE71900206431;
+			remoteInfo = CoordinatorTest;
+		};
 		005877DA2A3FEC3A0008EF84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */;
@@ -253,6 +260,7 @@
 		001D70E3299F053400448A4F /* Popovers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Popovers.xcodeproj; path = Popovers/Popovers.xcodeproj; sourceTree = "<group>"; };
 		0045F8E729C7FC80000638B1 /* AutoScrollingTab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutoScrollingTab.xcodeproj; path = AutoScrollingTab/AutoScrollingTab.xcodeproj; sourceTree = "<group>"; };
 		0045F9B529CBD800000638B1 /* Drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Drawing.xcodeproj; path = Drawing/Drawing.xcodeproj; sourceTree = "<group>"; };
+		004CF6E22B0AE71B00206431 /* CoordinatorTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoordinatorTest.xcodeproj; path = CoordinatorTest/CoordinatorTest.xcodeproj; sourceTree = "<group>"; };
 		005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ElasticScroll.xcodeproj; path = ElasticScroll/ElasticScroll.xcodeproj; sourceTree = "<group>"; };
 		00593C4D2A25C2C100556FBB /* ShowcaseView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShowcaseView.xcodeproj; path = ShowcaseView/ShowcaseView.xcodeproj; sourceTree = "<group>"; };
 		006EF7EE2A92F4BA00F3D8B1 /* SnapIntervalCarousel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapIntervalCarousel.xcodeproj; path = SnapIntervalCarousel/SnapIntervalCarousel.xcodeproj; sourceTree = "<group>"; };
@@ -339,6 +347,14 @@
 			isa = PBXGroup;
 			children = (
 				0045F9C129CBD800000638B1 /* Drawing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		004CF6E32B0AE71B00206431 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				004CF6EF2B0AE71D00206431 /* CoordinatorTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -609,6 +625,7 @@
 		0098DF9B299C63D40047478A /* MiniProject */ = {
 			isa = PBXGroup;
 			children = (
+				004CF6E22B0AE71B00206431 /* CoordinatorTest.xcodeproj */,
 				00926CE829AD975D0016CFD4 /* Weather.xcodeproj */,
 				00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */,
 				0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */,
@@ -753,6 +770,10 @@
 					ProjectRef = 007C2D8F2936E8EA0030BC36 /* ContextMenus.xcodeproj */;
 				},
 				{
+					ProductGroup = 004CF6E32B0AE71B00206431 /* Products */;
+					ProjectRef = 004CF6E22B0AE71B00206431 /* CoordinatorTest.xcodeproj */;
+				},
+				{
 					ProductGroup = 0045F9B629CBD800000638B1 /* Products */;
 					ProjectRef = 0045F9B529CBD800000638B1 /* Drawing.xcodeproj */;
 				},
@@ -887,6 +908,13 @@
 			fileType = wrapper.application;
 			path = Drawing.app;
 			remoteRef = 0045F9C029CBD800000638B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		004CF6EF2B0AE71D00206431 /* CoordinatorTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CoordinatorTest.app;
+			remoteRef = 004CF6EE2B0AE71D00206431 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		005877DB2A3FEC3A0008EF84 /* ElasticScroll.app */ = {
