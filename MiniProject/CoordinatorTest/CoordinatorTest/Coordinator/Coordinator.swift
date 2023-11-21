@@ -51,8 +51,10 @@ final class Coordinator: ObservableObject {
         
         if isRoot {
             rootNavigationTrigger.toggle()
+            print("rootNavigationTrigger : ", rootNavigationTrigger)
         } else {
             navigationTrigger.toggle()
+            print("navigationTrigger : ", navigationTrigger)
         }
     }
     

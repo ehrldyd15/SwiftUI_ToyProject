@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIModule
 
 struct CView: View {
     
@@ -14,7 +15,12 @@ struct CView: View {
     var body: some View {
         VStack {
             coordinator.navigationLinkSection()
-            Text("CView")
+//            Text("CView")
+            VStack {
+                Color.bgColor.frame(height: 100)
+                Text("Hello, World!")
+            }
+            .border(.red)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
