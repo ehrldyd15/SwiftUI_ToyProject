@@ -19,6 +19,8 @@
 		005D22622B0AEF0900E67F26 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005D22612B0AEF0900E67F26 /* Product.swift */; };
 		00F7C3A52B0C6E39002766E0 /* UIModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F7C39C2B0C6C6D002766E0 /* UIModule.framework */; };
 		00F7C3A62B0C6E39002766E0 /* UIModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00F7C39C2B0C6C6D002766E0 /* UIModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		00F7C3E12B0D93D0002766E0 /* LoadingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F7C3E02B0D938B002766E0 /* LoadingView.framework */; };
+		00F7C3E22B0D93D0002766E0 /* LoadingView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00F7C3E02B0D938B002766E0 /* LoadingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +31,30 @@
 			remoteGlobalIDString = 00F7C38B2B0C6C6D002766E0;
 			remoteInfo = UIModule;
 		};
+		00F7C3C62B0D8241002766E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F7C3C22B0D8241002766E0 /* LoadingView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00F7C3B62B0D8241002766E0;
+			remoteInfo = LoadingView;
+		};
+		00F7C3DF2B0D938B002766E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F7C3DB2B0D938B002766E0 /* LoadingView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00F7C3B62B0D8241002766E0;
+			remoteInfo = LoadingView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		00F7C3A72B0C6E39002766E0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				00F7C3E22B0D93D0002766E0 /* LoadingView.framework in Embed Frameworks */,
 				00F7C3A62B0C6E39002766E0 /* UIModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -58,6 +75,12 @@
 		005D225C2B0AEABF00E67F26 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		005D22612B0AEF0900E67F26 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		00F7C3972B0C6C6D002766E0 /* UIModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIModule.xcodeproj; path = UIModule/UIModule.xcodeproj; sourceTree = "<group>"; };
+		00F7C3C22B0D8241002766E0 /* LoadingView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoadingView.xcodeproj; path = LoadingView/LoadingView.xcodeproj; sourceTree = "<group>"; };
+		00F7C3D72B0D938B002766E0 /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		00F7C3D82B0D938B002766E0 /* LoadingView.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LoadingView.docc; sourceTree = "<group>"; };
+		00F7C3D92B0D938B002766E0 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		00F7C3DA2B0D938B002766E0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		00F7C3DB2B0D938B002766E0 /* LoadingView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LoadingView.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F7C3E12B0D93D0002766E0 /* LoadingView.framework in Frameworks */,
 				00F7C3A52B0C6E39002766E0 /* UIModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +99,7 @@
 		004CF6C82B0AE71900206431 = {
 			isa = PBXGroup;
 			children = (
+				00F7C3C22B0D8241002766E0 /* LoadingView.xcodeproj */,
 				00F7C3972B0C6C6D002766E0 /* UIModule.xcodeproj */,
 				004CF6D32B0AE71900206431 /* CoordinatorTest */,
 				004CF6D22B0AE71900206431 /* Products */,
@@ -142,6 +167,7 @@
 		008640172B0C48610054D9D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00F7C3D52B0D938B002766E0 /* LoadingView */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +176,42 @@
 			isa = PBXGroup;
 			children = (
 				00F7C39C2B0C6C6D002766E0 /* UIModule.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00F7C3C32B0D8241002766E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00F7C3C72B0D8241002766E0 /* LoadingView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00F7C3D52B0D938B002766E0 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				00F7C3D62B0D938B002766E0 /* LoadingView */,
+				00F7C3DB2B0D938B002766E0 /* LoadingView.xcodeproj */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		00F7C3D62B0D938B002766E0 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				00F7C3D72B0D938B002766E0 /* loading.json */,
+				00F7C3D82B0D938B002766E0 /* LoadingView.docc */,
+				00F7C3D92B0D938B002766E0 /* LoadingView.h */,
+				00F7C3DA2B0D938B002766E0 /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		00F7C3DC2B0D938B002766E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00F7C3E02B0D938B002766E0 /* LoadingView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +265,14 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 00F7C3DC2B0D938B002766E0 /* Products */;
+					ProjectRef = 00F7C3DB2B0D938B002766E0 /* LoadingView.xcodeproj */;
+				},
+				{
+					ProductGroup = 00F7C3C32B0D8241002766E0 /* Products */;
+					ProjectRef = 00F7C3C22B0D8241002766E0 /* LoadingView.xcodeproj */;
+				},
+				{
 					ProductGroup = 00F7C3982B0C6C6D002766E0 /* Products */;
 					ProjectRef = 00F7C3972B0C6C6D002766E0 /* UIModule.xcodeproj */;
 				},
@@ -220,6 +290,20 @@
 			fileType = wrapper.framework;
 			path = UIModule.framework;
 			remoteRef = 00F7C39B2B0C6C6D002766E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00F7C3C72B0D8241002766E0 /* LoadingView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoadingView.framework;
+			remoteRef = 00F7C3C62B0D8241002766E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00F7C3E02B0D938B002766E0 /* LoadingView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoadingView.framework;
+			remoteRef = 00F7C3DF2B0D938B002766E0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -389,6 +473,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +502,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

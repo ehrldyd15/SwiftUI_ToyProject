@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import LoadingView
 
 struct ContentView: View {
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
-        NavigationView {
-            AView()
+//        NavigationView {
+//            AView()
+//        }
+        VStack {
+            MetLoadingView()
         }
     }
 }
