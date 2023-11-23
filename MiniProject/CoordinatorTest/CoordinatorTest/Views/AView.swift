@@ -6,15 +6,33 @@
 //
 
 import SwiftUI
+import LoadingView
 
 struct AView: View {
+    
+    @State private var isLoading = false
     
     @StateObject var coordinator = Coordinator(isRoot: true)
     
     var body: some View {
         LazyVStack {
             coordinator.navigationLinkSection()
-            Text("AView")
+            ZStack {
+                Text("AView")
+                
+                VStack {
+                    Spacer()
+                    
+                    Toggle("로딩", isOn: $isLoading)
+                }
+                
+                VStack {
+                    if isLoading {
+                        MetLoadingView()
+                    }
+                }
+            }
+            
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

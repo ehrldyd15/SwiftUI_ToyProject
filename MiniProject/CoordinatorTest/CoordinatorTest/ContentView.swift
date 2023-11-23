@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import LoadingView
+//import LoadingView
 
 struct ContentView: View {
     @State private var isLoading = false
@@ -14,25 +14,31 @@ struct ContentView: View {
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
-//        NavigationView {
-//            AView()
-//        }
-        ZStack {
-
-            
-            VStack {
-                Spacer()
-                
-                Toggle("로딩", isOn: $isLoading)
-            }
-            .padding()
-            
-            VStack {
-                if isLoading {
-                    MetLoadingView()
-                }
-            }
+        NavigationView {
+            AView()
         }
+        
+//        ZStack {
+//            NavigationView {
+//                AView()
+//                
+//                VStack {
+//                    Spacer()
+//                    
+//                    Toggle("로딩", isOn: $isLoading)
+//                }
+//                .padding()
+//                
+//                VStack {
+//                    if isLoading {
+//                        MetLoadingView()
+//                    }
+//                }
+//                
+//            }
+//            
+//
+//        }
         
         
     }
