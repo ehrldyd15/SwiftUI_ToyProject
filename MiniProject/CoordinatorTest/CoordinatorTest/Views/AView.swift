@@ -15,47 +15,57 @@ struct AView: View {
     @StateObject var coordinator = Coordinator(isRoot: true)
     
     var body: some View {
-        LazyVStack {
-            coordinator.navigationLinkSection()
-            ZStack {
+        ZStack {
+            LazyVStack {
+                coordinator.navigationLinkSection()
                 Text("AView")
-                
-                VStack {
-                    Spacer()
-                    
-                    Toggle("로딩", isOn: $isLoading)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        coordinator.push(destination: .aView)
+                    } label: {
+                        Image(systemName: "a.square.fill")
+                    }
                 }
-                
-                VStack {
-                    if isLoading {
-                        MetLoadingView()
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        coordinator.push(destination: .bView(.init(name: "")))
+                    } label: {
+                        Image(systemName: "b.square.fill")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        coordinator.push(destination: .cView)
+                    } label: {
+                        Image(systemName: "c.square.fill")
                     }
                 }
             }
             
+            VStack {
+                Spacer()
+                
+                Toggle("로딩", isOn: $isLoading)
+            }
+            .padding()
+            
+            VStack {
+                if isLoading {
+                    MetLoadingView()
+                        .onAppear(perform: {
+                            delay()
+                        })
+                }
+            }
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    coordinator.push(destination: .aView)
-                } label: {
-                    Image(systemName: "a.square.fill")
-                }
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    coordinator.push(destination: .bView(.init(name: "")))
-                } label: {
-                    Image(systemName: "b.square.fill")
-                }
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    coordinator.push(destination: .cView)
-                } label: {
-                    Image(systemName: "c.square.fill")
-                }
-            }
+
+    }
+    
+    private func delay() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            isLoading = false
         }
     }
     
