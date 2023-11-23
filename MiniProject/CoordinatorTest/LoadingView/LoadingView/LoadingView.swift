@@ -14,7 +14,11 @@ public struct MetLoadingView: View {
     public init() {}
     
     public var body: some View {
-        VStack {
+        
+        ZStack {
+            Color.black.opacity(0.4)
+                .ignoresSafeArea()
+
             LottieView(fileName: "loading")
                 .frame(width: 300, height: 100)
         }
@@ -23,8 +27,6 @@ public struct MetLoadingView: View {
 }
 
 struct LottieView: UIViewRepresentable {
-    
-    typealias UIViewType = UIView
     
     let animationView = LottieAnimationView()
     
@@ -58,7 +60,7 @@ struct LottieView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {
-
+        
     }
     
 }
