@@ -49,6 +49,13 @@
 			remoteGlobalIDString = 004CF6D12B0AE71900206431;
 			remoteInfo = CoordinatorTest;
 		};
+		00558DDF2B2198C600016261 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00558DC22B2198C600016261 /* PropertyWrapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00558DB12B2198C400016261;
+			remoteInfo = PropertyWrapper;
+		};
 		005877DA2A3FEC3A0008EF84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */;
@@ -268,6 +275,7 @@
 		0045F8E729C7FC80000638B1 /* AutoScrollingTab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutoScrollingTab.xcodeproj; path = AutoScrollingTab/AutoScrollingTab.xcodeproj; sourceTree = "<group>"; };
 		0045F9B529CBD800000638B1 /* Drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Drawing.xcodeproj; path = Drawing/Drawing.xcodeproj; sourceTree = "<group>"; };
 		004CF6E22B0AE71B00206431 /* CoordinatorTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoordinatorTest.xcodeproj; path = CoordinatorTest/CoordinatorTest.xcodeproj; sourceTree = "<group>"; };
+		00558DC22B2198C600016261 /* PropertyWrapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PropertyWrapper.xcodeproj; path = PropertyWrapper/PropertyWrapper.xcodeproj; sourceTree = "<group>"; };
 		005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ElasticScroll.xcodeproj; path = ElasticScroll/ElasticScroll.xcodeproj; sourceTree = "<group>"; };
 		00593C4D2A25C2C100556FBB /* ShowcaseView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShowcaseView.xcodeproj; path = ShowcaseView/ShowcaseView.xcodeproj; sourceTree = "<group>"; };
 		006EF7EE2A92F4BA00F3D8B1 /* SnapIntervalCarousel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapIntervalCarousel.xcodeproj; path = SnapIntervalCarousel/SnapIntervalCarousel.xcodeproj; sourceTree = "<group>"; };
@@ -367,6 +375,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		00558DC32B2198C600016261 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00558DE02B2198C600016261 /* PropertyWrapper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		005877CC2A3FEC3A0008EF84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +437,7 @@
 		007C2CD72936E1E60030BC36 /* Fundamental */ = {
 			isa = PBXGroup;
 			children = (
+				00558DC22B2198C600016261 /* PropertyWrapper.xcodeproj */,
 				008D01832B20414C007291BA /* CustomEnvironment.xcodeproj */,
 				0045F9B529CBD800000638B1 /* Drawing.xcodeproj */,
 				007C2D2F2936E5E80030BC36 /* Oauth_Authentication.xcodeproj */,
@@ -855,6 +872,10 @@
 					ProjectRef = 007C2D412936E76D0030BC36 /* PreferenceKey_Tutorial.xcodeproj */;
 				},
 				{
+					ProductGroup = 00558DC32B2198C600016261 /* Products */;
+					ProjectRef = 00558DC22B2198C600016261 /* PropertyWrapper.xcodeproj */;
+				},
+				{
 					ProductGroup = 00926BA629A459EE0016CFD4 /* Products */;
 					ProjectRef = 00926BA529A459EE0016CFD4 /* PS_TabBar.xcodeproj */;
 				},
@@ -936,6 +957,13 @@
 			fileType = wrapper.application;
 			path = CoordinatorTest.app;
 			remoteRef = 004CF6EE2B0AE71D00206431 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00558DE02B2198C600016261 /* PropertyWrapper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PropertyWrapper.app;
+			remoteRef = 00558DDF2B2198C600016261 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		005877DB2A3FEC3A0008EF84 /* ElasticScroll.app */ = {

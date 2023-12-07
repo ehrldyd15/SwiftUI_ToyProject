@@ -28,7 +28,7 @@ class Store: ObservableObject {
 class Item: ObservableObject {
     // name의 값이 변경되면 objectWillChange는 뷰에 값 변경 여부를 알려주는데
     // 뷰에서 값의 바인딩이 아닌 값 변경을 시도하면 objectWillChange Item 내부에서만 값 변경 여부를 알게된다.(Store에서는 값 변경을 모른다는 얘기)
-    // 결국 name의변경으로 인하여 Item자체의 변경을 Store에 알려주는 것이다.
+    // 결국 name의변경으로 인하여 Item자체의 변경을 Combine을 통하여 Store에 알려줘야 하는 것이다. (Store의 init()을 참고)
     @Published var name: String = "item name"
     @Published var price: Int = 0
 }
