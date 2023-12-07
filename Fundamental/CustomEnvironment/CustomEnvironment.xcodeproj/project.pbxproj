@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00558D9A2B2149AF00016261 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00558D992B2149AF00016261 /* HomeView.swift */; };
+		00558D9C2B214F5B00016261 /* RootFlowObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00558D9B2B214F5B00016261 /* RootFlowObject.swift */; };
+		00558D9E2B214FE200016261 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00558D9D2B214FE200016261 /* RootView.swift */; };
+		00558DA12B217E2D00016261 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00558DA02B217E2D00016261 /* Store.swift */; };
+		00558DA32B21891700016261 /* StoreTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00558DA22B21891700016261 /* StoreTestView.swift */; };
+		00558DA52B2192DC00016261 /* OStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00558DA42B2192DC00016261 /* OStore.swift */; };
+		00558DA72B21934C00016261 /* ObservationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00558DA62B21934C00016261 /* ObservationTestView.swift */; };
 		008D01762B20414B007291BA /* CustomEnvironmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01752B20414B007291BA /* CustomEnvironmentApp.swift */; };
 		008D01782B20414B007291BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01772B20414B007291BA /* ContentView.swift */; };
 		008D017A2B20414C007291BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008D01792B20414C007291BA /* Assets.xcassets */; };
@@ -19,9 +26,19 @@
 		008D01BA2B204EAC007291BA /* CustomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01B92B204EAC007291BA /* CustomTheme.swift */; };
 		008D01BC2B20570E007291BA /* ThemeChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01BB2B20570E007291BA /* ThemeChildView.swift */; };
 		008D01BE2B20588D007291BA /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01BD2B20588D007291BA /* ThemeView.swift */; };
+		008D01C52B205B44007291BA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01C42B205B44007291BA /* SplashView.swift */; };
+		008D01C72B205B96007291BA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01C62B205B96007291BA /* RegisterView.swift */; };
+		008D01EF2B205CE3007291BA /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D01EE2B205CE3007291BA /* PasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00558D992B2149AF00016261 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		00558D9B2B214F5B00016261 /* RootFlowObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlowObject.swift; sourceTree = "<group>"; };
+		00558D9D2B214FE200016261 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		00558DA02B217E2D00016261 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		00558DA22B21891700016261 /* StoreTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTestView.swift; sourceTree = "<group>"; };
+		00558DA42B2192DC00016261 /* OStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OStore.swift; sourceTree = "<group>"; };
+		00558DA62B21934C00016261 /* ObservationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTestView.swift; sourceTree = "<group>"; };
 		008D01722B20414B007291BA /* CustomEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008D01752B20414B007291BA /* CustomEnvironmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnvironmentApp.swift; sourceTree = "<group>"; };
 		008D01772B20414B007291BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +52,9 @@
 		008D01B92B204EAC007291BA /* CustomTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTheme.swift; sourceTree = "<group>"; };
 		008D01BB2B20570E007291BA /* ThemeChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChildView.swift; sourceTree = "<group>"; };
 		008D01BD2B20588D007291BA /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		008D01C42B205B44007291BA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		008D01C62B205B96007291BA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		008D01EE2B205CE3007291BA /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00558D9F2B217C7C00016261 /* Observation */ = {
+			isa = PBXGroup;
+			children = (
+				00558DA02B217E2D00016261 /* Store.swift */,
+				00558DA22B21891700016261 /* StoreTestView.swift */,
+				00558DA42B2192DC00016261 /* OStore.swift */,
+				00558DA62B21934C00016261 /* ObservationTestView.swift */,
+			);
+			path = Observation;
+			sourceTree = "<group>";
+		};
 		008D01692B20414B007291BA = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +102,7 @@
 				008D01772B20414B007291BA /* ContentView.swift */,
 				008D01C22B205A9B007291BA /* Environment */,
 				008D01C32B205AA9007291BA /* EnvironmentObject */,
+				00558D9F2B217C7C00016261 /* Observation */,
 				008D01792B20414C007291BA /* Assets.xcassets */,
 				008D017B2B20414C007291BA /* Preview Content */,
 			);
@@ -127,6 +159,12 @@
 		008D01C32B205AA9007291BA /* EnvironmentObject */ = {
 			isa = PBXGroup;
 			children = (
+				008D01C42B205B44007291BA /* SplashView.swift */,
+				008D01C62B205B96007291BA /* RegisterView.swift */,
+				008D01EE2B205CE3007291BA /* PasswordView.swift */,
+				00558D992B2149AF00016261 /* HomeView.swift */,
+				00558D9B2B214F5B00016261 /* RootFlowObject.swift */,
+				00558D9D2B214FE200016261 /* RootView.swift */,
 			);
 			path = EnvironmentObject;
 			sourceTree = "<group>";
@@ -202,13 +240,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				008D01BC2B20570E007291BA /* ThemeChildView.swift in Sources */,
+				00558D9A2B2149AF00016261 /* HomeView.swift in Sources */,
+				00558DA52B2192DC00016261 /* OStore.swift in Sources */,
+				00558DA32B21891700016261 /* StoreTestView.swift in Sources */,
+				008D01C52B205B44007291BA /* SplashView.swift in Sources */,
 				008D01782B20414B007291BA /* ContentView.swift in Sources */,
 				008D01B22B204390007291BA /* CustomEnvironmentTestView.swift in Sources */,
+				00558DA72B21934C00016261 /* ObservationTestView.swift in Sources */,
+				00558D9C2B214F5B00016261 /* RootFlowObject.swift in Sources */,
+				008D01EF2B205CE3007291BA /* PasswordView.swift in Sources */,
 				008D01BA2B204EAC007291BA /* CustomTheme.swift in Sources */,
+				00558D9E2B214FE200016261 /* RootView.swift in Sources */,
 				008D01762B20414B007291BA /* CustomEnvironmentApp.swift in Sources */,
+				00558DA12B217E2D00016261 /* Store.swift in Sources */,
 				008D01B62B20466B007291BA /* DismissTestView.swift in Sources */,
 				008D01B42B2043E1007291BA /* CustomEnvironmentTestChildView.swift in Sources */,
 				008D018A2B2041E9007291BA /* CountEnvironment.swift in Sources */,
+				008D01C72B205B96007291BA /* RegisterView.swift in Sources */,
 				008D01BE2B20588D007291BA /* ThemeView.swift in Sources */,
 				008D01B82B204C67007291BA /* Theme.swift in Sources */,
 			);
