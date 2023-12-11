@@ -10,27 +10,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            TabView {
+                Forum()
+                    .tabItem {
+                        Image(systemName: "bubble.right")
+                    }
+                Text("두번째 탭")
+                    .tabItem {
+                        Image(systemName: "house")
+                    }
+            }
+            .navigationTitle("Scrum 스터디 방")
         }
-        .padding()
     }
+    
 }
 
-struct Porum: View {
+struct Forum: View {
     @State private var list: [Post] = Post.list
     @State private var showAddView: Bool = false
+    @State private var newPost = Post(username: "유저 이름", content: "")
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(list) { post in
+                ForEach($list) { $post in
                     NavigationLink {
-                        PostDetail(post: post)
+                        PostDetail(post: $post)
                     } label: {
                         PostRow(post: post)
                     }
@@ -41,7 +50,7 @@ struct Porum: View {
         .refreshable { }
         .safeAreaInset(edge: .bottom, alignment: .trailing) {
             Button {
-                
+                showAddView = true
             } label: {
                 Image(systemName: "plus")
                     .font(.largeTitle)
@@ -50,9 +59,25 @@ struct Porum: View {
             }
             .padding()
         }
-        .sheet(isPresented: $showAddView) {
-            PostAdd { post in
-                
+        .fullScreenCover(isPresented: $showAddView) {
+            NavigationView {
+                PostAdd(editingPost: $newPost)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button("취소") {
+                                newPost = Post(username: "유저 이름", content: "")
+                                showAddView = false
+                            }
+                        }
+                        
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("게시") {
+                                list.insert(newPost, at: 0)
+                                showAddView = false
+                                newPost = Post(username: "유저 이름", content: "")
+                            }
+                        }
+                    }
             }
         }
     }
@@ -60,49 +85,31 @@ struct Porum: View {
 
 struct PostAdd: View {
     @FocusState private var focused: Bool
-    @Environment(\.dismiss) private var dismiss
-    
-    @State private var text: String = ""
-    
-    let action: (_ post: Post) -> ()
+    @Binding var editingPost: Post
     
     var body: some View {
-        NavigationView {
-            VStack {
-                TextField("포스트를 입력해주세요...", text: $text)
-                    .font(.title)
-                    .padding()
-                    .padding(.top)
-                    .focused($focused)
-                    .onAppear {
-                        focused = true
-                    }
-                
-                Spacer()
-            }
-            .navigationTitle("포스트 개시")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("취소") {
-                        dismiss()
-                    }
+        VStack {
+            TextField("포스트를 입력해주세요...", text: $editingPost.content)
+                .font(.title)
+                .padding()
+                .padding(.top)
+                .focused($focused)
+                .onAppear {
+                    focused = true
                 }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("게시") {
-                        let newPost = Post(username: "유저이름", content: text)
-                        action(newPost)
-                        dismiss()
-                    }
-                }
-            }
+            
+            Spacer()
         }
+        .navigationTitle("포스트 개시")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct PostDetail: View {
-    let post: Post
+    @State private var showEditView: Bool = false
+    @Binding var post: Post
+    @State private var editingPost = Post(username: "유저 이름", content: "")
+    
     var body: some View {
         VStack(spacing: 20) {
             Text(post.username)
@@ -110,10 +117,30 @@ struct PostDetail: View {
                 .font(.largeTitle)
             
             Button {
-                
+                editingPost = post
+                showEditView = true
             } label: {
                 Image(systemName: "pencil")
                 Text("수정")
+            }
+            .fullScreenCover(isPresented: $showEditView) {
+                NavigationView {
+                    PostAdd(editingPost: $editingPost)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button("취소") {
+                                    showEditView = false
+                                }
+                            }
+                            
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button("게시") {
+                                    post = editingPost
+                                    showEditView = false
+                                }
+                            }
+                        }
+                }
             }
         }
     }
@@ -151,7 +178,7 @@ struct PostRow: View {
 struct Post: Identifiable {
     let id = UUID()
     let username: String
-    let content: String
+    var content: String
 }
 
 extension Post {
@@ -172,7 +199,6 @@ extension Post {
 //    PostAdd() { post in
 //        
 //    }
-    NavigationView {
-        Porum()
-    }
+    ContentView()
+
 }
