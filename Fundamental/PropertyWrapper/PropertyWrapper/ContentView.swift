@@ -100,7 +100,7 @@ struct PostAdd: View {
             
             Spacer()
         }
-        .navigationTitle("포스트 개시")
+        .navigationTitle("포스트 게시")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
