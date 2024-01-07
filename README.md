@@ -59,6 +59,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2023.02.15 | MarvelAPI | https://www.youtube.com/watch?v=VBvphFzVQS4 |
 | 2023.02.27 | Movie Booking | https://www.youtube.com/watch?v=EkcKeGQm3_U |
 | 2023.03.17 | Weather App | https://www.youtube.com/watch?v=b8sP7AS0CAY&t=71s |
+| 2023.12.17 | Weather App | 코디네이터 패턴 개념만 알아보자 |
 
 ### What's In New SwiftUI (Xcode 버전별 최신사항 업데이트)
 
