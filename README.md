@@ -67,10 +67,3 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | ------ | ------ | ------ |
 | 2023.02.20 | Xcode 16.4 | (Sheet / ScrollView / popOver) Options |
 
-### 참고자료
-
-| 날짜  | 내용 | url |
-| ------ | ------ | ------ |
-| 2024.02.02 | SwiftUI -> UIKit notification | https://phillip5094.tistory.com/78 |
-
-
