@@ -51,6 +51,7 @@ SwiftUI 토이프로젝트를 만들어 업로드한다
 | 2022.11.08 | NavigationStack_Tutorial | IOS 16 이상에서 네비게이션 스택의 다양한 사용법과 스텍관리애 대하여 알아보자 |
 | 2022.11.16 | PreferenceKey_Tutorial | PreferenceKey 사용법 |
 | 2023.04.18 | Combine | Combine의 기본만 알아보자 |
+| 2024.02.06 | TCA_Study | TCA 기초개념 |
 
 ### 미니 프로젝트
 
