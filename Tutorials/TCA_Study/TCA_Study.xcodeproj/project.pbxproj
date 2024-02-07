@@ -83,6 +83,8 @@
 			dependencies = (
 			);
 			name = TCA_Study;
+			packageProductDependencies = (
+			);
 			productName = TCA_Study;
 			productReference = 00CBE14D2B71E9E10074B516 /* TCA_Study.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,8 @@
 				Base,
 			);
 			mainGroup = 00CBE1442B71E9E10074B516;
+			packageReferences = (
+			);
 			productRefGroup = 00CBE14E2B71E9E10074B516 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
