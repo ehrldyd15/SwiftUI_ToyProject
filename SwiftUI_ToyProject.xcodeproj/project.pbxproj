@@ -266,6 +266,13 @@
 			remoteGlobalIDString = 0098DFBA299C65630047478A;
 			remoteInfo = MarvelAPI;
 		};
+		00C9F3392C3B5FF200086A3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00C9F3122C3B5FF000086A3B;
+			remoteInfo = MetWidget;
+		};
 		00CBE1832B71E9E20074B516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00CBE15E2B71E9E20074B516 /* TCA_Study.xcodeproj */;
@@ -320,6 +327,7 @@
 		00926CE829AD975D0016CFD4 /* Weather.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Weather.xcodeproj; path = Weather/Weather.xcodeproj; sourceTree = "<group>"; };
 		0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CombineTutorial.xcodeproj; path = CombineTutorial/CombineTutorial.xcodeproj; sourceTree = "<group>"; };
 		0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MarvelAPI.xcodeproj; path = MarvelAPI/MarvelAPI.xcodeproj; sourceTree = "<group>"; };
+		00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MetWidget.xcodeproj; path = MetWidget/MetWidget.xcodeproj; sourceTree = "<group>"; };
 		00CBE15E2B71E9E20074B516 /* TCA_Study.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCA_Study.xcodeproj; path = TCA_Study/TCA_Study.xcodeproj; sourceTree = "<group>"; };
 		00DB31392971357000935646 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = DropDown/DropDown.xcodeproj; sourceTree = "<group>"; };
 		00F2E3D228F4F97000C7DA00 /* SwiftUI_ToyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_ToyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,6 +367,7 @@
 		002772172924C7A3002C4716 /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
+				00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */,
 				00CBE15E2B71E9E20074B516 /* TCA_Study.xcodeproj */,
 				0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */,
 				007C2D472936E7710030BC36 /* TCA_Simple_tutorial.xcodeproj */,
@@ -701,6 +710,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		00C9F3242C3B5FF100086A3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C9F33A2C3B5FF200086A3B /* MetWidget.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00CBE15F2B71E9E20074B516 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,6 +893,10 @@
 				{
 					ProductGroup = 007C2DB82936EAF80030BC36 /* Products */;
 					ProjectRef = 007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C9F3242C3B5FF100086A3B /* Products */;
+					ProjectRef = 00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */;
 				},
 				{
 					ProductGroup = 007C2D662936E86E0030BC36 /* Products */;
@@ -1216,6 +1237,13 @@
 			fileType = wrapper.application;
 			path = MarvelAPI.app;
 			remoteRef = 0098DFCF299C65650047478A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C9F33A2C3B5FF200086A3B /* MetWidget.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MetWidget.app;
+			remoteRef = 00C9F3392C3B5FF200086A3B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00CBE1842B71E9E20074B516 /* TCA_Study.app */ = {
