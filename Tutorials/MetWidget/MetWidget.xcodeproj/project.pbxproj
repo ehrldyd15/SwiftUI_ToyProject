@@ -19,6 +19,7 @@
 		00C9F3A82C3B61BB00086A3B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9F3A72C3B61BB00086A3B /* AppIntent.swift */; };
 		00C9F3AA2C3B61BC00086A3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C9F3A92C3B61BC00086A3B /* Assets.xcassets */; };
 		00C9F3AE2C3B61BC00086A3B /* CertWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 00C9F39A2C3B61BB00086A3B /* CertWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		00C9F4102C3CBB7800086A3B /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9F40E2C3CBA9B00086A3B /* TextModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		00C9F3A72C3B61BB00086A3B /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		00C9F3A92C3B61BC00086A3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00C9F3AB2C3B61BC00086A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00C9F40E2C3CBA9B00086A3B /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModel.swift; sourceTree = "<group>"; };
+		00C9F4652C3CF6FE00086A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		00C9F3142C3B5FF000086A3B /* MetWidget */ = {
 			isa = PBXGroup;
 			children = (
+				00C9F4652C3CF6FE00086A3B /* Info.plist */,
 				00C9F3152C3B5FF000086A3B /* MetWidgetApp.swift */,
 				00C9F3172C3B5FF000086A3B /* ContentView.swift */,
 				00C9F3192C3B5FF100086A3B /* Assets.xcassets */,
@@ -132,6 +136,7 @@
 		00C9F3A02C3B61BB00086A3B /* CertWidget */ = {
 			isa = PBXGroup;
 			children = (
+				00C9F40D2C3CBA8C00086A3B /* Models */,
 				00C9F3A12C3B61BB00086A3B /* CertWidgetBundle.swift */,
 				00C9F3A32C3B61BB00086A3B /* CertWidgetLiveActivity.swift */,
 				00C9F3A52C3B61BB00086A3B /* CertWidget.swift */,
@@ -140,6 +145,14 @@
 				00C9F3AB2C3B61BC00086A3B /* Info.plist */,
 			);
 			path = CertWidget;
+			sourceTree = "<group>";
+		};
+		00C9F40D2C3CBA8C00086A3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00C9F40E2C3CBA9B00086A3B /* TextModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C9F3A42C3B61BB00086A3B /* CertWidgetLiveActivity.swift in Sources */,
+				00C9F4102C3CBB7800086A3B /* TextModel.swift in Sources */,
 				00C9F3A82C3B61BB00086A3B /* AppIntent.swift in Sources */,
 				00C9F3A62C3B61BB00086A3B /* CertWidget.swift in Sources */,
 				00C9F3A22C3B61BB00086A3B /* CertWidgetBundle.swift in Sources */,
@@ -405,6 +419,7 @@
 				DEVELOPMENT_TEAM = N683GJ5HAT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,6 +450,7 @@
 				DEVELOPMENT_TEAM = N683GJ5HAT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
