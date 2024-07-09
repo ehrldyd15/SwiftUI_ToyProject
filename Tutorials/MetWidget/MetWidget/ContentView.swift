@@ -16,22 +16,6 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
-        .onAppear {
-            gettext(completion: { data in
-                print("@@@@@data: ", data)
-            })
-        }
-    }
-    
-    func gettext(completion: @escaping ([String]) -> ()) {
-        guard let url = URL(string: "https://meowfacts.herokuapp.com/?count=1") else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data,
-                  let textModel = try? JSONDecoder().decode(TextModel.self, from: data) else { return }
-            
-            completion(textModel.datas)
-        }.resume()
     }
 }
 
