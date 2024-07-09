@@ -9,7 +9,8 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-// https://ios-development.tistory.com/1131
+// https://rriver2.tistory.com/entry/SwiftUI-Widget-%EB%94%B1%EB%8C%80-14
+// https://developer.apple.com/documentation/widgetkit/creating-a-widget-extension?language=objc
 
 // 위젯을 업데이트 할 시기를 WidgetKit에 알리는 역할
 // SimpleEntry를 포함하여, 본격적으로 위젯에 표시될 placeholder, 데이터를 가져와서 표출해주는 snapshot, 타임라인 설정 관련된 timeLine이 존재
