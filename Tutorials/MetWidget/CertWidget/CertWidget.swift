@@ -35,8 +35,9 @@ struct Provider: TimelineProvider {
         getTexts { texts in
             let currentDate = Date()
             let entry = SimpleEntry(date: currentDate, texts: texts)
-            let nextRefresh = Calendar.current.date(byAdding: .minute, value: 3, to: currentDate)!
+            let nextRefresh = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
             let timeline = Timeline(entries: [entry], policy: .after(nextRefresh))
+            
             completion(timeline)
         }
     }
@@ -62,6 +63,8 @@ struct SimpleEntry: TimelineEntry {
 
 // 위젯 뷰를 표출
 struct CertWidgetEntryView: View {
+    @Environment(\.widgetFamily) private var widgetFamily
+    
     var entry: Provider.Entry
     
     private var randomColor: Color {
@@ -73,18 +76,37 @@ struct CertWidgetEntryView: View {
     }
 
     var body: some View {
-        ZStack {
-            randomColor.opacity(0.7)
-            
-            ForEach(entry.texts, id: \.hashValue) { text in
-                LazyVStack { // Widget은 스크롤이 안되므로, List지원 x (대신 VStack 사용)
-                    Text(text)
-                        .foregroundColor(Color.white)
-                        .lineLimit(1)
-                    
-                    Divider()
+        switch widgetFamily {
+        case .systemSmall:
+            ZStack {
+                randomColor.opacity(0.7)
+                
+                Button(intent: ChangeText()) {
+                    Text("컬러변경")
                 }
             }
+        case .systemMedium:
+            ForEach(entry.texts, id: \.hashValue) { text in
+                VStack {
+                    Text(text)
+                        .foregroundColor(Color.black)
+                }
+            }
+        case .systemLarge:
+            ZStack {
+                ForEach(entry.texts, id: \.hashValue) { text in
+                    LazyVStack { // Widget은 스크롤이 안되므로, List지원 x (대신 VStack 사용)
+                        Text(text)
+                            .foregroundColor(Color.black)
+                        
+                        Button(intent: ChangeText()) {
+                            Text("텍스트 변경")
+                        }
+                    }
+                }
+            }
+        default:
+            Text("unknown")
         }
     }
 }

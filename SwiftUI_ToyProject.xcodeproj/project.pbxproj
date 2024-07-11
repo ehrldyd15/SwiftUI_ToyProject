@@ -273,6 +273,13 @@
 			remoteGlobalIDString = 00C9F3122C3B5FF000086A3B;
 			remoteInfo = MetWidget;
 		};
+		00C9F4CE2C3FA1E000086A3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00C9F39A2C3B61BB00086A3B;
+			remoteInfo = CertWidgetExtension;
+		};
 		00CBE1832B71E9E20074B516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00CBE15E2B71E9E20074B516 /* TCA_Study.xcodeproj */;
@@ -714,6 +721,7 @@
 			isa = PBXGroup;
 			children = (
 				00C9F33A2C3B5FF200086A3B /* MetWidget.app */,
+				00C9F4CF2C3FA1E000086A3B /* CertWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1246,6 +1254,13 @@
 			remoteRef = 00C9F3392C3B5FF200086A3B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		00C9F4CF2C3FA1E000086A3B /* CertWidgetExtension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = CertWidgetExtension.appex;
+			remoteRef = 00C9F4CE2C3FA1E000086A3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		00CBE1842B71E9E20074B516 /* TCA_Study.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -1409,6 +1424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_ToyProject/Preview Content\"";
+				DEVELOPMENT_TEAM = N683GJ5HAT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SwiftUI-ToyProject-Info.plist";
@@ -1439,6 +1455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_ToyProject/Preview Content\"";
+				DEVELOPMENT_TEAM = N683GJ5HAT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SwiftUI-ToyProject-Info.plist";
