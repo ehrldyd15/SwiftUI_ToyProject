@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TextModel: Codable {
+struct RandomTextModel: Codable {
     
     enum CodingKeys : String, CodingKey {
         case datas = "data"

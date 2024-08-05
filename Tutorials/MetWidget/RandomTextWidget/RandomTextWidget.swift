@@ -1,0 +1,275 @@
+import WidgetKit
+import SwiftUI
+import Intents
+import ComposableArchitecture
+
+// https://rriver2.tistory.com/entry/SwiftUI-Widget-%EB%94%B1%EB%8C%80-14
+// https://developer.apple.com/documentation/widgetkit/creating-a-widget-extension?language=objc
+
+// 위젯을 업데이트 할 시기를 WidgetKit에 알리는 역할
+// SimpleEntry를 포함하여, 본격적으로 위젯에 표시될 placeholder, 데이터를 가져와서 표출해주는 snapshot, 타임라인 설정 관련된 timeLine이 존재
+struct Provider: TimelineProvider {
+    let viewStore: ViewStore<RandomTextReducer.State, RandomTextReducer.Action>
+    
+    // 데이터를 불러오기 전(snapshot)에 보여줄 placeholder
+    func placeholder(in context: Context) -> SimpleEntry {
+        SimpleEntry(date: Date(), texts: ["empty"])
+    }
+    
+    // 위젯 갤러리에서 위젯을 고를 때 보이는 샘플 데이터를 보여줄때 해당 메소드 호출
+    // API를 통해서 데이터를 fetch하여 보여줄때 딜레이가 있는 경우 여기서 샘플 데이터를 하드코딩해서 보여주는 작업도 가능
+    // context.isPreview가 true인 경우 위젯 갤러리에 위젯이 표출되는 상태
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
+        RandomTextManager.shared.getTexts { texts in
+            let entry = SimpleEntry(date: Date(), texts: texts)
+            completion(entry)
+        }
+    }
+    
+    // 홈화면에 있는 위젯을 언제 업데이트 시킬것인지 구현하는 부분
+    func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+        RandomTextManager.shared.getTexts { texts in
+            print("viewStore: ", viewStore)
+            
+            let currentDate = Date()
+            let entry = SimpleEntry(date: currentDate, texts: texts)
+            let nextRefresh = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
+            let timeline = Timeline(entries: [entry], policy: .after(nextRefresh))
+            
+            completion(timeline)
+        }
+    }
+    
+}
+
+// TimelineEntry를 준수하는 구조체
+// TimelineEntry: 위젯을 표시할 Date를 정하고, 그 Data에 표시할 데이터를 나타냄
+struct SimpleEntry: TimelineEntry {
+    let date: Date
+    let texts: [String]
+}
+
+@Reducer
+struct RandomTextReducer {
+    
+    struct State: Equatable {
+        var date: Date
+        var texts: [String]
+    }
+    
+    enum Action {
+        case changeText
+        case changeColor
+    }
+    
+    var body: some Reducer<State, Action> {
+        Reduce { state, action in
+            switch action {
+            case .changeText:
+//                state.texts = [""]
+                return .none
+            case .changeColor:
+                return .none
+            }
+        }
+    }
+    
+}
+
+// 위젯 뷰를 표출
+struct RandomTextWidgetView: View {
+    @Environment(\.widgetFamily) private var widgetFamily
+    
+    let store: StoreOf<RandomTextReducer>
+    
+    var entry: Provider.Entry
+
+    var body: some View {
+        switch widgetFamily {
+        case .systemLarge:
+            WithViewStore(self.store, observe: { $0 }) { viewStore in
+                ZStack {
+                    ForEach(viewStore.texts, id: \.hashValue) { text in
+                        LazyVStack { // Widget은 스크롤이 안되므로, List지원 x (대신 VStack 사용)
+                            Text(text)
+                                .foregroundColor(Color.black)
+                            
+                            Button(intent: ChangeText()) {
+                                Text("텍스트 변경")
+                            }
+                        }
+                    }
+                }
+            }
+        default:
+            Text("unknown")
+        }
+    }
+}
+
+struct RandomTextWidget: Widget {
+    // 위젯에서 타임라인을 리로드할때 사용
+    let kind: String = "RandomTextWidget"
+    
+    var _store: StoreOf<RandomTextReducer>!
+    var store: StoreOf<RandomTextReducer> {
+        return _store
+    }
+    
+    public init() {
+        self._store = Store(initialState: RandomTextReducer.State(date: Date(), texts: [""]), reducer: {
+            RandomTextReducer()
+        })
+    }
+    
+    // body 안에 사용하는 Configuration
+    // IntentConfiguration: 사용자가 위젯에서 Edit을 통해 위젯에 보여지는 내용 변경이 가능
+    // StaticConfiguration: 사용자가 변경 불가능한 정적 데이터 표출
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, // 위젯의 ID
+                            provider: Provider(viewStore: ViewStore(self.store, observe: { $0 })) // 위젯 생성자 (타이밍 설정도 가능)
+        ) { entry in
+            RandomTextWidgetView(store: self.store, entry: entry)
+                .containerBackground(.fill.tertiary, for: .widget)
+        }
+        .configurationDisplayName("My Widget")
+        .description("This is an example widget.")
+    }
+}
+
+#Preview(as: .systemSmall) {
+    RandomTextWidget()
+} timeline: {
+    SimpleEntry(date: .now, texts: ["Empty"])
+    SimpleEntry(date: .now, texts: ["Empty"])
+}
+
+
+//// https://rriver2.tistory.com/entry/SwiftUI-Widget-%EB%94%B1%EB%8C%80-14
+//// https://developer.apple.com/documentation/widgetkit/creating-a-widget-extension?language=objc
+//
+//// 위젯을 업데이트 할 시기를 WidgetKit에 알리는 역할
+//// SimpleEntry를 포함하여, 본격적으로 위젯에 표시될 placeholder, 데이터를 가져와서 표출해주는 snapshot, 타임라인 설정 관련된 timeLine이 존재
+//struct Provider: TimelineProvider {
+//    // 데이터를 불러오기 전(snapshot)에 보여줄 placeholder
+//    func placeholder(in context: Context) -> SimpleEntry {
+//        SimpleEntry(date: Date(), texts: ["empty"])
+//    }
+//    
+//    // 위젯 갤러리에서 위젯을 고를 때 보이는 샘플 데이터를 보여줄때 해당 메소드 호출
+//    // API를 통해서 데이터를 fetch하여 보여줄때 딜레이가 있는 경우 여기서 샘플 데이터를 하드코딩해서 보여주는 작업도 가능
+//    // context.isPreview가 true인 경우 위젯 갤러리에 위젯이 표출되는 상태
+//    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
+//        getTexts { texts in
+//            let entry = SimpleEntry(date: Date(), texts: texts)
+//            completion(entry)
+//        }
+//    }
+//    
+//    // 홈화면에 있는 위젯을 언제 업데이트 시킬것인지 구현하는 부분
+//    func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+//        getTexts { texts in
+//            let currentDate = Date()
+//            let entry = SimpleEntry(date: currentDate, texts: texts)
+//            let nextRefresh = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
+//            let timeline = Timeline(entries: [entry], policy: .after(nextRefresh))
+//            
+//            completion(timeline)
+//        }
+//    }
+//    
+//    private func getTexts(completion: @escaping ([String]) -> ()) {
+//        guard let url = URL(string: "https://meowfacts.herokuapp.com/?count=1") else { return }
+//        
+//        URLSession.shared.dataTask(with: url) { data, response, error in
+//            guard let data = data,
+//                  let textModel = try? JSONDecoder().decode(RandomTextModel.self, from: data) else { return }
+//            
+//            completion(textModel.datas)
+//        }.resume()
+//    }
+//}
+//
+//// TimelineEntry를 준수하는 구조체
+//// TimelineEntry: 위젯을 표시할 Date를 정하고, 그 Data에 표시할 데이터를 나타냄
+//struct SimpleEntry: TimelineEntry {
+//    let date: Date
+//    let texts: [String]
+//}
+//
+//// 위젯 뷰를 표출
+//struct RandomTextWidgetView: View {
+//    @Environment(\.widgetFamily) private var widgetFamily
+//    
+//    var entry: Provider.Entry
+//    
+//    private var randomColor: Color {
+//        Color(
+//            red: .random(in: 0...1),
+//            green: .random(in: 0...1),
+//            blue: .random(in: 0...1)
+//        )
+//    }
+//
+//    var body: some View {
+//        switch widgetFamily {
+//        case .systemSmall:
+//            ZStack {
+//                randomColor.opacity(0.7)
+//                
+//                Button(intent: ChangeText()) {
+//                    Text("컬러변경")
+//                }
+//            }
+//        case .systemMedium:
+//            ForEach(entry.texts, id: \.hashValue) { text in
+//                VStack {
+//                    Text(text)
+//                        .foregroundColor(Color.black)
+//                }
+//            }
+//        case .systemLarge:
+//            ZStack {
+//                ForEach(entry.texts, id: \.hashValue) { text in
+//                    LazyVStack { // Widget은 스크롤이 안되므로, List지원 x (대신 VStack 사용)
+//                        Text(text)
+//                            .foregroundColor(Color.black)
+//                        
+//                        Button(intent: ChangeText()) {
+//                            Text("텍스트 변경")
+//                        }
+//                    }
+//                }
+//            }
+//        default:
+//            Text("unknown")
+//        }
+//    }
+//}
+//
+//
+//struct RandomTextWidget: Widget {
+//    // 위젯에서 타임라인을 리로드할때 사용
+//    let kind: String = "RandomTextWidget"
+//
+//    // body 안에 사용하는 Configuration
+//    // IntentConfiguration: 사용자가 위젯에서 Edit을 통해 위젯에 보여지는 내용 변경이 가능
+//    // StaticConfiguration: 사용자가 변경 불가능한 정적 데이터 표출
+//    var body: some WidgetConfiguration {
+//        StaticConfiguration(kind: kind, // 위젯의 ID
+//                            provider: Provider() // 위젯 생성자 (타이밍 설정도 가능)
+//        ) { entry in
+//            RandomTextWidgetView(entry: entry)
+//                .containerBackground(.fill.tertiary, for: .widget)
+//        }
+//        .configurationDisplayName("My Widget")
+//        .description("This is an example widget.")
+//    }
+//}
+//
+//#Preview(as: .systemSmall) {
+//    RandomTextWidget()
+//} timeline: {
+//    SimpleEntry(date: .now, texts: ["Empty"])
+//    SimpleEntry(date: .now, texts: ["Empty"])
+//}
