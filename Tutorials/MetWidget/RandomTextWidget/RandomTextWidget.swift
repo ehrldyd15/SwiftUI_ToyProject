@@ -96,6 +96,12 @@ struct RandomTextWidgetView: View {
                         Button(intent: ChangeText()) {
                             Text("텍스트 변경")
                         }
+                        
+                        Button() {
+                            
+                        } label: {
+                            Text("텍스트 변경22")
+                        }
                     }
                 }
             }

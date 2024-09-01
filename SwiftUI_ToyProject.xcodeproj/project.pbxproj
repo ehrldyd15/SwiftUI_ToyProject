@@ -217,6 +217,20 @@
 			remoteGlobalIDString = 007C33B1294ABA730030BC36;
 			remoteInfo = SwiftCharts;
 		};
+		0088E4B82C85363900A24208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0038925B2C604CE8006E3D69;
+			remoteInfo = RandomTextWidgetExtension;
+		};
+		0088E4EF2C85367800A24208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0088E4EB2C85367800A24208 /* UpDownAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0088E4DA2C85367700A24208;
+			remoteInfo = UpDownAnimation;
+		};
 		008D01872B20414C007291BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 008D01832B20414C007291BA /* CustomEnvironment.xcodeproj */;
@@ -273,13 +287,6 @@
 			remoteGlobalIDString = 00C9F3122C3B5FF000086A3B;
 			remoteInfo = MetWidget;
 		};
-		00C9F4CE2C3FA1E000086A3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00C9F39A2C3B61BB00086A3B;
-			remoteInfo = CertWidgetExtension;
-		};
 		00CBE1832B71E9E20074B516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00CBE15E2B71E9E20074B516 /* TCA_Study.xcodeproj */;
@@ -327,6 +334,7 @@
 		007C2D8F2936E8EA0030BC36 /* ContextMenus.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ContextMenus.xcodeproj; sourceTree = "<group>"; };
 		007C2DB72936EAF80030BC36 /* Metrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Metrix.xcodeproj; sourceTree = "<group>"; };
 		007C33C2294ABA740030BC36 /* SwiftCharts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCharts.xcodeproj; path = SwiftCharts/SwiftCharts.xcodeproj; sourceTree = "<group>"; };
+		0088E4EB2C85367800A24208 /* UpDownAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UpDownAnimation.xcodeproj; path = UpDownAnimation/UpDownAnimation.xcodeproj; sourceTree = "<group>"; };
 		008D01832B20414C007291BA /* CustomEnvironment.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CustomEnvironment.xcodeproj; path = CustomEnvironment/CustomEnvironment.xcodeproj; sourceTree = "<group>"; };
 		00926B4929A34D150016CFD4 /* Whats_In_New(16.4).xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Whats_In_New(16.4).xcodeproj"; path = "Whats_In_New(16.4)/Whats_In_New(16.4).xcodeproj"; sourceTree = "<group>"; };
 		00926BA529A459EE0016CFD4 /* PS_TabBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PS_TabBar.xcodeproj; path = PS_TabBar/PS_TabBar.xcodeproj; sourceTree = "<group>"; };
@@ -451,6 +459,7 @@
 		007C2CC42936E1DC0030BC36 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				0088E4EB2C85367800A24208 /* UpDownAnimation.xcodeproj */,
 				006EF7EE2A92F4BA00F3D8B1 /* SnapIntervalCarousel.xcodeproj */,
 				005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */,
 				00593C4D2A25C2C100556FBB /* ShowcaseView.xcodeproj */,
@@ -642,6 +651,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		0088E4EC2C85367800A24208 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0088E4F02C85367800A24208 /* UpDownAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		008D01842B20414C007291BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,7 +738,7 @@
 			isa = PBXGroup;
 			children = (
 				00C9F33A2C3B5FF200086A3B /* MetWidget.app */,
-				00C9F4CF2C3FA1E000086A3B /* CertWidgetExtension.appex */,
+				0088E4B92C85363900A24208 /* RandomTextWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -975,6 +992,10 @@
 					ProjectRef = 00558E2C2B26EB6D00016261 /* ThrowsDoTryCatch.xcodeproj */;
 				},
 				{
+					ProductGroup = 0088E4EC2C85367800A24208 /* Products */;
+					ProjectRef = 0088E4EB2C85367800A24208 /* UpDownAnimation.xcodeproj */;
+				},
+				{
 					ProductGroup = 007C2D2A2936E5570030BC36 /* Products */;
 					ProjectRef = 007C2D292936E5570030BC36 /* ValidatingAndDisablingForms.xcodeproj */;
 				},
@@ -1198,6 +1219,20 @@
 			remoteRef = 007C33C6294ABA750030BC36 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		0088E4B92C85363900A24208 /* RandomTextWidgetExtension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = RandomTextWidgetExtension.appex;
+			remoteRef = 0088E4B82C85363900A24208 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0088E4F02C85367800A24208 /* UpDownAnimation.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UpDownAnimation.app;
+			remoteRef = 0088E4EF2C85367800A24208 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		008D01882B20414C007291BA /* CustomEnvironment.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -1252,13 +1287,6 @@
 			fileType = wrapper.application;
 			path = MetWidget.app;
 			remoteRef = 00C9F3392C3B5FF200086A3B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00C9F4CF2C3FA1E000086A3B /* CertWidgetExtension.appex */ = {
-			isa = PBXReferenceProxy;
-			fileType = "wrapper.app-extension";
-			path = CertWidgetExtension.appex;
-			remoteRef = 00C9F4CE2C3FA1E000086A3B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00CBE1842B71E9E20074B516 /* TCA_Study.app */ = {
