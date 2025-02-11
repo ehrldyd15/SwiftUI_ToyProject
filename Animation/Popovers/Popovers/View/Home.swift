@@ -97,7 +97,7 @@ struct PopOverController<Content: View>: UIViewControllerRepresentable {
             // Close View, if it's toggled Back
             if !isPresented {
                 // Closing Popover
-                uiViewController.dismiss(animated: true) {
+                uiViewController.dismiss(animated: false) {
                     // Resetting alreadyPresented State
                     alreadyPresented = false
                 }
