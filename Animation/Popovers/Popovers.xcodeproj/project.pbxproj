@@ -12,6 +12,14 @@
 		001D70DA299F053400448A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001D70D9299F053400448A4F /* Assets.xcassets */; };
 		001D70DD299F053400448A4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001D70DC299F053400448A4F /* Preview Assets.xcassets */; };
 		001D7101299F058200448A4F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D7100299F058200448A4F /* Home.swift */; };
+		0050D9BA2D5C73B00069B7C8 /* ArrowOnlyTooltipConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9B92D5C73B00069B7C8 /* ArrowOnlyTooltipConfig.swift */; };
+		0050D9BC2D5C73BC0069B7C8 /* DefaultTooltipConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9BB2D5C73BC0069B7C8 /* DefaultTooltipConfig.swift */; };
+		0050D9BE2D5C73C70069B7C8 /* TooltipConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9BD2D5C73C70069B7C8 /* TooltipConfig.swift */; };
+		0050D9C02D5C73D50069B7C8 /* TooltipSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9BF2D5C73D50069B7C8 /* TooltipSide.swift */; };
+		0050D9C22D5C73E00069B7C8 /* ArrowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9C12D5C73E00069B7C8 /* ArrowShape.swift */; };
+		0050D9C42D5C73E90069B7C8 /* CurveInArrowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9C32D5C73E90069B7C8 /* CurveInArrowShape.swift */; };
+		0050D9C62D5C73F10069B7C8 /* TooltipModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9C52D5C73F10069B7C8 /* TooltipModifier.swift */; };
+		0050D9C82D5C73FB0069B7C8 /* TooltipViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050D9C72D5C73FB0069B7C8 /* TooltipViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +29,14 @@
 		001D70D9299F053400448A4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		001D70DC299F053400448A4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		001D7100299F058200448A4F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0050D9B92D5C73B00069B7C8 /* ArrowOnlyTooltipConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowOnlyTooltipConfig.swift; sourceTree = "<group>"; };
+		0050D9BB2D5C73BC0069B7C8 /* DefaultTooltipConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTooltipConfig.swift; sourceTree = "<group>"; };
+		0050D9BD2D5C73C70069B7C8 /* TooltipConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipConfig.swift; sourceTree = "<group>"; };
+		0050D9BF2D5C73D50069B7C8 /* TooltipSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipSide.swift; sourceTree = "<group>"; };
+		0050D9C12D5C73E00069B7C8 /* ArrowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowShape.swift; sourceTree = "<group>"; };
+		0050D9C32D5C73E90069B7C8 /* CurveInArrowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveInArrowShape.swift; sourceTree = "<group>"; };
+		0050D9C52D5C73F10069B7C8 /* TooltipModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipModifier.swift; sourceTree = "<group>"; };
+		0050D9C72D5C73FB0069B7C8 /* TooltipViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,9 @@
 				001D70D7299F053300448A4F /* ContentView.swift */,
 				001D70D9299F053400448A4F /* Assets.xcassets */,
 				001D70DB299F053400448A4F /* Preview Content */,
+				0050D9C92D5C74040069B7C8 /* SwiftUIToolTip */,
+				0050D9C52D5C73F10069B7C8 /* TooltipModifier.swift */,
+				0050D9C72D5C73FB0069B7C8 /* TooltipViewExtension.swift */,
 			);
 			path = Popovers;
 			sourceTree = "<group>";
@@ -76,6 +95,43 @@
 				001D7100299F058200448A4F /* Home.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0050D9C92D5C74040069B7C8 /* SwiftUIToolTip */ = {
+			isa = PBXGroup;
+			children = (
+				0050D9CC2D5C74250069B7C8 /* config */,
+				0050D9CB2D5C741A0069B7C8 /* shapes */,
+				0050D9CA2D5C74140069B7C8 /* Lib */,
+			);
+			path = SwiftUIToolTip;
+			sourceTree = "<group>";
+		};
+		0050D9CA2D5C74140069B7C8 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				0050D9BF2D5C73D50069B7C8 /* TooltipSide.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		0050D9CB2D5C741A0069B7C8 /* shapes */ = {
+			isa = PBXGroup;
+			children = (
+				0050D9C12D5C73E00069B7C8 /* ArrowShape.swift */,
+				0050D9C32D5C73E90069B7C8 /* CurveInArrowShape.swift */,
+			);
+			path = shapes;
+			sourceTree = "<group>";
+		};
+		0050D9CC2D5C74250069B7C8 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				0050D9BB2D5C73BC0069B7C8 /* DefaultTooltipConfig.swift */,
+				0050D9B92D5C73B00069B7C8 /* ArrowOnlyTooltipConfig.swift */,
+				0050D9BD2D5C73C70069B7C8 /* TooltipConfig.swift */,
+			);
+			path = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +205,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				001D70D8299F053300448A4F /* ContentView.swift in Sources */,
+				0050D9BE2D5C73C70069B7C8 /* TooltipConfig.swift in Sources */,
+				0050D9C82D5C73FB0069B7C8 /* TooltipViewExtension.swift in Sources */,
+				0050D9BC2D5C73BC0069B7C8 /* DefaultTooltipConfig.swift in Sources */,
+				0050D9C02D5C73D50069B7C8 /* TooltipSide.swift in Sources */,
+				0050D9BA2D5C73B00069B7C8 /* ArrowOnlyTooltipConfig.swift in Sources */,
 				001D7101299F058200448A4F /* Home.swift in Sources */,
+				0050D9C42D5C73E90069B7C8 /* CurveInArrowShape.swift in Sources */,
 				001D70D6299F053300448A4F /* PopoversApp.swift in Sources */,
+				0050D9C62D5C73F10069B7C8 /* TooltipModifier.swift in Sources */,
+				0050D9C22D5C73E00069B7C8 /* ArrowShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +351,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +381,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

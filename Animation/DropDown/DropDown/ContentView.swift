@@ -40,7 +40,7 @@ struct ContentView_Previews: PreviewProvider {
 
 // MARK: Custom View Builder
 struct DropDown: View {
-    /// - Drop Down Properties
+    // - Drop Down Properties
     var content: [String]
     
     @Binding var selection: String
@@ -49,7 +49,7 @@ struct DropDown: View {
     var inActiveTint: Color
     var dynamic: Bool = true
     
-    /// - View Properties
+    // - View Properties
     @State private var expandView: Bool = false
     
     var body: some View {
@@ -71,7 +71,7 @@ struct DropDown: View {
                 Rectangle()
                     .fill(inActiveTint)
             }
-            /// - Moving View Based on the Selection
+            // - Moving View Based on the Selection
             .offset(y: dynamic ? (CGFloat(content.firstIndex(of: selection) ?? 0) * -55) : 0)
         }
         .frame(height: 55)
@@ -82,8 +82,8 @@ struct DropDown: View {
         .mask(alignment: .top) {
             Rectangle()
                 .frame(height: expandView ? CGFloat(content.count) * 55 : 55)
-            /// - Moving the Mask Based on the Selection, so that Every Content Will be Visible
-            /// - Visible Only When Content is Expanded
+            // - Moving the Mask Based on the Selection, so that Every Content Will be Visible
+            // - Visible Only When Content is Expanded
                 .offset(y: dynamic && expandView ? (CGFloat(content.firstIndex(of: selection) ?? 0) * -55) : 0)
         }
     }
@@ -105,10 +105,10 @@ struct DropDown: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
-                    /// - If Expanded then Make Selection
+                    // - If Expanded then Make Selection
                     if expandView {
                         expandView = false
-                        /// - Disabling Animation for Non-Dynamic Contents
+                        // - Disabling Animation for Non-Dynamic Contents
                         if dynamic {
                             selection = title
                         } else {
@@ -117,8 +117,8 @@ struct DropDown: View {
                             }
                         }
                     } else {
-                        /// - Disabling Outside Taps
-                        /// 뷰가 확장돼지 않아도 접근이 가능하기 때문에 외부 터치를 막아준다.
+                        // - Disabling Outside Taps
+                        // 뷰가 확장돼지 않아도 접근이 가능하기 때문에 외부 터치를 막아준다.
                         if selection == title {
                             expandView = true
                         }
