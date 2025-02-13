@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct DefaultTooltipConfig: TooltipConfig {
+    
     static var shared = DefaultTooltipConfig()
 
     public var side: TooltipSide = .bottom
@@ -57,5 +58,6 @@ public struct DefaultTooltipConfig: TooltipConfig {
     public init(side: TooltipSide) {
         self.side = side
     }
+    
 }
 

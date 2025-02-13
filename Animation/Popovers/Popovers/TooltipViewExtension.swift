@@ -86,5 +86,6 @@ public extension View {
 
         return modifier(TooltipModifier(enabled: true, config: config, content: content))
     }
+    
 }
 

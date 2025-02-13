@@ -125,7 +125,7 @@ struct TooltipModifier<TooltipContent: View>: ViewModifier {
         guard let arrowAngle = config.side.getArrowAngleRadians() else {
             return AnyView(EmptyView())
         }
-
+        
         return AnyView(arrowShape(angle: arrowAngle, borderColor: config.borderColor)
             .background(arrowShape(angle: arrowAngle)
                 .frame(width: config.arrowWidth, height: config.arrowHeight)
@@ -224,73 +224,3 @@ struct TooltipModifier<TooltipContent: View>: ViewModifier {
     }
 }
 
-struct Tooltip_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        let side: TooltipSide = .top
-
-        var config1 = DefaultTooltipConfig(side: side)
-        config1.backgroundColor = .black
-
-        let config2 = DefaultTooltipConfig(side: side)
-
-        var config3 = DefaultTooltipConfig(side: side)
-        config3.backgroundColor = .green
-        config3.borderColor = .red
-
-        var config4 = DefaultTooltipConfig(side: side)
-        config4.arrowWidth = 24
-        config4.arrowHeight = 8
-        config4.backgroundColor = .black
-        config4.arrowType = .curveIn
-
-        var config5 = DefaultTooltipConfig(side: side)
-        config5.arrowWidth = 24
-        config5.arrowHeight = 8
-        config5.arrowType = .curveIn
-
-        var config6 = DefaultTooltipConfig(side: side)
-        config6.arrowWidth = 24
-        config6.arrowHeight = 8
-        config6.backgroundColor = .green
-        config6.borderColor = .red
-        config6.arrowType = .curveIn
-        
-        return VStack {
-            HStack {
-                Text("Say...").tooltip(config: config1) {
-                    Text("Something nice!")
-                        .foregroundColor(.white)
-                }.padding(54)
-                Text("Say...").tooltip(config: config4) {
-                    Text("Something nice!")
-                        .foregroundColor(.white)
-                }.padding(54)
-            }
-            
-            HStack {
-                Text("Say...").tooltip(config: config2) {
-                    Text("Something nice!")
-                        .foregroundColor(.black)
-                }.padding(54)
-                Text("Say...").tooltip(config: config5) {
-                    Text("Something nice!")
-                        .foregroundColor(.black)
-                }.padding(54)
-            }
-            
-            HStack {
-                Text("Say...").tooltip(config: config3) {
-                    Text("Something nice!")
-                        .foregroundColor(.black)
-                }.padding(54)
-                Text("Say...").tooltip(config: config6) {
-                    Text("Something nice!")
-                        .foregroundColor(.black)
-                }.padding(54)
-            }
-        }
-        .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
-    }
-    
-}
