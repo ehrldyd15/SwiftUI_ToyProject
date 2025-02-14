@@ -258,11 +258,14 @@ struct ContentView: View {
     var tooltipConfig = DefaultTooltipConfig()
     
     init() {
-        self.tooltipConfig.borderWidth = 5
         self.tooltipConfig.borderColor = .blue
-        self.tooltipConfig.borderRadius = 10
-        self.tooltipConfig.height = 149
+        self.tooltipConfig.borderRadius = 8
+        self.tooltipConfig.borderWidth = 2
+        self.tooltipConfig.height = 162
         self.tooltipConfig.width = 198
+        self.tooltipConfig.shadowColor = .gray
+        self.tooltipConfig.shadowRadius = 8
+        self.tooltipConfig.shadowOffset = CGPoint(x: 0, y: 0)
     }
     
     var body: some View {

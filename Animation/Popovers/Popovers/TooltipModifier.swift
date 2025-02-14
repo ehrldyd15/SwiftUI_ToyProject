@@ -140,14 +140,16 @@ struct TooltipModifier<TooltipContent: View>: ViewModifier {
             let shape = ArrowShape()
                 .rotation(Angle(radians: angle))
             if let borderColor {
-                return AnyView(shape.stroke(borderColor))
+//                return AnyView(shape.stroke(borderColor))
+                return AnyView(shape.stroke(borderColor, lineWidth: config.borderWidth))
             }
             return AnyView(shape)
         case .curveIn:
             let shape = CurveInArrowShape()
                 .rotation(Angle(radians: angle))
             if let borderColor {
-                return AnyView(shape.stroke(borderColor))
+//                return AnyView(shape.stroke(borderColor))
+                return AnyView(shape.stroke(borderColor, lineWidth: config.borderWidth))
             }
             return AnyView(shape)
         }
@@ -184,7 +186,8 @@ struct TooltipModifier<TooltipContent: View>: ViewModifier {
         GeometryReader { g in
             ZStack {
                 RoundedRectangle(cornerRadius: config.borderRadius, style: config.borderRadiusStyle)
-                    .stroke(config.borderWidth == 0 ? Color.clear : config.borderColor)
+//                    .stroke(config.borderWidth == 0 ? Color.clear : config.borderColor)
+                    .stroke(config.borderWidth == 0 ? Color.clear : config.borderColor, lineWidth: config.borderWidth)
                     .frame(width: contentWidth, height: contentHeight)
                     .mask(self.arrowCutoutMask)
                     .background(

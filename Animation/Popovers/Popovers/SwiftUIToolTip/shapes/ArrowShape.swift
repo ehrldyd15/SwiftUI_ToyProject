@@ -12,9 +12,9 @@ public struct ArrowShape: Shape {
         var path = Path()
         
         path.addLines([
-            CGPoint(x: 0, y: rect.height),
+            CGPoint(x: 0, y: rect.height + 0.3),
             CGPoint(x: rect.width / 2, y: 0),
-            CGPoint(x: rect.width, y: rect.height),
+            CGPoint(x: rect.width, y: rect.height + 0.3),
         ])
         
         return path

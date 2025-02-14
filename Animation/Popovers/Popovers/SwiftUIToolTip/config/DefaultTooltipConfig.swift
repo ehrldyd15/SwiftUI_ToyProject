@@ -12,7 +12,7 @@ public struct DefaultTooltipConfig: TooltipConfig {
     static var shared = DefaultTooltipConfig()
 
     public var side: TooltipSide = .bottom
-    public var margin: CGFloat = 8
+    public var margin: CGFloat = 0
     public var zIndex: Double = 10000
     
     public var width: CGFloat?
@@ -43,7 +43,7 @@ public struct DefaultTooltipConfig: TooltipConfig {
 
     public var showArrow: Bool = true
     public var arrowWidth: CGFloat = 12
-    public var arrowHeight: CGFloat = 6
+    public var arrowHeight: CGFloat = 15
     public var arrowType: ArrowType = .default
     
     public var enableAnimation: Bool = false
