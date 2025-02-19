@@ -255,18 +255,24 @@ import SwiftUI
 struct ContentView: View {
     @State var tooltipVisible = false
     
-    var tooltipConfig = DefaultTooltipConfig()
+//    @State var tooltipConfig = DefaultTooltipConfig()
+    @State private var tooltipConfig: DefaultTooltipConfig = {
+        var config = DefaultTooltipConfig()
+        config.borderColor = .blue
+        config.borderRadius = 8
+        config.borderWidth = 2
+        config.height = 162
+        config.width = 198
+        config.shadowColor = .gray
+        config.shadowRadius = 8
+        config.shadowOffset = CGPoint(x: 0, y: 0)
+        return config
+    }()
     
     init() {
-        self.tooltipConfig.borderColor = .blue
-        self.tooltipConfig.borderRadius = 8
-        self.tooltipConfig.borderWidth = 2
-        self.tooltipConfig.height = 162
-        self.tooltipConfig.width = 198
-        self.tooltipConfig.shadowColor = .gray
-        self.tooltipConfig.shadowRadius = 8
-        self.tooltipConfig.shadowOffset = CGPoint(x: 0, y: 0)
+
     }
+    
     
     var body: some View {
         //        Home()
@@ -315,6 +321,7 @@ struct ContentView: View {
                 Spacer()
             }
         }
+
     }
 }
 
