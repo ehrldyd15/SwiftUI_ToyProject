@@ -28,6 +28,13 @@
 			remoteGlobalIDString = 001D70D2299F053300448A4F;
 			remoteInfo = Popovers;
 		};
+		003FF6742D8264D000E6EFC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003FF6532D8264D000E6EFC4 /* Share.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 003FF6422D8264CE00E6EFC4;
+			remoteInfo = Share;
+		};
 		0045F8ED29C7FC81000638B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0045F8E729C7FC80000638B1 /* AutoScrollingTab.xcodeproj */;
@@ -307,6 +314,7 @@
 		000292E829514E4C00DEAA04 /* AnimatedOnBoardingScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimatedOnBoardingScreen.xcodeproj; path = AnimatedOnBoardingScreen/AnimatedOnBoardingScreen.xcodeproj; sourceTree = "<group>"; };
 		0012164528FFCE79000414FB /* SwiftUI-ToyProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-ToyProject-Info.plist"; sourceTree = SOURCE_ROOT; };
 		001D70E3299F053400448A4F /* Popovers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Popovers.xcodeproj; path = Popovers/Popovers.xcodeproj; sourceTree = "<group>"; };
+		003FF6532D8264D000E6EFC4 /* Share.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Share.xcodeproj; path = Share/Share.xcodeproj; sourceTree = "<group>"; };
 		0045F8E729C7FC80000638B1 /* AutoScrollingTab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutoScrollingTab.xcodeproj; path = AutoScrollingTab/AutoScrollingTab.xcodeproj; sourceTree = "<group>"; };
 		0045F9B529CBD800000638B1 /* Drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Drawing.xcodeproj; path = Drawing/Drawing.xcodeproj; sourceTree = "<group>"; };
 		004CF6E22B0AE71B00206431 /* CoordinatorTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoordinatorTest.xcodeproj; path = CoordinatorTest/CoordinatorTest.xcodeproj; sourceTree = "<group>"; };
@@ -390,6 +398,14 @@
 				007C2D412936E76D0030BC36 /* PreferenceKey_Tutorial.xcodeproj */,
 			);
 			path = Tutorials;
+			sourceTree = "<group>";
+		};
+		003FF6542D8264D000E6EFC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				003FF6752D8264D000E6EFC4 /* Share.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		0045F8E829C7FC80000638B1 /* Products */ = {
@@ -487,6 +503,7 @@
 		007C2CD72936E1E60030BC36 /* Fundamental */ = {
 			isa = PBXGroup;
 			children = (
+				003FF6532D8264D000E6EFC4 /* Share.xcodeproj */,
 				00558E2C2B26EB6D00016261 /* ThrowsDoTryCatch.xcodeproj */,
 				00558DC22B2198C600016261 /* PropertyWrapper.xcodeproj */,
 				008D01832B20414C007291BA /* CustomEnvironment.xcodeproj */,
@@ -960,6 +977,10 @@
 					ProjectRef = 00926BA529A459EE0016CFD4 /* PS_TabBar.xcodeproj */;
 				},
 				{
+					ProductGroup = 003FF6542D8264D000E6EFC4 /* Products */;
+					ProjectRef = 003FF6532D8264D000E6EFC4 /* Share.xcodeproj */;
+				},
+				{
 					ProductGroup = 00593C4E2A25C2C100556FBB /* Products */;
 					ProjectRef = 00593C4D2A25C2C100556FBB /* ShowcaseView.xcodeproj */;
 				},
@@ -1028,6 +1049,13 @@
 			fileType = wrapper.application;
 			path = Popovers.app;
 			remoteRef = 001D70F7299F053500448A4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		003FF6752D8264D000E6EFC4 /* Share.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Share.app;
+			remoteRef = 003FF6742D8264D000E6EFC4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0045F8EE29C7FC81000638B1 /* AutoScrollingTab.app */ = {
