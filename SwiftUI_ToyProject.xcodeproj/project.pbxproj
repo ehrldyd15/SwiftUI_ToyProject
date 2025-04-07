@@ -273,6 +273,27 @@
 			remoteGlobalIDString = 00926CD729AD975B0016CFD4;
 			remoteInfo = Weather;
 		};
+		009658BD2D9F95DB00862066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 009658A92D9F95DB00862066 /* HealthSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0096587C2D9F95D900862066;
+			remoteInfo = HealthSample;
+		};
+		009658BF2D9F95DB00862066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 009658A92D9F95DB00862066 /* HealthSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0096588C2D9F95DB00862066;
+			remoteInfo = HealthSampleTests;
+		};
+		009658C12D9F95DB00862066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 009658A92D9F95DB00862066 /* HealthSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 009658962D9F95DB00862066;
+			remoteInfo = HealthSampleUITests;
+		};
 		0096F24229ECE11500CC1DAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */;
@@ -348,6 +369,7 @@
 		00926BA529A459EE0016CFD4 /* PS_TabBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PS_TabBar.xcodeproj; path = PS_TabBar/PS_TabBar.xcodeproj; sourceTree = "<group>"; };
 		00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieBooking.xcodeproj; path = MovieBooking/MovieBooking.xcodeproj; sourceTree = "<group>"; };
 		00926CE829AD975D0016CFD4 /* Weather.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Weather.xcodeproj; path = Weather/Weather.xcodeproj; sourceTree = "<group>"; };
+		009658A92D9F95DB00862066 /* HealthSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HealthSample.xcodeproj; path = HealthSample/HealthSample.xcodeproj; sourceTree = "<group>"; };
 		0096F23829ECE11500CC1DAA /* CombineTutorial.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CombineTutorial.xcodeproj; path = CombineTutorial/CombineTutorial.xcodeproj; sourceTree = "<group>"; };
 		0098DFCB299C65640047478A /* MarvelAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MarvelAPI.xcodeproj; path = MarvelAPI/MarvelAPI.xcodeproj; sourceTree = "<group>"; };
 		00C9F3232C3B5FF100086A3B /* MetWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MetWidget.xcodeproj; path = MetWidget/MetWidget.xcodeproj; sourceTree = "<group>"; };
@@ -724,6 +746,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		009658AA2D9F95DB00862066 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				009658BE2D9F95DB00862066 /* HealthSample.app */,
+				009658C02D9F95DB00862066 /* HealthSampleTests.xctest */,
+				009658C22D9F95DB00862066 /* HealthSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0096F23929ECE11500CC1DAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +767,7 @@
 		0098DF9B299C63D40047478A /* MiniProject */ = {
 			isa = PBXGroup;
 			children = (
+				009658A92D9F95DB00862066 /* HealthSample.xcodeproj */,
 				004CF6E22B0AE71B00206431 /* CoordinatorTest.xcodeproj */,
 				00926CE829AD975D0016CFD4 /* Weather.xcodeproj */,
 				00926C5729A6F58F0016CFD4 /* MovieBooking.xcodeproj */,
@@ -919,6 +952,10 @@
 				{
 					ProductGroup = 005877CC2A3FEC3A0008EF84 /* Products */;
 					ProjectRef = 005877CB2A3FEC3A0008EF84 /* ElasticScroll.xcodeproj */;
+				},
+				{
+					ProductGroup = 009658AA2D9F95DB00862066 /* Products */;
+					ProjectRef = 009658A92D9F95DB00862066 /* HealthSample.xcodeproj */;
 				},
 				{
 					ProductGroup = 007C2D842936E86E0030BC36 /* Products */;
@@ -1294,6 +1331,27 @@
 			fileType = wrapper.application;
 			path = Weather.app;
 			remoteRef = 00926CEC29AD975D0016CFD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		009658BE2D9F95DB00862066 /* HealthSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HealthSample.app;
+			remoteRef = 009658BD2D9F95DB00862066 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		009658C02D9F95DB00862066 /* HealthSampleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HealthSampleTests.xctest;
+			remoteRef = 009658BF2D9F95DB00862066 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		009658C22D9F95DB00862066 /* HealthSampleUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HealthSampleUITests.xctest;
+			remoteRef = 009658C12D9F95DB00862066 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0096F24329ECE11500CC1DAA /* CombineTutorial.app */ = {
