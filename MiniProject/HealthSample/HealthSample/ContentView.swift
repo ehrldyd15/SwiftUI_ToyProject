@@ -242,16 +242,47 @@ struct ContentView: View {
         let startOfDay = Calendar.current.startOfDay(for: now)
         
         // 오늘 하루 간격의 조건 설정
-        let predicate = HKQuery.predicateForSamples(
-            withStart: startOfDay,
-            end: now,
-            options: .strictStartDate
-        )
+//        let predicate = HKQuery.predicateForSamples(
+//            withStart: startOfDay,
+//            end: now,
+//            options: .strictStartDate
+//        )
         
-        // 통계 쿼리 설정
+//        let metadataKeyWasUserEntered = HKMetadataKeyWasUserEntered // 메타데이터 키 정의
+//        let predicateExcludingUserEnteredData = NSCompoundPredicate(
+//            andPredicateWithSubpredicates: [
+//                HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate), // 시간 범위 조건
+//                NSPredicate(format: "metadata[%@] != YES", metadataKeyWasUserEntered) // 사용자 입력 제외 조건
+//            ]
+//        )
+//        
+//        // 통계 쿼리 설정
+//        let query = HKStatisticsQuery(
+//            quantityType: stepsQuantityType,
+//            quantitySamplePredicate: predicateExcludingUserEnteredData,
+//            options: .cumulativeSum
+//        ) { _, result, error in
+//            guard let result = result, let sum = result.sumQuantity() else {
+//                completion(0, error)
+//                return
+//            }
+//            
+//            // 결과 반환 (걸음 수)
+//            let steps = sum.doubleValue(for: HKUnit.count())
+//            completion(steps, nil)
+//        }
+        
+        let metadataKeyWasUserEntered = HKMetadataKeyWasUserEntered
+        let predicateExcludingUserEnteredData = NSCompoundPredicate(
+            andPredicateWithSubpredicates: [
+                HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate),
+                NSPredicate(format: "metadata.%K != YES", metadataKeyWasUserEntered)
+            ]
+        )
+
         let query = HKStatisticsQuery(
             quantityType: stepsQuantityType,
-            quantitySamplePredicate: predicate,
+            quantitySamplePredicate: predicateExcludingUserEnteredData,
             options: .cumulativeSum
         ) { _, result, error in
             guard let result = result, let sum = result.sumQuantity() else {
@@ -263,6 +294,26 @@ struct ContentView: View {
             let steps = sum.doubleValue(for: HKUnit.count())
             completion(steps, nil)
         }
+        
+//        let query = HKSampleQuery(sampleType: stepsQuantityType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { result, samples, error in
+//            guard error == nil else {
+//                print("Error fetching step count: \(error!)")
+//                return
+//            }
+//            
+//            let stepSamples = samples as? [HKQuantitySample] ?? []
+//            
+//            let actualSteps = stepSamples.filter { sample in
+//                let metadata = sample.metadata?[HKMetadataKeyWasUserEntered] as? Bool
+//                return metadata != true
+//            }
+//
+//            let totalSteps = actualSteps.reduce(0.0) { sum, sample in
+//                return sum + sample.quantity.doubleValue(for: HKUnit.count())
+//            }
+//            
+//            completion(totalSteps, nil)
+//        }
         
         // 쿼리 실행
         healthStore.execute(query)
