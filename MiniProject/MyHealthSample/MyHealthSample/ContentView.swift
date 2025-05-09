@@ -27,7 +27,16 @@ struct ContentView: View {
     
     @State private var isMeasuring = false
     
+    @State private var daysStepsData: [Date: (steps: Int, distance: Int)] = [:]
+    
     let pedometer = CMPedometer()
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M월 d일"
+        
+        return formatter
+    }
     
     var body: some View {
         VStack {
@@ -37,7 +46,7 @@ struct ContentView: View {
                 .padding()
             
             Spacer()
-
+            
             // 탭 뷰
             TabView(selection: $selectedTab) {
                 VStack {
@@ -62,7 +71,7 @@ struct ContentView: View {
                     Image(systemName: "chart.bar.fill")
                     Text("총 데이터")
                 }.tag(0)
-
+                
                 VStack {
                     Text("오전 걸음 수: \(morningSteps)")
                         .font(.largeTitle)
@@ -110,7 +119,7 @@ struct ContentView: View {
                     Image(systemName: "hourglass")
                     Text("시간별")
                 }.tag(2)
-
+                
                 VStack {
                     Text("실시간 걸음 수: \(realTimeStepCount)")
                         .font(.largeTitle)
@@ -143,7 +152,44 @@ struct ContentView: View {
                     Image(systemName: "figure.walk")
                     Text("실시간")
                 }.tag(3)
-
+                
+                VStack {
+                    VStack(spacing: 10) {
+                        ForEach(daysStepsData.keys.sorted(by: >), id: \.self) { date in
+                            if let data = daysStepsData[date] {
+                                HStack {
+                                    Text(dateFormatter.string(from: date))
+                                        .font(.headline)
+                                        .frame(width: 80, alignment: .leading) // 날짜 고정 너비
+                                    
+                                    Text("걸음 수: \(data.steps)")
+                                        .frame(maxWidth: 120, alignment: .leading)
+                                    
+                                    Text("이동 거리: \(data.distance)m")
+                                        .frame(width: 120, alignment: .leading)
+                                }
+                                .padding(.vertical, 5)
+                                Divider() // 항목 구분선
+                            }
+                        }
+                    }
+                    .padding()
+                    
+                    Button(action: {
+                        requestPermission()
+                    }) {
+                        Text("가져오기")
+                            .font(.title3)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }
+                .tabItem {
+                    Image(systemName: "list.bullet.rectangle")
+                    Text("일자별")
+                }.tag(4)
             }
         }
     }
@@ -154,6 +200,7 @@ struct ContentView: View {
         case 1: return "오늘 오전과 오후 데이터"
         case 2: return "오늘 시간별 데이터"
         case 3: return "실시간 카운트"
+        case 4: return "일자별 데이터(최대 7일)"
         default: return "알 수 없는 탭"
         }
     }
@@ -169,6 +216,9 @@ struct ContentView: View {
                     timeData = data // 데이터 업데이트
                 }
                 self.startRealTimeStepUpdates()
+                self.getDaysSteps { data in
+                    daysStepsData = data // 일자별 걸음수 저장
+                }
             }
         case .authorized:
             self.getStepCount()
@@ -177,8 +227,30 @@ struct ContentView: View {
                 timeData = data // 데이터 업데이트
             }
             self.startRealTimeStepUpdates()
+            self.getDaysSteps { data in
+                daysStepsData = data // 일자별 걸음수 저장
+            }
         case .denied:
             print("@@@거부됨")
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "권한 필요",
+                                              message: "걸음 수 데이터를 가져오려면 설정에서 권한을 허용해야 합니다.",
+                                              preferredStyle: .alert)
+
+                let settingsAction = UIAlertAction(title: "설정으로 이동", style: .default) { _ in
+                    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return }
+                    UIApplication.shared.open(settingsURL)
+                }
+                
+                let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+                
+                alert.addAction(settingsAction)
+                alert.addAction(cancelAction)
+
+                if let topController = UIApplication.shared.keyWindow?.rootViewController {
+                    topController.present(alert, animated: true, completion: nil)
+                }
+            }
         default:
             print("@@@디폴트")
         }
@@ -209,7 +281,7 @@ struct ContentView: View {
             print("걸음 수 추적을 사용할 수 없습니다.")
             return
         }
-
+        
         pedometer.startUpdates(from: Date()) { data, error in
             if let stepData = data, error == nil {
                 DispatchQueue.main.async {
@@ -227,10 +299,43 @@ struct ContentView: View {
         print("실시간 걸음 수 업데이트 중지됨")
     }
     
+    func getDaysSteps(completion: @escaping ([Date: (steps: Int, distance: Int)]) -> Void) {
+        var resultData: [Date: (steps: Int, distance: Int)] = [:]
+        let dispatchGroup = DispatchGroup()
+        let calendar = Calendar.current
+        
+        for dayOffset in 0..<7 {
+            dispatchGroup.enter()
+            
+            // 시작 날짜: 해당 일의 00:00:00
+            let startDate = calendar.startOfDay(for: calendar.date(byAdding: .day, value: -dayOffset, to: Date())!)
+            // 종료 날짜: 해당 일의 23:59:59
+            let endDate = calendar.date(byAdding: .second, value: 86399, to: startDate)!
+            
+            pedometer.queryPedometerData(from: startDate, to: endDate) { data, error in
+                if let data = data {
+                    let distance = Int(data.distance?.doubleValue ?? 0.0)
+                    resultData[startDate] = (steps: data.numberOfSteps.intValue, distance: distance)
+                    print("✅ 날짜: \(startDate), 걸음수: \(data.numberOfSteps.intValue), 거리: \(distance)")
+                } else {
+                    print("❌ 데이터 없음: \(startDate)")
+                }
+                dispatchGroup.leave()
+            }
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            DispatchQueue.main.async {
+                print("🔎 저장된 데이터 개수: \(resultData.count)일")
+                completion(resultData)
+            }
+        }
+    }
+    
     func getPeriodTimeSteps(completion: @escaping ([String: (steps: Int, distance: Int)]) -> Void) {
         let calendar = Calendar.current
         let today = Date()
-
+        
         let timeRanges = [
             ("새벽(0, 5)", 0, 5),
             ("아침(6, 11)", 6, 11),
@@ -238,22 +343,22 @@ struct ContentView: View {
             ("저녁(18, 21)", 18, 21),
             ("밤(22, 23)", 22, 23)
         ]
-
+        
         var results: [String: (steps: Int, distance: Int)] = [:]
         let dispatchGroup = DispatchGroup()
-
+        
         for (label, startHour, endHour) in timeRanges {
             dispatchGroup.enter()
-
+            
             let startTime = calendar.date(bySettingHour: startHour, minute: 0, second: 0, of: today)!
             let endTime = calendar.date(bySettingHour: endHour, minute: 59, second: 59, of: today)!
-
+            
             getSteps(for: startTime, endTime: endTime) { steps, distance in
                 results[label] = (steps ?? 0, distance ?? 0)
                 dispatchGroup.leave()
             }
         }
-
+        
         dispatchGroup.notify(queue: .main) {
             completion(results)
         }
@@ -263,22 +368,22 @@ struct ContentView: View {
     func getHalfDaySteps() {
         let calendar = Calendar.current
         let today = Date()
-
+        
         // 오전 (00:00 ~ 12:00)
         let morningStart = calendar.startOfDay(for: today)
         let morningEnd = calendar.date(bySettingHour: 12, minute: 0, second: 0, of: today)!
-
+        
         getSteps(for: morningStart, endTime: morningEnd) { morningSteps, morningDistance in
             print("오전 걸음 수: \(morningSteps ?? 0)")
             print("오전 거리: \(morningDistance ?? 0)")
             self.morningSteps = morningSteps ?? 0
             self.morningDistance = morningDistance ?? 0
         }
-
+        
         // 오후 (12:00 ~ 23:59)
         let afternoonStart = morningEnd
         let afternoonEnd = calendar.date(bySettingHour: 23, minute: 59, second: 59, of: today)!
-
+        
         getSteps(for: afternoonStart, endTime: afternoonEnd) { afternoonSteps, afternoonDistance in
             print("오후 걸음 수: \(afternoonSteps ?? 0)")
             print("오후 거리: \(afternoonDistance ?? 0)")
@@ -313,7 +418,7 @@ struct ContentView: View {
             completion(nil, nil)
             return
         }
-
+        
         pedometer.queryPedometerData(from: startTime, to: endTime) { data, error in
             if let stepData = data, error == nil {
                 completion(stepData.numberOfSteps.intValue, Int(stepData.distance?.doubleValue ?? 0))
@@ -335,7 +440,7 @@ struct TimeView: View {
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())] // 2열 설정
     let sortedPeriods = ["새벽(0, 5)", "아침(6, 11)", "점심(12, 17)", "저녁(18, 21)", "밤(22, 23)"] // 원하는 순서 정의
-
+    
     var body: some View {
         LazyVGrid(columns: columns, spacing: 20) {
             ForEach(sortedPeriods, id: \.self) { period in

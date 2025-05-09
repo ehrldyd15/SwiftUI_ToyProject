@@ -7,17 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		002392C42DCD81F500264CFF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002392C32DCD81F400264CFF /* WidgetKit.framework */; };
-		002392C62DCD81F500264CFF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002392C52DCD81F500264CFF /* SwiftUI.framework */; };
-		002392D72DCD81F600264CFF /* MyHealthWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 002392C12DCD81F400264CFF /* MyHealthWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0023936C2DCDB5AC00264CFF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002392C32DCD81F400264CFF /* WidgetKit.framework */; };
+		0023936D2DCDB5AC00264CFF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002392C52DCD81F500264CFF /* SwiftUI.framework */; };
+		0023937E2DCDB5AE00264CFF /* MyHealthWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0023936B2DCDB5AC00264CFF /* MyHealthWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		002393832DCDB5C000264CFF /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.rkassets;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# realitytool\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
-		002392D52DCD81F600264CFF /* PBXContainerItemProxy */ = {
+		0023937C2DCDB5AE00264CFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 002392A42DCC7DA600264CFF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 002392C02DCD81F400264CFF;
+			remoteGlobalIDString = 0023936A2DCDB5AC00264CFF;
 			remoteInfo = MyHealthWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
@@ -29,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				002392D72DCD81F600264CFF /* MyHealthWidgetExtension.appex in Embed Foundation Extensions */,
+				0023937E2DCDB5AE00264CFF /* MyHealthWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,18 +52,18 @@
 
 /* Begin PBXFileReference section */
 		002392AC2DCC7DA600264CFF /* MyHealthSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHealthSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		002392C12DCD81F400264CFF /* MyHealthWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyHealthWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		002392C32DCD81F400264CFF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		002392C52DCD81F500264CFF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0023936B2DCDB5AC00264CFF /* MyHealthWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyHealthWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		002392D82DCD81F600264CFF /* Exceptions for "MyHealthWidget" folder in "MyHealthWidgetExtension" target */ = {
+		0023937F2DCDB5AE00264CFF /* Exceptions for "MyHealthWidget" folder in "MyHealthWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 002392C02DCD81F400264CFF /* MyHealthWidgetExtension */;
+			target = 0023936A2DCDB5AC00264CFF /* MyHealthWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -59,10 +73,10 @@
 			path = MyHealthSample;
 			sourceTree = "<group>";
 		};
-		002392C72DCD81F500264CFF /* MyHealthWidget */ = {
+		0023936E2DCDB5AC00264CFF /* MyHealthWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				002392D82DCD81F600264CFF /* Exceptions for "MyHealthWidget" folder in "MyHealthWidgetExtension" target */,
+				0023937F2DCDB5AE00264CFF /* Exceptions for "MyHealthWidget" folder in "MyHealthWidgetExtension" target */,
 			);
 			path = MyHealthWidget;
 			sourceTree = "<group>";
@@ -77,12 +91,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		002392BE2DCD81F400264CFF /* Frameworks */ = {
+		002393682DCDB5AC00264CFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				002392C62DCD81F500264CFF /* SwiftUI.framework in Frameworks */,
-				002392C42DCD81F500264CFF /* WidgetKit.framework in Frameworks */,
+				0023936D2DCDB5AC00264CFF /* SwiftUI.framework in Frameworks */,
+				0023936C2DCDB5AC00264CFF /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				002392AE2DCC7DA600264CFF /* MyHealthSample */,
-				002392C72DCD81F500264CFF /* MyHealthWidget */,
+				0023936E2DCDB5AC00264CFF /* MyHealthWidget */,
 				002392C22DCD81F400264CFF /* Frameworks */,
 				002392AD2DCC7DA600264CFF /* Products */,
 			);
@@ -103,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				002392AC2DCC7DA600264CFF /* MyHealthSample.app */,
-				002392C12DCD81F400264CFF /* MyHealthWidgetExtension.appex */,
+				0023936B2DCDB5AC00264CFF /* MyHealthWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +146,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				002392D62DCD81F600264CFF /* PBXTargetDependency */,
+				0023937D2DCDB5AE00264CFF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				002392AE2DCC7DA600264CFF /* MyHealthSample */,
@@ -144,26 +158,27 @@
 			productReference = 002392AC2DCC7DA600264CFF /* MyHealthSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		002392C02DCD81F400264CFF /* MyHealthWidgetExtension */ = {
+		0023936A2DCDB5AC00264CFF /* MyHealthWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 002392D92DCD81F600264CFF /* Build configuration list for PBXNativeTarget "MyHealthWidgetExtension" */;
+			buildConfigurationList = 002393802DCDB5AE00264CFF /* Build configuration list for PBXNativeTarget "MyHealthWidgetExtension" */;
 			buildPhases = (
-				002392BD2DCD81F400264CFF /* Sources */,
-				002392BE2DCD81F400264CFF /* Frameworks */,
-				002392BF2DCD81F400264CFF /* Resources */,
+				002393672DCDB5AC00264CFF /* Sources */,
+				002393682DCDB5AC00264CFF /* Frameworks */,
+				002393692DCDB5AC00264CFF /* Resources */,
 			);
 			buildRules = (
+				002393832DCDB5C000264CFF /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				002392C72DCD81F500264CFF /* MyHealthWidget */,
+				0023936E2DCDB5AC00264CFF /* MyHealthWidget */,
 			);
 			name = MyHealthWidgetExtension;
 			packageProductDependencies = (
 			);
 			productName = MyHealthWidgetExtension;
-			productReference = 002392C12DCD81F400264CFF /* MyHealthWidgetExtension.appex */;
+			productReference = 0023936B2DCDB5AC00264CFF /* MyHealthWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -179,7 +194,7 @@
 					002392AB2DCC7DA600264CFF = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					002392C02DCD81F400264CFF = {
+					0023936A2DCDB5AC00264CFF = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -199,7 +214,7 @@
 			projectRoot = "";
 			targets = (
 				002392AB2DCC7DA600264CFF /* MyHealthSample */,
-				002392C02DCD81F400264CFF /* MyHealthWidgetExtension */,
+				0023936A2DCDB5AC00264CFF /* MyHealthWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		002392BF2DCD81F400264CFF /* Resources */ = {
+		002393692DCDB5AC00264CFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		002392BD2DCD81F400264CFF /* Sources */ = {
+		002393672DCDB5AC00264CFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,10 +254,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		002392D62DCD81F600264CFF /* PBXTargetDependency */ = {
+		0023937D2DCDB5AE00264CFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 002392C02DCD81F400264CFF /* MyHealthWidgetExtension */;
-			targetProxy = 002392D52DCD81F600264CFF /* PBXContainerItemProxy */;
+			target = 0023936A2DCDB5AC00264CFF /* MyHealthWidgetExtension */;
+			targetProxy = 0023937C2DCDB5AE00264CFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -436,7 +451,7 @@
 			};
 			name = Release;
 		};
-		002392DA2DCD81F600264CFF /* Debug */ = {
+		002393812DCDB5AE00264CFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,7 +478,7 @@
 			};
 			name = Debug;
 		};
-		002392DB2DCD81F600264CFF /* Release */ = {
+		002393822DCDB5AE00264CFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -511,11 +526,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		002392D92DCD81F600264CFF /* Build configuration list for PBXNativeTarget "MyHealthWidgetExtension" */ = {
+		002393802DCDB5AE00264CFF /* Build configuration list for PBXNativeTarget "MyHealthWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				002392DA2DCD81F600264CFF /* Debug */,
-				002392DB2DCD81F600264CFF /* Release */,
+				002393812DCDB5AE00264CFF /* Debug */,
+				002393822DCDB5AE00264CFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

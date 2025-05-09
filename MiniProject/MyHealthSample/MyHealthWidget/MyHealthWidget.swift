@@ -63,9 +63,6 @@ struct MyHealthWidget: Widget {
             MyHealthWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
-        .configurationDisplayName("잠금화면 위젯")
-        .description("간단한 잠금화면 위젯 예제입니다.")
-        .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline])
     }
 }
 
