@@ -14,31 +14,31 @@ struct ContentView: View {
         
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
-            Text("오늘 걸음 수: \(healthKitManager.myHealthModel.todayStepCount)")
+            Text("오늘 걸음 수: \(healthKitManager.todayStepCount)")
                 .font(.title3)
             
-            Text(String(format: "오늘 이동 거리: %.2f km", healthKitManager.myHealthModel.todayDistance))
+            Text(String(format: "오늘 이동 거리: %.2f m", healthKitManager.todayDistance))
                 .font(.title3)
             
-            Text(String(format: "오늘 칼로리 소모량: %.1f kcal", healthKitManager.myHealthModel.todayCalory))
+            Text(String(format: "오늘 칼로리 소모량: %.1f kcal", healthKitManager.todayCalory))
                 .font(.title3)
             
-            Text("오전 걸음 수: \(healthKitManager.myHealthModel.morningStepCount)")
+            Text("오전 걸음 수: \(healthKitManager.morningStepCount)")
                 .font(.title3)
             
-            Text("오후 걸음 수: \(healthKitManager.myHealthModel.afternoonStepCount)")
+            Text("오후 걸음 수: \(healthKitManager.afternoonStepCount)")
                 .font(.title3)
             
-            Text(String(format: "지방 소모량: %.1f g", healthKitManager.myHealthModel.fatBurned))
+            Text(String(format: "지방 소모량: %.1f g", healthKitManager.fatBurned))
                 .font(.title3)
             
-            Text("지난주 총 걸음 수: \(healthKitManager.myHealthModel.lastWeekStepCount)")
+            Text("지난주 총 걸음 수: \(healthKitManager.lastWeekStepCount)")
                 .font(.title3)
             
-            Text("지난주 일평균 걸음 수: \(healthKitManager.myHealthModel.lastWeekAverageSteps)")
+            Text("지난주 일평균 걸음 수: \(healthKitManager.lastWeekAverageSteps)")
                 .font(.title3)
             
-            Text("1달 누적 걸음 수: \(healthKitManager.myHealthModel.monthlyTotalSteps)")
+            Text("1달 누적 걸음 수: \(healthKitManager.monthlyTotalSteps)")
         }
         .padding()
         .onAppear {

@@ -7,41 +7,23 @@
 
 import Foundation
 import HealthKit
-
-/// 건강 데이터를 담는 모델
-struct MyHealthModel {
-    /// 오늘의 총 걸음 수
-    var todayStepCount: Int = 0
-    
-    /// 오늘 이동 거리
-    var todayDistance: Double = 0.0
-    
-    /// 오늘 소모한 칼로리
-    var todayCalory: Double = 0.0
-
-    /// 오전 동안의 걸음 수
-    var morningStepCount: Int = 0
-    
-    /// 오후 동안의 걸음 수
-    var afternoonStepCount: Int = 0
-    
-    /// 오늘 총 지방 소모량
-    var fatBurned: Double = 0.0
-
-    /// 지난주 총 걸음 수
-    var lastWeekStepCount: Int = 0
-    
-    /// 지난주 일평균 걸음 수
-    var lastWeekAverageSteps: Int = 0
-
-    /// 최근 한 달 간 누적 걸음 수
-    var monthlyTotalSteps: Int = 0
-}
+import Combine
 
 class HealthKitManager: ObservableObject {
     
     let healthStore = HKHealthStore()
-    @Published var myHealthModel: MyHealthModel = MyHealthModel()
+    private var cancellables = Set<AnyCancellable>()
+    
+    @Published var todayStepCount: Int = 0
+    @Published var todayDistance: Double = 0
+    @Published var todayCalory: Double = 0
+    @Published var morningStepCount: Int = 0
+    @Published var afternoonStepCount: Int = 0
+    @Published var fatBurned: Double = 0
+    @Published var lastWeekStepCount: Int = 0
+    @Published var lastWeekAverageSteps: Int = 0
+    @Published var monthlyTotalSteps: Int = 0
+    
     
     /// HealthKit 사용 가능 여부 확인
     func isHealthKitAvailable() -> Bool {
@@ -52,20 +34,18 @@ class HealthKitManager: ObservableObject {
     func checkAndRequestPermission() {
         if isHealthKitAvailable() {
             guard let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount) else { return }
-
+            
             // 현재 권한 상태 확인
             let authStatus = checkAuthorizationStatus(for: stepsQuantityType)
             
             switch authStatus {
             case .sharingAuthorized:
                 print("권한이 이미 허용되어 있습니다.")
-//                fetchMyHealthData() { model in
-//                    self.myHealthModel = model
-//                }
-                
+                fetchAllHealthData()
             case .sharingDenied:
                 print("권한이 거부되어 있습니다. 설정에서 변경해주세요.")
-
+                fetchAllHealthData()
+                
             case .notDetermined:
                 print("권한이 아직 결정되지 않았습니다. 권한을 요청합니다.")
                 // 권한 요청
@@ -88,39 +68,31 @@ class HealthKitManager: ObservableObject {
             return
         }
         
-        let read = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
+        let read = Set([HKQuantityType.quantityType(forIdentifier: .stepCount)!,
+                        HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+                        HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
+                        HKQuantityType.quantityType(forIdentifier: .dietaryFatTotal)!])
         
-        // 권한 요청 전 상태 확인
-        print("권한 요청 전 상태:")
-       // debugHealthKitPermission()
-        
+
         // 권한 요청 (읽기만 요청)
         healthStore.requestAuthorization(toShare: nil, read: read) { success, error in
-            // 권한 요청 직후 상태 확인
-//            DispatchQueue.main.async {
-               // print("권한 요청 직후 상태 (success=\(success)):")
-               // self.debugHealthKitPermission()
+            let actualStatus = self.healthStore.authorizationStatus(for: stepsQuantityType)
+            
+            switch actualStatus {
+            case .sharingAuthorized:
+                print("HealthKit 권한 획득 성공")
+                self.fetchAllHealthData()
                 
-                // 약간의 지연을 주어 권한 상태가 시스템에 완전히 반영될 시간 확보
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    let actualStatus = self.healthStore.authorizationStatus(for: stepsQuantityType)
-
-//                    print("1초 후 권한 상태:")
-//                    self.debugHealthKitPermission()
-
-                    switch actualStatus {
-                    case .sharingAuthorized:
-                        print("HealthKit 권한 획득 성공")
-                        //self.fetchStepsData()
-                    case .sharingDenied:
-                        print("HealthKit 권한이 거부되었습니다. 설정에서 변경해주세요.")
-                    case .notDetermined:
-                        print("HealthKit 권한이 아직 결정되지 않았습니다.")
-                    @unknown default:
-                        print("알 수 없는 권한 상태입니다.")
-                    }
-//                }
-//            }
+            case .sharingDenied:
+                print("HealthKit 권한이 거부되었습니다. 설정에서 변경해주세요.")
+                self.fetchAllHealthData()
+                
+            case .notDetermined:
+                print("HealthKit 권한이 아직 결정되지 않았습니다.")
+                
+            @unknown default:
+                print("알 수 없는 권한 상태입니다.")
+            }
         }
     }
     
@@ -147,44 +119,132 @@ class HealthKitManager: ObservableObject {
         print("===============================")
     }
     
-    /// HealthKit에서 데이터를 가져와 MyHealthModel 리턴
-        func fetchMyHealthData(completion: @escaping (MyHealthModel) -> Void) {
-            let now = Date()
-            let calendar = Calendar.current
-            let startOfDay = calendar.startOfDay(for: now)
-            let noon = calendar.date(bySettingHour: 12, minute: 0, second: 0, of: now)!
-            let oneMonthAgo = calendar.date(byAdding: .month, value: -1, to: now)!
-            let oneWeekAgo = calendar.date(byAdding: .day, value: -7, to: now)!
-            
-            let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
-            let calorieType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
-            let fatBurnType = HKQuantityType.quantityType(forIdentifier: .dietaryFatTotal)! // 지방?
-
-            var model = MyHealthModel()
-
-            fetchSteps(start: startOfDay, end: now) { model.todayStepCount = $0 } // 오늘 걸음 수
-            fetchSum(type: distanceType, start: startOfDay, end: now, unit: .meter()) { model.todayDistance = $0 / 1000.0 } // 오늘 이동 거리
-            fetchSum(type: calorieType, start: startOfDay, end: now, unit: .kilocalorie()) { model.todayCalory = $0 } // 오늘 칼로리 소모량
-            
-            fetchSteps(start: startOfDay, end: noon) { model.morningStepCount = $0 } // 오늘 오전 걸음 수 - 0시~12시
-            fetchSteps(start: noon, end: now) { model.afternoonStepCount = $0 } // 오늘 오후 걸음 수 - 12시~현재시간
-
-            fetchSum(type: fatBurnType, start: startOfDay, end: now, unit: .gram()) { model.fatBurned = $0 } // 지방 소모량
-
-            fetchSteps(start: oneWeekAgo, end: now) { model.lastWeekStepCount = $0 } // 지난 주 총 걸음 수
-
-            fetchSteps(start: oneWeekAgo, end: now) { total in // 지난 주 평균 걸음 수
-                model.lastWeekAverageSteps = total / 7
-            }
-
-            fetchSteps(start: oneMonthAgo, end: now) { model.monthlyTotalSteps = $0 } // 지난 주 일평균 걸음 수
-
-            completion(model)
-            
+    /// 최근 7일간의 걸음 수 데이터 가져오기 (테스트용)
+    func fetchRecentStepsData(noPermissionCompletion: @escaping () -> (), permissionCompletion: @escaping () -> ()) {
+        let now = Date()
+        guard let weekAgo = Calendar.current.date(byAdding: .day, value: -7, to: now) else {
+            return
         }
+        
+        self.fetchStepsCount(from: weekAgo, to: now) { steps, error in
+            if let error = error {
+                print("최근 7일간 걸음 수 데이터 가져오기 오류: \(error.localizedDescription)")
+                noPermissionCompletion()
+            } else {
+                print("최근 7일간 총 걸음 수: \(Int(steps))")
+                permissionCompletion()
+            }
+        }
+    }
     
-    // 총합 가져오기 (ex. 걸음 수, 이동거리 ...)
-    func fetchSum(type: HKQuantityType, start: Date, end: Date, unit: HKUnit, assign: @escaping (Double) -> Void) {
+    // 특정 기간의 걸음 수 데이터 가져오기
+    func fetchStepsCount(from startDate: Date, to endDate: Date, completion: @escaping (Double, Error?) -> Void) {
+        // 걸음 수 데이터 타입
+        guard let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount) else {
+            completion(0, nil)
+            return
+        }
+        
+        // 기간 조건 설정
+        let predicate = HKQuery.predicateForSamples(
+            withStart: startDate,
+            end: endDate,
+            options: .strictStartDate
+        )
+        
+        // 통계 쿼리 설정
+        let query = HKStatisticsQuery(
+            quantityType: stepsQuantityType,
+            quantitySamplePredicate: predicate,
+            options: .cumulativeSum
+        ) { _, result, error in
+            guard let result = result, let sum = result.sumQuantity() else {
+                completion(0, error)
+                return
+            }
+            
+            // 결과 반환 (걸음 수)
+            let steps = sum.doubleValue(for: HKUnit.count())
+            completion(steps, nil)
+        }
+        
+        // 쿼리 실행
+        healthStore.execute(query)
+    }
+    
+    func fetchAllHealthData() {
+        let now = Date()
+        let calendar = Calendar.current
+        let startOfDay = calendar.startOfDay(for: now)
+        let noon = calendar.date(bySettingHour: 12, minute: 0, second: 0, of: now)!
+        let oneMonthAgo = calendar.date(byAdding: .month, value: -1, to: now)!
+        let oneWeekAgo = calendar.date(byAdding: .day, value: -7, to: now)!
+        
+        let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
+        let calorieType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
+        let fatBurnType = HKQuantityType.quantityType(forIdentifier: .dietaryFatTotal)!
+        
+        // 오늘 걸음 수
+        fetchSteps(start: startOfDay, end: now) { value in
+            DispatchQueue.main.async {
+                self.todayStepCount = value
+            }
+        }
+        
+        // 오늘 이동거리
+        fetchHealthDataUnit(type: distanceType, start: startOfDay, end: now, unit: .meter()) { value in
+            DispatchQueue.main.async {
+                self.todayDistance = value / 1000.0
+            }
+        }
+        
+        // 오늘 칼로리 소모량
+        fetchHealthDataUnit(type: calorieType, start: startOfDay, end: now, unit: .largeCalorie()) { value in
+            DispatchQueue.main.async {
+                self.todayCalory = value
+            }
+        }
+        
+        // 오전 걸음 수
+        fetchSteps(start: startOfDay, end: noon) { value in
+            DispatchQueue.main.async {
+                self.morningStepCount = value
+            }
+        }
+        
+        // 오후 걸음 수
+        fetchSteps(start: noon, end: now) { value in
+            DispatchQueue.main.async {
+                self.afternoonStepCount = value
+            }
+        }
+        
+        // 지방 소모량 -> 안나옴
+        fetchHealthDataUnit(type: fatBurnType, start: startOfDay, end: now, unit: .gram()) { value in
+            DispatchQueue.main.async {
+                self.fatBurned = value
+            }
+        }
+        
+        // 지난 주 걸음 수
+        fetchSteps(start: oneWeekAgo, end: now) { value in
+            DispatchQueue.main.async {
+                self.lastWeekStepCount = value
+                self.lastWeekAverageSteps = value / 7
+            }
+        }
+        
+        // 일평균 걸음 수
+        fetchSteps(start: oneMonthAgo, end: now) { value in
+            DispatchQueue.main.async {
+                self.monthlyTotalSteps = value
+            }
+        }
+        
+    }
+    
+    /// 유닛별 헬스데이터 가져오기 (ex. 걸음 수, 이동거리 ...)
+    func fetchHealthDataUnit(type: HKQuantityType, start: Date, end: Date, unit: HKUnit, assign: @escaping (Double) -> Void) {
         let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
         let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, _ in
             let value = result?.sumQuantity()?.doubleValue(for: unit) ?? 0
@@ -193,13 +253,13 @@ class HealthKitManager: ObservableObject {
         healthStore.execute(query)
     }
     
-    // 걸음 수 가져오기
+    /// 걸음 수 가져오기
     func fetchSteps(start: Date, end: Date, assign: @escaping (Int) -> Void) {
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
-        fetchSum(type: stepType, start: start, end: end, unit: HKUnit.count()) { value in
+        fetchHealthDataUnit(type: stepType, start: start, end: end, unit: HKUnit.count()) { value in
             assign(Int(value))
         }
     }
     
-   
+    
 }
